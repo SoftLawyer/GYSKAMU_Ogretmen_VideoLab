@@ -1,10 +1,10 @@
 # MASTER PROMPT: GYSKAMU Öğretmen VideoLab — Otonom 9:16 EKYS & Öğretmen Hakları Animasyon & Caption Üretim Sistemi
 
-> **AI Ajanları İçin Tek Cümlelik Özet:** Bu repo açıldığında veya linki verildiğinde kullanıcı bir öğretmenlik/EKYS alanı veya konusu isterse (ör. *"EKYS konusu"*, *"öğretmen hakları"*, *"izin ve tayin"*, *"disiplin soruşturması"*, *"ek ders ve nöbet"*), önce **10 şaşırtıcı/paradoksal vaka seçeneği** sun; kullanıcı birini seçtiğinde ise mevzuatı web'den doğrula, **45–55 saniye** aralığında, **`Charon` (Gemini 2.5 TTS)** seslendirmeli, **tam boy aksiyon animasyonlu (Remotion)** `1080×1920` MP4 videoyu ve altında **zorunlu GYSKAMU sabit bloğu** bulunan Instagram Reels caption metnini eksiksiz üret.
+> **AI Ajanları İçin Tek Cümlelik Özet:** Bu repo açıldığında veya linki verildiğinde kullanıcı bir öğretmenlik/EKYS alanı veya konusu isterse (ör. *"EKYS konusu"*, *"öğretmen hakları"*, *"izin ve tayin"*, *"disiplin soruşturması"*, *"ek ders ve nöbet"*): **(1)** önce **10 şaşırtıcı/paradoksal vaka seçeneği** sun; **(2)** kullanıcı birini seçtiğinde mevzuatı web'den doğrula ve **video/ses üretmeden önce** 7 bölümlü senaryo + Instagram caption taslağı + **bilgileri kontrol edebileceği kaynak linklerini** sunarak onay al; **(3)** kullanıcı onayladığında (veya düzenleyip geri gönderdiğinde birebir o metinle) **45–55 saniye** aralığında, **`Charon` (Gemini 2.5 TTS)** seslendirmeli, **tam boy aksiyon animasyonlu (Remotion)** `1080×1920` MP4 videoyu ve altında **zorunlu GYSKAMU sabit bloğu** bulunan Instagram Reels caption metnini eksiksiz üret.
 
 ---
 
-## 1) İŞ AKIŞI (2 AŞAMALI ZORUNLU PROTOKOL)
+## 1) İŞ AKIŞI (3 AŞAMALI ZORUNLU PROTOKOL)
 
 ### AŞAMA 1 — Konu İsteği Geldiğinde 10 Seçenek Sunumu
 Kullanıcı *"yeni bir konu yapalım"*, *"EKYS konusu öner"*, *"öğretmen hakları konusu"*, *"disiplin konusu"*, *"ek ders veya nöbet konusu"* gibi bir talepte bulunduğunda **doğrudan video üretimine geçme!**
@@ -19,12 +19,20 @@ Kullanıcı *"yeni bir konu yapalım"*, *"EKYS konusu öner"*, *"öğretmen hakl
 
 ---
 
-### AŞAMA 2 — Seçilen Konunun 45–55 Saniyelik Videoya Dönüştürülmesi
-Kullanıcı 10 seçenekten birini seçtiğinde aşağıdaki üretim hattını sırasıyla çalıştır:
+### AŞAMA 2 — Mevzuat Doğrulaması, Senaryo + Kaynak Linkleri Sunumu ve Kullanıcı Onayı (ZORUNLU)
+Kullanıcı 10 seçenekten birini seçtiğinde **henüz ses veya video üretme!**
 
-#### 0. Güncel Mevzuat Doğrulaması (ZORUNLU)
-- MEB yönetmelikleri, EKYS kuralları, 7528 sayılı Öğretmenlik Mesleği Kanunu (ÖMK) ve Toplu Sözleşme hükümleri sık güncellenir.
-- Senaryoyu yazmadan önce seçilen konunun **güncel madde numarasını, yürürlük durumunu ve varsa son yönetmelik değişikliğini** web araması ile mutlaka doğrula.
+1. **Güncel Mevzuat Doğrulaması:** MEB yönetmelikleri, EKYS kuralları, 7528 sayılı Öğretmenlik Mesleği Kanunu (ÖMK), 657 sayılı DMK ve Danıştay içtihatlarını web'den doğrula.
+2. **Senaryo + Caption + Kaynak Linkleri Sunumu:** Kullanıcıya kontrol edebilmesi için:
+   - 7 bölümlü (`01/07`..`07/07`) seslendirme ve sahne kurgu metnini,
+   - Instagram Reels caption taslağını (altında sabit GYSKAMU bloğuyla),
+   - İçerikteki hukuki/mevzuat bilgilerini doğrudan kontrol edebileceği **resmi ve güvenilir kaynak linklerini** (Mevzuat.gov.tr, Resmî Gazete, Danıştay/MEB duyuruları vb.) sun.
+3. **Kullanıcı Onayı & %100 Sadakat:** Kullanıcının onayını bekle. Kullanıcı metinde değişiklik yapıp geri gönderirse, kendi ilk taslağını değil, **kullanıcının gönderdiği son metni birebir (%100 sadakatle)** esas al.
+
+---
+
+### AŞAMA 3 — Onaylanan Senaryonun 45–55 Saniyelik Videoya Dönüştürülmesi
+Kullanıcı senaryoyu onayladığında aşağıdaki üretim hattını sırasıyla çalıştır:
 
 #### A. Süre ve Senaryo Kilidi (`45.0 – 55.0 Saniye`)
 - **Hedef Süre:** Videonun toplam süresi (`totalDuration`) kesinlikle **45 ile 55 saniye** arasında olmalıdır.

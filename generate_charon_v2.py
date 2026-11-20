@@ -16,125 +16,132 @@ RAW_WAV = os.path.join(OUT_DIR, "charon_v2_raw.wav")
 with open(SETTINGS_PATH, "r", encoding="utf-8") as _sf:
     _SETTINGS = json.load(_sf)
 
+# Load .env if present (kept out of git)
+_ENV_PATH = os.path.join(BASE_DIR, ".env")
+if os.path.exists(_ENV_PATH):
+    with open(_ENV_PATH, "r", encoding="utf-8") as _ef:
+        for _line in _ef:
+            _line = _line.strip()
+            if _line and not _line.startswith("#") and "=" in _line:
+                _k, _v = _line.split("=", 1)
+                os.environ.setdefault(_k.strip(), _v.strip().strip('"').strip("'"))
+
 API_KEY = os.environ.get("GEMINI_API_KEY", _SETTINGS.get("gemini_api_key", ""))
 TEMPO = float(_SETTINGS["tts"].get("atempo", 1.10))
 VOICE_NAME = _SETTINGS["tts"].get("voice_name", "Charon")
 TTS_MODEL = _SETTINGS["tts"].get("model", "gemini-2.5-flash-preview-tts")
 
 # ============================================================================
-# ÖRNEK ŞABLON SENARYO (Yeni her Dosya No için burayı ve SEGMENTS_DEF'i güncelle)
-# Hedef: 7 Bölüm (Beat 0..6), 16-20 Segment, 100-128 kelime -> 45.0s - 55.0s
+# DOSYA NO: 1 — Müdür Hem Tartışmanın Tarafı Hem Disiplin Amiri Olup Ceza Verebilir mi?
+# Hedef: 7 Bölüm (Beat 0..6), 20 Segment -> 45.0s - 55.0s
 # ============================================================================
 PROMPT_TEXT = """Aşağıdaki metni genç, karizmatik, tok, merak uyandıran ve akıcı bir Türkçe belgesel/Reels anlatıcısı tonuyla oku. Her satır arasında çok kısa ve doğal bir es ver; aynı satır içinde duraksama yapma:
 
-Müdür odaya çağırdı, önüne bir tutanak koydu.
-Yarın sabaha kadar savunmanı getir dedi.
-İki gün sonra da uyarma cezası tebliğ edildi.
-Peki bu ceza hukuken geçerli mi?
+Okulda öğretmen ile müdür arasında sert bir tartışma çıktı.
+Müdür hemen kendi eliyle tutanak tuttu.
+Savunmasını alıp hemen kınama cezası kesti.
+Peki bu ceza geçerli mi?
 
-Çoğu öğretmen müdür yazdıysa yapacak bir şey yok sanır.
-Ama mevzuat burada bambaşka bir kırmızı çizgi çizer.
+İlk akla gelen yanıt: Müdür disiplin amiri, yetkisi var.
+Ancak hukuk burada net bir kırmızı çizgi çizer.
 
-Anayasa madde yüz yirmi dokuz ve altı yüz elli yedi sayılı kanun açık.
-Memura savunma hakkı tanınmadan disiplin cezası verilemez.
+Altı yüz elli yedi sayılı kanunda müdür normalde yetkilidir.
+Ama bu olayda tartışmanın bizzat tarafı ve şikayetçisidir.
 
-Üstelik bu savunma için süre keyfi belirlenemez.
-Kanun en az yedi gün süre verilmesini zorunlu kılar.
-Yarına kadar getir demek açık bir usul hatasıdır.
-İdare bu kuralı çiğnerse işlem baştan sakattır.
+İşte burada temel bir ilke devreye girer:
+Kimse kendi davasının hakimi olamaz.
+Danıştay kararları bu konuda çok nettir.
+Olayın tarafı olan amir tarafsızlığını yitirir.
 
-Peki sonuç ne olur?
-Yedi günden az süreyle verilen her disiplin cezası,
-idare mahkemesinde doğrudan iptal edilir.
+Sonuç ne mi olur?
+Soruşturmayı üst amir veya tarafsız muhakkik yürütmeliydi.
+Müdürün kestiği kınama cezası İdare Mahkemesinde iptal edilir.
 
-Kısacası tutanak var, imza var,
+Sonuçta elde bir tutanak var,
 ama hukuken geçerli bir ceza yok.
 
-Senin veya bir meslektaşının başına böyle bir durum geldi mi?
+Senin veya bir meslektaşının başına böyle bir olay geldi mi?
 Deneyimini yorumlara yaz.
 Yeni öğretmen dosyaları için GYSKAMU'yu takip et."""
 
 SEGMENTS_DEF = [
     # Beat 0
-    {"id": "b0_s0", "beat": 0, "text": "Müdür odaya çağırdı, önüne bir tutanak koydu.", "sub_chunks": [
-        {"words": ["Müdür", "odaya", "çağırdı,"], "highlight": [0]},
-        {"words": ["önüne", "bir", "tutanak", "koydu."], "highlight": [2, 3]}
+    {"id": "b0_s0", "beat": 0, "text": "Okulda öğretmen ile müdür arasında sert bir tartışma çıktı.", "sub_chunks": [
+        {"words": ["Okulda", "öğretmen", "ile", "müdür", "arasında"], "highlight": [1, 3]},
+        {"words": ["sert", "bir", "tartışma", "çıktı."], "highlight": [0, 2]}
     ], "pause_after": 0.12},
-    {"id": "b0_s1", "beat": 0, "text": "Yarın sabaha kadar savunmanı getir dedi.", "sub_chunks": [
-        {"words": ["Yarın", "sabaha", "kadar"], "highlight": [0, 1]},
-        {"words": ["savunmanı", "getir", "dedi."], "highlight": [0, 1]}
+    {"id": "b0_s1", "beat": 0, "text": "Müdür hemen kendi eliyle tutanak tuttu.", "sub_chunks": [
+        {"words": ["Müdür", "hemen", "kendi", "eliyle"], "highlight": [0, 2]},
+        {"words": ["tutanak", "tuttu."], "highlight": [0, 1]}
     ], "pause_after": 0.12},
-    {"id": "b0_s2", "beat": 0, "text": "İki gün sonra da uyarma cezası tebliğ edildi.", "sub_chunks": [
-        {"words": ["İki", "gün", "sonra", "da"], "highlight": [0, 1]},
-        {"words": ["uyarma", "cezası", "tebliğ", "edildi."], "highlight": [0, 1]}
+    {"id": "b0_s2", "beat": 0, "text": "Savunmasını alıp hemen kınama cezası kesti.", "sub_chunks": [
+        {"words": ["Savunmasını", "alıp", "hemen"], "highlight": [0, 2]},
+        {"words": ["kınama", "cezası", "kesti."], "highlight": [0, 1]}
     ], "pause_after": 0.12},
-    {"id": "b0_s3", "beat": 0, "text": "Peki bu ceza hukuken geçerli mi?", "sub_chunks": [
-        {"words": ["Peki", "bu", "ceza", "hukuken", "geçerli", "mi?"], "highlight": [2, 4, 5]}
-    ], "pause_after": 0.22},
+    {"id": "b0_s3", "beat": 0, "text": "Peki bu ceza geçerli mi?", "sub_chunks": [
+        {"words": ["Peki", "bu", "ceza", "geçerli", "mi?"], "highlight": [2, 3, 4]}
+    ], "pause_after": 0.20},
 
     # Beat 1
-    {"id": "b1_s0", "beat": 1, "text": "Çoğu öğretmen müdür yazdıysa yapacak bir şey yok sanır.", "sub_chunks": [
-        {"words": ["Çoğu", "öğretmen", "müdür", "yazdıysa"], "highlight": [0, 1]},
-        {"words": ["yapacak", "bir", "şey", "yok", "sanır."], "highlight": [3, 4]}
+    {"id": "b1_s0", "beat": 1, "text": "İlk akla gelen yanıt: Müdür disiplin amiri, yetkisi var.", "sub_chunks": [
+        {"words": ["İlk", "akla", "gelen", "yanıt:"], "highlight": [0, 3]},
+        {"words": ["Müdür", "disiplin", "amiri,", "yetkisi", "var."], "highlight": [1, 2, 3]}
     ], "pause_after": 0.12},
-    {"id": "b1_s1", "beat": 1, "text": "Ama mevzuat burada bambaşka bir kırmızı çizgi çizer.", "sub_chunks": [
-        {"words": ["Ama", "mevzuat", "burada"], "highlight": [1]},
-        {"words": ["bambaşka", "bir", "kırmızı", "çizgi", "çizer."], "highlight": [2, 3]}
-    ], "pause_after": 0.22},
+    {"id": "b1_s1", "beat": 1, "text": "Ancak hukuk burada net bir kırmızı çizgi çizer.", "sub_chunks": [
+        {"words": ["Ancak", "hukuk", "burada", "net", "bir"], "highlight": [1, 3]},
+        {"words": ["kırmızı", "çizgi", "çizer."], "highlight": [0, 1]}
+    ], "pause_after": 0.20},
 
     # Beat 2
-    {"id": "b2_s0", "beat": 2, "text": "Anayasa m. 129 ve 657 sayılı Kanun açık.", "sub_chunks": [
-        {"words": ["Anayasa", "m.", "129", "ve"], "highlight": [0, 2]},
-        {"words": ["657", "sayılı", "Kanun", "açık."], "highlight": [0, 2, 3]}
+    {"id": "b2_s0", "beat": 2, "text": "657 sayılı Kanunda müdür normalde yetkilidir.", "sub_chunks": [
+        {"words": ["657", "sayılı", "Kanunda"], "highlight": [0, 2]},
+        {"words": ["müdür", "normalde", "yetkilidir."], "highlight": [0, 2]}
     ], "pause_after": 0.12},
-    {"id": "b2_s1", "beat": 2, "text": "Memura savunma hakkı tanınmadan disiplin cezası verilemez.", "sub_chunks": [
-        {"words": ["Memura", "savunma", "hakkı", "tanınmadan"], "highlight": [1, 2]},
-        {"words": ["disiplin", "cezası", "verilemez."], "highlight": [0, 1, 2]}
-    ], "pause_after": 0.22},
+    {"id": "b2_s1", "beat": 2, "text": "Ama bu olayda tartışmanın bizzat tarafı ve şikayetçisidir.", "sub_chunks": [
+        {"words": ["Ama", "bu", "olayda", "tartışmanın"], "highlight": [3]},
+        {"words": ["bizzat", "tarafı", "ve", "şikayetçisidir."], "highlight": [1, 3]}
+    ], "pause_after": 0.20},
 
     # Beat 3
-    {"id": "b3_s0", "beat": 3, "text": "Üstelik bu savunma için süre keyfi belirlenemez.", "sub_chunks": [
-        {"words": ["Üstelik", "bu", "savunma", "için"], "highlight": [2]},
-        {"words": ["süre", "keyfi", "belirlenemez."], "highlight": [1, 2]}
-    ], "pause_after": 0.12},
-    {"id": "b3_s1", "beat": 3, "text": "Kanun en az 7 gün süre verilmesini zorunlu kılar.", "sub_chunks": [
-        {"words": ["Kanun", "en", "az", "7", "gün"], "highlight": [2, 3, 4]},
-        {"words": ["süre", "verilmesini", "zorunlu", "kılar."], "highlight": [2, 3]}
-    ], "pause_after": 0.12},
-    {"id": "b3_s2", "beat": 3, "text": "Yarına kadar getir demek açık bir usul hatasıdır.", "sub_chunks": [
-        {"words": ["Yarına", "kadar", "getir", "demek"], "highlight": [0, 1]},
-        {"words": ["açık", "bir", "usul", "hatasıdır."], "highlight": [2, 3]}
+    {"id": "b3_s0", "beat": 3, "text": "İşte burada temel bir ilke devreye girer:", "sub_chunks": [
+        {"words": ["İşte", "burada", "temel", "bir", "ilke", "devreye", "girer:"], "highlight": [2, 4]}
     ], "pause_after": 0.10},
-    {"id": "b3_s3", "beat": 3, "text": "İdare bu kuralı çiğnerse işlem baştan sakattır.", "sub_chunks": [
-        {"words": ["İdare", "bu", "kuralı", "çiğnerse"], "highlight": [2, 3]},
-        {"words": ["işlem", "baştan", "sakattır."], "highlight": [1, 2]}
-    ], "pause_after": 0.22},
+    {"id": "b3_s1", "beat": 3, "text": "Kimse kendi davasının hâkimi olamaz.", "sub_chunks": [
+        {"words": ["Kimse", "kendi", "davasının", "hâkimi", "olamaz."], "highlight": [0, 2, 3]}
+    ], "pause_after": 0.14},
+    {"id": "b3_s2", "beat": 3, "text": "Danıştay kararları bu konuda çok nettir.", "sub_chunks": [
+        {"words": ["Danıştay", "kararları", "bu", "konuda", "çok", "nettir."], "highlight": [0, 1, 5]}
+    ], "pause_after": 0.12},
+    {"id": "b3_s3", "beat": 3, "text": "Olayın tarafı olan amir tarafsızlığını yitirir.", "sub_chunks": [
+        {"words": ["Olayın", "tarafı", "olan", "amir"], "highlight": [1, 3]},
+        {"words": ["tarafsızlığını", "yitirir."], "highlight": [0, 1]}
+    ], "pause_after": 0.20},
 
     # Beat 4
-    {"id": "b4_s0", "beat": 4, "text": "Peki sonuç ne olur?", "sub_chunks": [
-        {"words": ["Peki", "sonuç", "ne", "olur?"], "highlight": [1, 2]}
+    {"id": "b4_s0", "beat": 4, "text": "Sonuç ne mi olur?", "sub_chunks": [
+        {"words": ["Sonuç", "ne", "mi", "olur?"], "highlight": [0, 1]}
     ], "pause_after": 0.12},
-    {"id": "b4_s1", "beat": 4, "text": "7 günden az süreyle verilen her disiplin cezası,", "sub_chunks": [
-        {"words": ["7", "günden", "az", "süreyle"], "highlight": [0, 1, 2]},
-        {"words": ["verilen", "her", "disiplin", "cezası,"], "highlight": [2, 3]}
-    ], "pause_after": 0.10},
-    {"id": "b4_s2", "beat": 4, "text": "İdare Mahkemesinde doğrudan iptal edilir.", "sub_chunks": [
-        {"words": ["İdare", "Mahkemesinde"], "highlight": [0, 1]},
-        {"words": ["doğrudan", "iptal", "edilir."], "highlight": [1, 2]}
-    ], "pause_after": 0.22},
+    {"id": "b4_s1", "beat": 4, "text": "Soruşturmayı üst amir veya tarafsız muhakkik yürütmeliydi.", "sub_chunks": [
+        {"words": ["Soruşturmayı", "üst", "amir", "veya"], "highlight": [1, 2]},
+        {"words": ["tarafsız", "muhakkik", "yürütmeliydi."], "highlight": [0, 1]}
+    ], "pause_after": 0.12},
+    {"id": "b4_s2", "beat": 4, "text": "Müdürün kestiği kınama cezası İdare Mahkemesinde iptal edilir.", "sub_chunks": [
+        {"words": ["Müdürün", "kestiği", "kınama", "cezası"], "highlight": [2, 3]},
+        {"words": ["İdare", "Mahkemesinde", "iptal", "edilir."], "highlight": [0, 1, 2]}
+    ], "pause_after": 0.20},
 
     # Beat 5
-    {"id": "b5_s0", "beat": 5, "text": "Kısacası tutanak var, imza var,", "sub_chunks": [
-        {"words": ["Kısacası", "tutanak", "var,", "imza", "var,"], "highlight": [1, 3]}
+    {"id": "b5_s0", "beat": 5, "text": "Sonuçta elde bir tutanak var,", "sub_chunks": [
+        {"words": ["Sonuçta", "elde", "bir", "tutanak", "var,"], "highlight": [2, 3]}
     ], "pause_after": 0.08},
     {"id": "b5_s1", "beat": 5, "text": "ama hukuken geçerli bir ceza yok.", "sub_chunks": [
         {"words": ["ama", "hukuken", "geçerli", "bir", "ceza", "yok."], "highlight": [2, 4, 5]}
-    ], "pause_after": 0.22},
+    ], "pause_after": 0.20},
 
     # Beat 6
-    {"id": "b6_s0", "beat": 6, "text": "Senin veya bir meslektaşının başına böyle bir durum geldi mi?", "sub_chunks": [
+    {"id": "b6_s0", "beat": 6, "text": "Senin veya bir meslektaşının başına böyle bir olay geldi mi?", "sub_chunks": [
         {"words": ["Senin", "veya", "bir", "meslektaşının"], "highlight": [0, 3]},
-        {"words": ["başına", "böyle", "bir", "durum", "geldi", "mi?"], "highlight": [3, 4]}
+        {"words": ["başına", "böyle", "bir", "olay", "geldi", "mi?"], "highlight": [3, 4]}
     ], "pause_after": 0.12},
     {"id": "b6_s1", "beat": 6, "text": "Deneyimini yorumlara yaz.", "sub_chunks": [
         {"words": ["Deneyimini", "yorumlara", "yaz."], "highlight": [0, 1]}
@@ -142,7 +149,7 @@ SEGMENTS_DEF = [
     {"id": "b6_s2", "beat": 6, "text": "Yeni öğretmen dosyaları için GYSKAMU'yu takip et.", "sub_chunks": [
         {"words": ["Yeni", "öğretmen", "dosyaları", "için"], "highlight": [1, 2]},
         {"words": ["GYSKAMU'yu", "takip", "et."], "highlight": [0, 1]}
-    ], "pause_after": 0.35},
+    ], "pause_after": 0.30},
 ]
 
 
@@ -255,11 +262,7 @@ def find_best_segments(samples, sr):
     return bounds
 
 
-# ============================================================================
-# PROSEDÜREL SES EFEKTLERİ (Okul / Mevzuat / Resmi Belge & Karar Temalı)
-# ============================================================================
 def make_sfx_bell(sr=44100):
-    # Subtle metallic school bell chime
     t = np.linspace(0, 0.45, int(sr * 0.45), endpoint=False)
     env = np.exp(-t * 7.5)
     tone = (
@@ -267,11 +270,10 @@ def make_sfx_bell(sr=44100):
         + np.sin(2 * np.pi * 1760 * t) * 0.30
         + np.sin(2 * np.pi * 2640 * t) * 0.15
     ) * env
-    return tone * 0.16
+    return tone * 0.15
 
 
 def make_sfx_impact(sr=44100):
-    # Heavy folder/desk thud
     t = np.linspace(0, 0.22, int(sr * 0.22), endpoint=False)
     env = np.exp(-t * 22)
     thud = np.sin(2 * np.pi * np.linspace(115, 40, len(t)) * t) * env
@@ -279,7 +281,6 @@ def make_sfx_impact(sr=44100):
 
 
 def make_sfx_stamp(sr=44100):
-    # Official rubber stamp slam
     t = np.linspace(0, 0.16, int(sr * 0.16), endpoint=False)
     env = np.exp(-t * 30)
     wave_data = (np.sin(2 * np.pi * 95 * t) * 0.72 + np.random.normal(0, 0.20, len(t))) * env
@@ -287,7 +288,6 @@ def make_sfx_stamp(sr=44100):
 
 
 def make_sfx_gavel(sr=44100):
-    # Crisp wood gavel knock
     t = np.linspace(0, 0.24, int(sr * 0.24), endpoint=False)
     env = np.exp(-t * 26)
     wood = (np.sin(2 * np.pi * 180 * t) * 0.6 + np.sin(2 * np.pi * 420 * t) * 0.3) * env
@@ -295,7 +295,6 @@ def make_sfx_gavel(sr=44100):
 
 
 def make_sfx_alert(sr=44100):
-    # Subtle notification / red-line alert ping
     t = np.linspace(0, 0.30, int(sr * 0.30), endpoint=False)
     env = np.sin(np.pi * np.minimum(1.0, t / 0.03)) * np.exp(-t * 9.0)
     tone = (np.sin(2 * np.pi * 740 * t) * 0.7 + np.sin(2 * np.pi * 1110 * t) * 0.3) * env
@@ -407,44 +406,32 @@ def build_audio_and_timeline():
             mix_at(max(0, br["start"] - 0.04), make_sfx_whoosh(sr))
 
     seg_map = {s["id"]: s for s in timeline_segments}
-    # Beat 0: school bell + folder slam + stamp
-    if "b0_s0" in seg_map:
-        mix_at(seg_map["b0_s0"]["start"], make_sfx_bell(sr))
-        mix_at(seg_map["b0_s0"]["end"] - 0.15, make_sfx_impact(sr))
-    if "b0_s2" in seg_map:
-        mix_at(seg_map["b0_s2"]["start"] + 0.25, make_sfx_stamp(sr))
+    # Beat 0: school bell + tutanak slam + kınama stamp
+    mix_at(seg_map["b0_s0"]["start"], make_sfx_bell(sr))
+    mix_at(seg_map["b0_s1"]["end"] - 0.15, make_sfx_impact(sr))
+    mix_at(seg_map["b0_s2"]["start"] + 0.35, make_sfx_stamp(sr))
 
-    # Beat 1: common myth stamp + pop
-    if "b1_s0" in seg_map:
-        mix_at(seg_map["b1_s0"]["end"] - 0.20, make_sfx_stamp(sr))
-    if "b1_s1" in seg_map:
-        mix_at(seg_map["b1_s1"]["start"] + 0.15, make_sfx_pop(sr, 480))
+    # Beat 1: myth stamp + red-line pop
+    mix_at(seg_map["b1_s0"]["end"] - 0.15, make_sfx_stamp(sr))
+    mix_at(seg_map["b1_s1"]["start"] + 0.15, make_sfx_pop(sr, 480))
 
-    # Beat 2: legal barrier slam
-    if "b2_s1" in seg_map:
-        mix_at(seg_map["b2_s1"]["start"] + 0.15, make_sfx_impact(sr))
+    # Beat 2: conflict barrier slam
+    mix_at(seg_map["b2_s1"]["start"] + 0.15, make_sfx_impact(sr))
 
-    # Beat 3: scan alert + official stamp
-    if "b3_s1" in seg_map:
-        mix_at(seg_map["b3_s1"]["start"] + 0.20, make_sfx_alert(sr))
-    if "b3_s3" in seg_map:
-        mix_at(seg_map["b3_s3"]["start"], make_sfx_stamp(sr))
+    # Beat 3: legal principle alert + Danıştay stamp
+    mix_at(seg_map["b3_s1"]["start"], make_sfx_alert(sr))
+    mix_at(seg_map["b3_s3"]["start"] + 0.15, make_sfx_stamp(sr))
 
-    # Beat 4: gavel / verdict
-    if "b4_s2" in seg_map:
-        mix_at(seg_map["b4_s2"]["start"] + 0.15, make_sfx_gavel(sr))
+    # Beat 4: gavel on İdare Mahkemesi cancellation
+    mix_at(seg_map["b4_s2"]["sub_chunks"][1]["start"] + 0.10, make_sfx_gavel(sr))
 
     # Beat 5: spotlight counters
-    if "b5_s0" in seg_map:
-        mix_at(seg_map["b5_s0"]["start"] + 0.20, make_sfx_pop(sr, 440))
-    if "b5_s1" in seg_map:
-        mix_at(seg_map["b5_s1"]["start"] + 0.20, make_sfx_pop(sr, 540))
+    mix_at(seg_map["b5_s0"]["start"] + 0.18, make_sfx_pop(sr, 440))
+    mix_at(seg_map["b5_s1"]["start"] + 0.18, make_sfx_pop(sr, 540))
 
-    # Beat 6: comment & CTA pops
-    if "b6_s1" in seg_map:
-        mix_at(seg_map["b6_s1"]["start"], make_sfx_pop(sr, 600))
-    if "b6_s2" in seg_map:
-        mix_at(seg_map["b6_s2"]["start"], make_sfx_pop(sr, 660))
+    # Beat 6: CTA pops
+    mix_at(seg_map["b6_s1"]["start"], make_sfx_pop(sr, 600))
+    mix_at(seg_map["b6_s2"]["start"], make_sfx_pop(sr, 660))
 
     full_audio = np.clip(full_audio, -0.98, 0.98)
     master_wav = os.path.join(OUT_DIR, "master_audio.wav")

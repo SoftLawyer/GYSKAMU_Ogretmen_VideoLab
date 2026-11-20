@@ -49,17 +49,17 @@ const COLORS = {
 };
 
 const BEAT_META = [
-  { code: "01/07", label: "OKULDA KRİZ / OLAY ANI" },
+  { code: "01/07", label: "OKULDA KRİZ / TARTIŞMA ANI" },
   { code: "02/07", label: "YAYGIN YANILGI" },
   { code: "03/07", label: "MEVZUAT KRİTERİ" },
-  { code: "04/07", label: "HUKUKİ DAYANAK & TERAZİ" },
-  { code: "05/07", label: "RESMİ KARAR / SONUÇ" },
-  { code: "06/07", label: "ÖĞRETMEN BİLANÇOSU" },
+  { code: "04/07", label: "TARAFSIZLIK İLKESİ & DANIŞTAY" },
+  { code: "05/07", label: "RESMİ KARAR / İPTAL" },
+  { code: "06/07", label: "DOSYA BİLANÇOSU" },
   { code: "07/07", label: "ÖĞRETMENLER NE DİYOR?" },
 ];
 
 // ============================================================================
-// ARTICULATED FULL-BODY EDITORIAL CHARACTER (Teacher / Principal / Inspector)
+// ARTICULATED FULL-BODY EDITORIAL CHARACTER (Teacher / Principal)
 // Origin (x, y) is ground contact point between feet. Total height ~245px.
 // ============================================================================
 const FullBodyCharacter: React.FC<{
@@ -68,7 +68,7 @@ const FullBodyCharacter: React.FC<{
   coatColor: string;
   accentColor: string;
   trouserColor?: string;
-  gesture?: "none" | "handDocumentRight" | "handDocumentLeft" | "pointRight" | "shock" | "shield";
+  gesture?: "none" | "argueRight" | "argueLeft" | "handDocumentRight" | "shock";
   gestureProg?: number;
   scale?: number;
   label?: string;
@@ -84,31 +84,27 @@ const FullBodyCharacter: React.FC<{
   label,
 }) => {
   const rightArmDeg =
-    gesture === "handDocumentRight" || gesture === "pointRight"
-      ? interpolate(gestureProg, [0, 1], [55, -10])
+    gesture === "argueRight"
+      ? interpolate(gestureProg, [0, 1], [45, -45])
+      : gesture === "handDocumentRight"
+      ? interpolate(gestureProg, [0, 1], [55, -18])
       : gesture === "shock"
-      ? interpolate(gestureProg, [0, 1], [40, -110])
-      : 22;
+      ? interpolate(gestureProg, [0, 1], [40, -115])
+      : 20;
 
   const leftArmDeg =
-    gesture === "handDocumentLeft"
-      ? interpolate(gestureProg, [0, 1], [-55, 10])
+    gesture === "argueLeft"
+      ? interpolate(gestureProg, [0, 1], [-45, 45])
       : gesture === "shock"
-      ? interpolate(gestureProg, [0, 1], [-40, 110])
-      : gesture === "shield"
-      ? interpolate(gestureProg, [0, 1], [-25, 45])
-      : -22;
+      ? interpolate(gestureProg, [0, 1], [-40, 115])
+      : -20;
 
   return (
     <g transform={`translate(${x}, ${y}) scale(${scale})`}>
-      {/* Ground Shadow */}
       <ellipse cx={0} cy={2} rx={42} ry={8} fill="rgba(16, 32, 51, 0.14)" />
-
-      {/* Shoes */}
       <ellipse cx={-15} cy={-3} rx={14} ry={6} fill="#101824" />
       <ellipse cx={15} cy={-3} rx={14} ry={6} fill="#101824" />
 
-      {/* Trousers */}
       <path
         d="M -22 -100 L -5 -100 L -8 -4 L -21 -4 Z"
         fill={trouserColor}
@@ -122,116 +118,46 @@ const FullBodyCharacter: React.FC<{
         strokeWidth={2.5}
       />
 
-      {/* Tailored Coat / Blazer */}
       <path
         d="M -32 -178 Q 0 -186 32 -178 L 28 -95 L -28 -95 Z"
         fill={coatColor}
         stroke={COLORS.navyDark}
         strokeWidth={2.8}
       />
-      {/* Shirt V-neck & Tie/Scarf */}
       <polygon points="-10,-178 10,-178 0,-138" fill={COLORS.creamCard} />
       <polygon points="-4,-176 4,-176 6,-142 0,-132 -6,-142" fill={accentColor} />
 
       {/* Left Arm */}
       <g transform={`translate(-28, -168) rotate(${leftArmDeg})`}>
-        <rect
-          x={-8}
-          y={0}
-          width={16}
-          height={64}
-          rx={8}
-          fill={coatColor}
-          stroke={COLORS.navyDark}
-          strokeWidth={2.4}
-        />
+        <rect x={-8} y={0} width={16} height={64} rx={8} fill={coatColor} stroke={COLORS.navyDark} strokeWidth={2.4} />
         <circle cx={0} cy={66} r={7} fill="#E7C9AD" stroke={COLORS.navyDark} strokeWidth={2} />
-        {gesture === "handDocumentLeft" && (
-          <g transform="translate(-30, 48) rotate(-8)">
-            <rect
-              x={0}
-              y={0}
-              width={34}
-              height={44}
-              rx={3}
-              fill={COLORS.creamCard}
-              stroke={COLORS.crimson}
-              strokeWidth={2.5}
-            />
-            <line x1={6} y1={12} x2={28} y2={12} stroke={COLORS.navyDark} strokeWidth={2} />
-            <line x1={6} y1={21} x2={24} y2={21} stroke={COLORS.navyDark} strokeWidth={2} />
-            <circle cx={22} cy={33} r={5} fill={COLORS.crimson} />
-          </g>
-        )}
       </g>
 
       {/* Right Arm */}
       <g transform={`translate(28, -168) rotate(${rightArmDeg})`}>
-        <rect
-          x={-8}
-          y={0}
-          width={16}
-          height={64}
-          rx={8}
-          fill={coatColor}
-          stroke={COLORS.navyDark}
-          strokeWidth={2.4}
-        />
+        <rect x={-8} y={0} width={16} height={64} rx={8} fill={coatColor} stroke={COLORS.navyDark} strokeWidth={2.4} />
         <circle cx={0} cy={66} r={7} fill="#E7C9AD" stroke={COLORS.navyDark} strokeWidth={2} />
         {gesture === "handDocumentRight" && (
           <g transform="translate(-4, 48) rotate(8)">
-            <rect
-              x={0}
-              y={0}
-              width={36}
-              height={46}
-              rx={3}
-              fill={COLORS.creamCard}
-              stroke={COLORS.crimson}
-              strokeWidth={2.5}
-            />
-            <line x1={6} y1={12} x2={30} y2={12} stroke={COLORS.navyDark} strokeWidth={2} />
-            <line x1={6} y1={22} x2={26} y2={22} stroke={COLORS.navyDark} strokeWidth={2} />
-            <circle cx={24} cy={35} r={5} fill={COLORS.crimson} />
+            <rect x={0} y={0} width={38} height={48} rx={3} fill={COLORS.creamCard} stroke={COLORS.crimson} strokeWidth={2.6} />
+            <line x1={6} y1={12} x2={32} y2={12} stroke={COLORS.navyDark} strokeWidth={2.2} />
+            <line x1={6} y1={22} x2={28} y2={22} stroke={COLORS.navyDark} strokeWidth={2.2} />
+            <circle cx={26} cy={36} r={6} fill={COLORS.crimson} />
           </g>
         )}
       </g>
 
       {/* Head */}
       <circle cx={0} cy={-204} r={22} fill="#E7C9AD" stroke={COLORS.navyDark} strokeWidth={2.5} />
-      {/* Editorial Hair Cap */}
-      <path
-        d="M -22 -206 Q -20 -230 0 -230 Q 20 -230 22 -206 Q 10 -216 -22 -206 Z"
-        fill={COLORS.navyDark}
-      />
-      {/* Glasses Accent */}
+      <path d="M -22 -206 Q -20 -230 0 -230 Q 20 -230 22 -206 Q 10 -216 -22 -206 Z" fill={COLORS.navyDark} />
       <rect x={-13} y={-208} width={11} height={7} rx={2} fill="none" stroke={COLORS.navyDark} strokeWidth={2} />
       <rect x={2} y={-208} width={11} height={7} rx={2} fill="none" stroke={COLORS.navyDark} strokeWidth={2} />
       <line x1={-2} y1={-204} x2={2} y2={-204} stroke={COLORS.navyDark} strokeWidth={2} />
 
-      {/* Role Pill */}
       {label && (
         <g transform="translate(0, 28)">
-          <rect
-            x={-68}
-            y={-15}
-            width={136}
-            height={28}
-            rx={6}
-            fill={COLORS.navyDark}
-            stroke={COLORS.gold}
-            strokeWidth={1.6}
-          />
-          <text
-            x={0}
-            y={4}
-            textAnchor="middle"
-            fill={COLORS.goldBright}
-            fontFamily={monoFamily}
-            fontSize={13}
-            fontWeight={700}
-            letterSpacing="1.2"
-          >
+          <rect x={-76} y={-15} width={152} height={28} rx={6} fill={COLORS.navyDark} stroke={COLORS.gold} strokeWidth={1.6} />
+          <text x={0} y={4} textAnchor="middle" fill={COLORS.goldBright} fontFamily={monoFamily} fontSize={13} fontWeight={700} letterSpacing="1.2">
             {label}
           </text>
         </g>
@@ -241,7 +167,7 @@ const FullBodyCharacter: React.FC<{
 };
 
 // ============================================================================
-// LUXURY BALANCE SCALE (Mevzuat & Adalet Terazisi)
+// LUXURY BALANCE SCALE (Tarafsızlık & Danıştay Terazisi)
 // ============================================================================
 const LuxuryBalanceScale: React.FC<{
   tiltDeg: number;
@@ -257,49 +183,29 @@ const LuxuryBalanceScale: React.FC<{
   rightColor = COLORS.forest,
 }) => {
   return (
-    <svg width={760} height={360} viewBox="0 0 760 360">
-      {/* Base Pedestal */}
-      <rect x={305} y={310} width={150} height={24} rx={6} fill={COLORS.navyDark} stroke={COLORS.gold} strokeWidth={2} />
-      <rect x={368} y={76} width={24} height={238} rx={4} fill={COLORS.goldDark} />
-      <circle cx={380} cy={76} r={16} fill={COLORS.goldBright} stroke={COLORS.navyDark} strokeWidth={3} />
+    <svg width={760} height={340} viewBox="0 0 760 340">
+      <rect x={305} y={292} width={150} height={24} rx={6} fill={COLORS.navyDark} stroke={COLORS.gold} strokeWidth={2} />
+      <rect x={368} y={66} width={24} height={230} rx={4} fill={COLORS.goldDark} />
+      <circle cx={380} cy={66} r={16} fill={COLORS.goldBright} stroke={COLORS.navyDark} strokeWidth={3} />
 
-      {/* Beam */}
-      <g transform={`translate(380, 76) rotate(${tiltDeg})`}>
+      <g transform={`translate(380, 66) rotate(${tiltDeg})`}>
         <rect x={-230} y={-7} width={460} height={14} rx={7} fill={COLORS.gold} stroke={COLORS.navyDark} strokeWidth={2.5} />
-        {/* Left Pan */}
         <g transform={`translate(-210, 0) rotate(${-tiltDeg})`}>
-          <line x1={0} y1={0} x2={-48} y2={115} stroke={COLORS.goldDark} strokeWidth={3} />
-          <line x1={0} y1={0} x2={48} y2={115} stroke={COLORS.goldDark} strokeWidth={3} />
-          <path d="M -72 115 Q 0 155 72 115 Z" fill={leftColor} stroke={COLORS.navyDark} strokeWidth={2.5} />
-          <rect x={-96} y={145} width={192} height={42} rx={8} fill={COLORS.creamCard} stroke={leftColor} strokeWidth={2.5} />
-          <text
-            x={0}
-            y={172}
-            textAnchor="middle"
-            fill={leftColor}
-            fontFamily={monoFamily}
-            fontSize={18}
-            fontWeight={700}
-          >
+          <line x1={0} y1={0} x2={-48} y2={108} stroke={COLORS.goldDark} strokeWidth={3} />
+          <line x1={0} y1={0} x2={48} y2={108} stroke={COLORS.goldDark} strokeWidth={3} />
+          <path d="M -72 108 Q 0 148 72 108 Z" fill={leftColor} stroke={COLORS.navyDark} strokeWidth={2.5} />
+          <rect x={-105} y={136} width={210} height={42} rx={8} fill={COLORS.creamCard} stroke={leftColor} strokeWidth={2.5} />
+          <text x={0} y={163} textAnchor="middle" fill={leftColor} fontFamily={monoFamily} fontSize={17} fontWeight={700}>
             {leftLabel}
           </text>
         </g>
 
-        {/* Right Pan */}
         <g transform={`translate(210, 0) rotate(${-tiltDeg})`}>
-          <line x1={0} y1={0} x2={-48} y2={115} stroke={COLORS.goldDark} strokeWidth={3} />
-          <line x1={0} y1={0} x2={48} y2={115} stroke={COLORS.goldDark} strokeWidth={3} />
-          <path d="M -72 115 Q 0 155 72 115 Z" fill={rightColor} stroke={COLORS.navyDark} strokeWidth={2.5} />
-          <rect x={-96} y={145} width={192} height={42} rx={8} fill={COLORS.creamCard} stroke={rightColor} strokeWidth={2.5} />
-          <text
-            x={0}
-            y={172}
-            textAnchor="middle"
-            fill={rightColor}
-            fontFamily={monoFamily}
-            fontSize={18}
-            fontWeight={700}
-          >
+          <line x1={0} y1={0} x2={-48} y2={108} stroke={COLORS.goldDark} strokeWidth={3} />
+          <line x1={0} y1={0} x2={48} y2={108} stroke={COLORS.goldDark} strokeWidth={3} />
+          <path d="M -72 108 Q 0 148 72 108 Z" fill={rightColor} stroke={COLORS.navyDark} strokeWidth={2.5} />
+          <rect x={-105} y={136} width={210} height={42} rx={8} fill={COLORS.creamCard} stroke={rightColor} strokeWidth={2.5} />
+          <text x={0} y={163} textAnchor="middle" fill={rightColor} fontFamily={monoFamily} fontSize={17} fontWeight={700}>
             {rightLabel}
           </text>
         </g>
@@ -316,26 +222,26 @@ const OfficialStamp: React.FC<{
   color: string;
   progress: number;
   rotateDeg?: number;
-}> = ({ text, color, progress, rotateDeg = -9 }) => {
-  const scale = interpolate(progress, [0, 1], [1.9, 1]);
+}> = ({ text, color, progress, rotateDeg = -8 }) => {
+  const scale = interpolate(progress, [0, 1], [1.85, 1]);
   const opacity = interpolate(progress, [0, 0.35, 1], [0, 1, 1]);
   return (
     <div
       style={{
         display: "inline-block",
-        padding: "14px 34px",
+        padding: "14px 32px",
         border: `6px solid ${color}`,
         borderRadius: 12,
         color,
         fontFamily: monoFamily,
-        fontSize: 34,
+        fontSize: 32,
         fontWeight: 700,
-        letterSpacing: 4,
+        letterSpacing: 3.5,
         textTransform: "uppercase",
         transform: `rotate(${rotateDeg}deg) scale(${scale})`,
         opacity,
-        backgroundColor: "rgba(250, 246, 238, 0.92)",
-        boxShadow: "0 12px 28px rgba(16, 32, 51, 0.14)",
+        backgroundColor: "rgba(250, 246, 238, 0.95)",
+        boxShadow: "0 12px 28px rgba(16, 32, 51, 0.16)",
       }}
     >
       {text}
@@ -344,13 +250,13 @@ const OfficialStamp: React.FC<{
 };
 
 // ============================================================================
-// MAIN VIDEO COMPOSITION
+// MAIN VIDEO COMPOSITION — DOSYA NO: 1
 // ============================================================================
 export const OgretmenVideo: React.FC = () => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const t = frame / fps;
-  const totalDur = timelineData.totalDuration || 49.5;
+  const totalDur = timelineData.totalDuration || 49.0;
   const overallPct = Math.min(100, Math.round((t / totalDur) * 100));
 
   let activeBeat = 0;
@@ -383,11 +289,18 @@ export const OgretmenVideo: React.FC = () => {
     if (activeChunk) break;
   }
 
-  // Beat 0 camera shake on folder slam
+  // Beat 0 camera shake on argument & tutanak slam
+  const b0s1End = timelineData.segments.find((s) => s.id === "b0_s1")?.end ?? 5.5;
+  const b0s2Start = timelineData.segments.find((s) => s.id === "b0_s2")?.start ?? 5.8;
   const slamShake =
-    activeBeat === 0 && t > 2.2 && t < 2.65
-      ? Math.sin(frame * 2.6) * 7 * (1 - (t - 2.2) / 0.45)
+    activeBeat === 0 && t > b0s1End - 0.2 && t < b0s1End + 0.25
+      ? Math.sin(frame * 2.8) * 7
       : 0;
+
+  // Argument spark oscillation in Beat 0
+  const arguePhase = Math.min(1, beatLocalFrame / 30);
+  const sparkPulse = 0.75 + 0.25 * Math.sin(frame * 0.45);
+  const handedDoc = t >= b0s1End - 0.5;
 
   return (
     <AbsoluteFill
@@ -400,12 +313,9 @@ export const OgretmenVideo: React.FC = () => {
         transform: `translateX(${slamShake}px)`,
       }}
     >
-      {/* Master Audio (generated via generate_charon_v2.py) */}
       <Audio src={staticFile("audio/master_audio.mp3")} />
 
-      {/* ====================================================================
-          TOP LETTERHEAD (♦ DOSYA NO: X  |  @gyskamu)
-         ==================================================================== */}
+      {/* TOP LETTERHEAD */}
       <div
         style={{
           position: "absolute",
@@ -443,9 +353,7 @@ export const OgretmenVideo: React.FC = () => {
         </div>
       </div>
 
-      {/* ====================================================================
-          LUXURY PROGRESS PANEL (Deep Navy-Espresso + Gold Capsules)
-         ==================================================================== */}
+      {/* LUXURY PROGRESS PANEL */}
       <div
         style={{
           position: "absolute",
@@ -459,34 +367,11 @@ export const OgretmenVideo: React.FC = () => {
           boxShadow: "0 14px 34px rgba(16, 32, 51, 0.22)",
         }}
       >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            marginBottom: 14,
-          }}
-        >
-          <div
-            style={{
-              fontFamily: monoFamily,
-              fontSize: 21,
-              fontWeight: 700,
-              color: COLORS.goldBright,
-              letterSpacing: 2,
-            }}
-          >
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 14 }}>
+          <div style={{ fontFamily: monoFamily, fontSize: 20, fontWeight: 700, color: COLORS.goldBright, letterSpacing: 1.8 }}>
             BÖLÜM {BEAT_META[activeBeat].code} · {BEAT_META[activeBeat].label}
           </div>
-          <div
-            style={{
-              fontFamily: monoFamily,
-              fontSize: 19,
-              fontWeight: 700,
-              color: COLORS.creamCard,
-              letterSpacing: 1.5,
-            }}
-          >
+          <div style={{ fontFamily: monoFamily, fontSize: 19, fontWeight: 700, color: COLORS.creamCard, letterSpacing: 1.5 }}>
             %{overallPct} TAMAMLANDI
           </div>
         </div>
@@ -514,9 +399,7 @@ export const OgretmenVideo: React.FC = () => {
         </div>
       </div>
 
-      {/* ====================================================================
-          MAIN STAGE (7-Beat Animated Editorial Canvas)
-         ==================================================================== */}
+      {/* MAIN STAGE */}
       <div
         style={{
           position: "absolute",
@@ -535,69 +418,81 @@ export const OgretmenVideo: React.FC = () => {
           padding: 44,
           boxShadow: "0 20px 50px rgba(16, 32, 51, 0.10)",
           opacity: interpolate(beatEnter, [0, 1], [0.25, 1]),
-          transform: `translateY(${interpolate(beatEnter, [0, 1], [18, 0])}px)`,
+          transform: `translateY(${interpolate(beatEnter, [0, 1], [16, 0])}px)`,
         }}
       >
-        {/* BEAT 0: ACTION SCENE — Okulda Kriz / Tutanak & Savunma Anı */}
+        {/* BEAT 0: ACTION SCENE — Öğretmenler Odasında Tartışma + Tutanak + Kınama Cezası */}
         {activeBeat === 0 && (
           <div style={{ width: "100%", height: "100%", position: "relative", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between" }}>
             <div style={{ textAlign: "center" }}>
               <div style={{ fontFamily: monoFamily, fontSize: 20, color: COLORS.crimson, fontWeight: 700, letterSpacing: 3 }}>
-                OKUL MÜDÜRLÜĞÜ · ANLIK TUTANAK
+                OKULDA TARTIŞMA · HEMEN CEZA
               </div>
-              <div style={{ fontSize: 50, fontWeight: 700, color: COLORS.navyDark, marginTop: 8, lineHeight: 1.15 }}>
-                “Yarın Sabaha Kadar Savunmanı Getir!”
+              <div style={{ fontSize: 48, fontWeight: 700, color: COLORS.navyDark, marginTop: 8, lineHeight: 1.15 }}>
+                Tartıştığı Öğretmene Kendi Cezayı Kesti!
               </div>
             </div>
 
-            <svg width={860} height={540} viewBox="0 0 860 540">
-              {/* Classroom / Office Chalkboard & Wall */}
-              <rect x={70} y={24} width={720} height={190} rx={12} fill={COLORS.navyDark} stroke={COLORS.gold} strokeWidth={4} />
-              <text x={430} y={96} textAnchor="middle" fill={COLORS.goldBright} fontFamily={monoFamily} fontSize={26} fontWeight={700} letterSpacing={3}>
-                DİSİPLİN TUTANAĞI
+            <svg width={860} height={560} viewBox="0 0 860 560">
+              {/* School Board / Wall */}
+              <rect x={60} y={18} width={740} height={175} rx={12} fill={COLORS.navyDark} stroke={COLORS.gold} strokeWidth={4} />
+              <text x={430} y={84} textAnchor="middle" fill={COLORS.goldBright} fontFamily={monoFamily} fontSize={25} fontWeight={700} letterSpacing={3}>
+                OLAY TESPİT TUTANAĞI
               </text>
-              <text x={430} y={145} textAnchor="middle" fill={COLORS.creamCard} fontFamily={playfairItalicFamily} fontSize={30}>
-                Süre: Sadece 24 Saat · Sonuç: Uyarma Cezası
+              <text x={430} y={134} textAnchor="middle" fill={COLORS.creamCard} fontFamily={playfairItalicFamily} fontSize={29}>
+                Tutanak: Okul Müdürü · Ceza: Kınama Cezası
               </text>
+
+              {/* Conflict Lightning / Tension Sparks between them */}
+              {!handedDoc && (
+                <g transform={`translate(430, 270) scale(${sparkPulse})`}>
+                  <polygon points="-14,-44 10,-8 -4,-8 18,40 -14,4 2,4" fill={COLORS.crimson} stroke={COLORS.goldBright} strokeWidth={2.5} />
+                  <circle cx={0} cy={0} r={46} fill="none" stroke={COLORS.crimson} strokeWidth={2.5} strokeDasharray="8 6" opacity={0.65} />
+                </g>
+              )}
 
               {/* Floor Line */}
-              <line x1={40} y1={450} x2={820} y2={450} stroke={COLORS.divider} strokeWidth={4} />
+              <line x1={40} y1={470} x2={820} y2={470} stroke={COLORS.divider} strokeWidth={4} />
 
-              {/* Principal handing document */}
+              {/* Principal */}
               <FullBodyCharacter
-                x={250}
-                y={450}
+                x={245}
+                y={470}
                 coatColor={COLORS.navyDark}
                 accentColor={COLORS.crimson}
-                gesture="handDocumentRight"
-                gestureProg={Math.min(1, beatLocalFrame / 35)}
+                gesture={handedDoc ? "handDocumentRight" : "argueRight"}
+                gestureProg={arguePhase}
                 scale={1.08}
                 label="OKUL MÜDÜRÜ"
               />
 
-              {/* Desk in between */}
-              <rect x={365} y={348} width={130} height={102} rx={6} fill={COLORS.goldDark} stroke={COLORS.navyDark} strokeWidth={3} />
-              <rect x={352} y={336} width={156} height={18} rx={4} fill={COLORS.gold} stroke={COLORS.navyDark} strokeWidth={2.5} />
+              {/* Desk */}
+              <rect x={368} y={372} width={124} height={98} rx={6} fill={COLORS.goldDark} stroke={COLORS.navyDark} strokeWidth={3} />
+              <rect x={354} y={360} width={152} height={18} rx={4} fill={COLORS.gold} stroke={COLORS.navyDark} strokeWidth={2.5} />
 
-              {/* Teacher reacting */}
+              {/* Teacher */}
               <FullBodyCharacter
                 x={615}
-                y={450}
+                y={470}
                 coatColor={COLORS.navySoft}
                 accentColor={COLORS.gold}
-                gesture={t > 3.0 ? "shock" : "none"}
-                gestureProg={Math.min(1, Math.max(0, (t - 3.0) * 2.2))}
+                gesture={handedDoc ? "shock" : "argueLeft"}
+                gestureProg={arguePhase}
                 scale={1.08}
                 label="ÖĞRETMEN"
               />
             </svg>
 
-            {t > 5.8 && (
-              <div style={{ position: "absolute", bottom: 30 }}>
+            {t >= b0s2Start + 0.3 && (
+              <div style={{ position: "absolute", bottom: 24 }}>
                 <OfficialStamp
-                  text="UYARMA CEZASI · GEÇERLİ Mİ?"
+                  text="KINAMA CEZASI · GEÇERLİ Mİ?"
                   color={COLORS.crimson}
-                  progress={spring({ frame: Math.max(0, Math.round((t - 5.8) * fps)), fps, config: { damping: 12 } })}
+                  progress={spring({
+                    frame: Math.max(0, Math.round((t - (b0s2Start + 0.3)) * fps)),
+                    fps,
+                    config: { damping: 12 },
+                  })}
                 />
               </div>
             )}
@@ -606,7 +501,7 @@ export const OgretmenVideo: React.FC = () => {
 
         {/* BEAT 1: YAYGIN YANILGI */}
         {activeBeat === 1 && (
-          <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 36 }}>
+          <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 34 }}>
             <div
               style={{
                 backgroundColor: COLORS.crimson,
@@ -619,123 +514,127 @@ export const OgretmenVideo: React.FC = () => {
                 letterSpacing: 2.5,
               }}
             >
-              ÇOĞU ÖĞRETMEN BUNU SANIYOR
+              İLK AKLA GELEN YANILGI
             </div>
-            <div style={{ fontSize: 56, fontWeight: 700, lineHeight: 1.2, maxWidth: 820 }}>
-              “Müdür tutanağı yazdıysa artık yapacak bir şey yok!”
+            <div style={{ fontSize: 54, fontWeight: 700, lineHeight: 1.2, maxWidth: 820 }}>
+              “Okul müdürü disiplin amiridir, istediği gibi ceza kesebilir!”
             </div>
             <OfficialStamp
-              text="YANLIŞ BİLGİ"
+              text="HER ZAMAN DEĞİL"
               color={COLORS.crimson}
-              progress={spring({ frame: Math.max(0, beatLocalFrame - 12), fps, config: { damping: 11 } })}
+              progress={spring({ frame: Math.max(0, beatLocalFrame - 14), fps, config: { damping: 11 } })}
             />
             <div
               style={{
-                marginTop: 18,
+                marginTop: 14,
                 padding: "18px 34px",
                 borderRadius: 999,
                 border: `3px solid ${COLORS.gold}`,
                 backgroundColor: COLORS.navyDark,
                 color: COLORS.goldBright,
                 fontFamily: monoFamily,
-                fontSize: 26,
+                fontSize: 25,
                 fontWeight: 700,
                 letterSpacing: 2,
               }}
             >
-              ? MEVZUAT NE DİYOR ?
+              ? İDARE HUKUKU NE DİYOR ?
             </div>
           </div>
         )}
 
         {/* BEAT 2: MEVZUAT KRİTERİ */}
         {activeBeat === 2 && (
-          <div style={{ width: "100%", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 32 }}>
+          <div style={{ width: "100%", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 30 }}>
             <div style={{ fontFamily: monoFamily, fontSize: 22, color: COLORS.goldDark, fontWeight: 700, letterSpacing: 3 }}>
-              ANAYASAL GÜVENCE · KIRMIZI ÇİZGİ
+              YETKİ vs. TARAF OLMA ÇELİŞKİSİ
             </div>
-            <div style={{ display: "flex", gap: 28, width: "100%", justifyContent: "center" }}>
-              <div style={{ flex: 1, backgroundColor: COLORS.bg, border: `2.5px solid ${COLORS.navyDark}`, borderRadius: 18, padding: 32 }}>
-                <div style={{ fontFamily: monoFamily, fontSize: 24, fontWeight: 700, color: COLORS.crimson }}>ANAYASA m. 129/2</div>
-                <div style={{ fontSize: 32, fontWeight: 600, marginTop: 14, lineHeight: 1.3 }}>
-                  Memura savunma hakkı tanınmadan disiplin cezası verilemez.
+            <div style={{ display: "flex", gap: 26, width: "100%", justifyContent: "center" }}>
+              <div style={{ flex: 1, backgroundColor: COLORS.bg, border: `2.5px solid ${COLORS.navyDark}`, borderRadius: 18, padding: 30 }}>
+                <div style={{ fontFamily: monoFamily, fontSize: 23, fontWeight: 700, color: COLORS.navyDark }}>657 DMK m. 126</div>
+                <div style={{ fontSize: 31, fontWeight: 600, marginTop: 14, lineHeight: 1.3 }}>
+                  Normal şartlarda okul müdürü uyarma ve kınama amiridir.
                 </div>
               </div>
-              <div style={{ flex: 1, backgroundColor: COLORS.bg, border: `2.5px solid ${COLORS.gold}`, borderRadius: 18, padding: 32 }}>
-                <div style={{ fontFamily: monoFamily, fontSize: 24, fontWeight: 700, color: COLORS.navyDark }}>657 DMK m. 130</div>
-                <div style={{ fontSize: 32, fontWeight: 600, marginTop: 14, lineHeight: 1.3 }}>
-                  Savunma süresi idarenin keyfine bırakılamaz.
+              <div style={{ flex: 1, backgroundColor: COLORS.bg, border: `2.5px solid ${COLORS.crimson}`, borderRadius: 18, padding: 30 }}>
+                <div style={{ fontFamily: monoFamily, fontSize: 23, fontWeight: 700, color: COLORS.crimson }}>AMA BU OLAYDA</div>
+                <div style={{ fontSize: 31, fontWeight: 600, marginTop: 14, lineHeight: 1.3 }}>
+                  Müdür tartışmanın bizzat tarafı, mağduru ve şikâyetçisidir!
                 </div>
               </div>
             </div>
-            <div style={{ backgroundColor: COLORS.navyDark, color: COLORS.goldBright, padding: "16px 36px", borderRadius: 12, fontFamily: monoFamily, fontSize: 24, fontWeight: 700 }}>
-              SAVUNMASIZ CEZA = USULDEN SAKAT İŞLEM
+            <div style={{ backgroundColor: COLORS.navyDark, color: COLORS.goldBright, padding: "16px 34px", borderRadius: 12, fontFamily: monoFamily, fontSize: 23, fontWeight: 700 }}>
+              HEM ŞİKÂYETÇİ HEM CEZALANDIRICI OLUNAMAZ
             </div>
           </div>
         )}
 
-        {/* BEAT 3: HUKUKİ DAYANAK & TERAZİ */}
+        {/* BEAT 3: TARAFSIZLIK İLKESİ & DANIŞTAY TERAZİSİ */}
         {activeBeat === 3 && (
-          <div style={{ width: "100%", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 20 }}>
-            <div style={{ fontSize: 54, fontWeight: 700, color: COLORS.navyDark }}>
-              Zorunlu Savunma Süresi: <span style={{ color: COLORS.forest }}>EN AZ 7 GÜN</span>
+          <div style={{ width: "100%", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 18 }}>
+            <div style={{ fontFamily: monoFamily, fontSize: 20, color: COLORS.goldDark, fontWeight: 700, letterSpacing: 2.5 }}>
+              NEMO IUDEX IN CAUSA SUA · DANIŞTAY İÇTİHADI
+            </div>
+            <div style={{ fontSize: 48, fontWeight: 700, color: COLORS.navyDark, lineHeight: 1.15 }}>
+              “Kimse Kendi Davasının Hâkimi Olamaz!”
             </div>
             <LuxuryBalanceScale
               tiltDeg={interpolate(beatEnter, [0, 1], [-12, 11])}
-              leftLabel="24 SAAT (USULSÜZ)"
-              rightLabel="7 GÜN (KANUNİ)"
+              leftLabel="TARAF MÜDÜR"
+              rightLabel="TARAFSIZLIK İLKESİ"
             />
             <OfficialStamp
-              text="AÇIK USUL HATASI"
+              text="TARAFSIZLIK İHLALİ"
               color={COLORS.crimson}
-              progress={spring({ frame: Math.max(0, beatLocalFrame - 40), fps, config: { damping: 12 } })}
+              progress={spring({ frame: Math.max(0, beatLocalFrame - 45), fps, config: { damping: 12 } })}
             />
           </div>
         )}
 
-        {/* BEAT 4: RESMİ KARAR / SONUÇ */}
+        {/* BEAT 4: RESMİ KARAR / İPTAL */}
         {activeBeat === 4 && (
-          <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 34 }}>
-            <div style={{ fontFamily: monoFamily, fontSize: 24, color: COLORS.goldDark, fontWeight: 700, letterSpacing: 3 }}>
-              İDARE MAHKEMESİ KARARI
+          <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 30 }}>
+            <div style={{ fontFamily: monoFamily, fontSize: 23, color: COLORS.goldDark, fontWeight: 700, letterSpacing: 3 }}>
+              DOĞRU USUL & İDARE MAHKEMESİ KARARI
             </div>
             <div
               style={{
-                fontSize: 44,
+                fontSize: 42,
                 color: COLORS.textMuted,
                 textDecoration: "line-through",
                 textDecorationColor: COLORS.crimson,
                 textDecorationThickness: 6,
               }}
             >
-              “1 Günlük Süreyle Verilen Uyarma Cezası”
+              “Tartıştığı Müdürün Kestiği Kınama Cezası”
             </div>
             <div
               style={{
                 backgroundColor: COLORS.navyDark,
                 border: `3px solid ${COLORS.gold}`,
                 borderRadius: 20,
-                padding: "36px 48px",
+                padding: "34px 44px",
                 color: COLORS.creamCard,
                 boxShadow: "0 18px 40px rgba(16, 32, 51, 0.25)",
+                maxWidth: 840,
               }}
             >
-              <div style={{ fontFamily: monoFamily, fontSize: 24, color: COLORS.goldBright, letterSpacing: 2 }}>
-                KESİN SONUÇ
+              <div style={{ fontFamily: monoFamily, fontSize: 23, color: COLORS.goldBright, letterSpacing: 2 }}>
+                YETKİLİ MERCİ: ÜST AMİR / TARAFSIZ MUHAKKİK
               </div>
-              <div style={{ fontSize: 56, fontWeight: 700, marginTop: 12 }}>
-                DOĞRUDAN İPTAL EDİLİR
+              <div style={{ fontSize: 46, fontWeight: 700, marginTop: 12, lineHeight: 1.18 }}>
+                CEZA, İDARE MAHKEMESİNDE İPTAL EDİLİR
               </div>
-              <div style={{ fontFamily: monoFamily, fontSize: 22, color: COLORS.goldLight, marginTop: 14 }}>
-                657 DMK m. 130 · 60 Gün İçinde İdare Mahkemesi
+              <div style={{ fontFamily: monoFamily, fontSize: 21, color: COLORS.goldLight, marginTop: 14 }}>
+                7 Gün İtiraz (657 m. 135) · 60 Gün İptal Davası (İYUK m. 7)
               </div>
             </div>
           </div>
         )}
 
-        {/* BEAT 5: ÖĞRETMEN BİLANÇOSU */}
+        {/* BEAT 5: DOSYA BİLANÇOSU */}
         {activeBeat === 5 && (
-          <div style={{ width: "100%", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 36 }}>
+          <div style={{ width: "100%", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 34 }}>
             <div style={{ fontFamily: monoFamily, fontSize: 24, color: COLORS.goldDark, fontWeight: 700, letterSpacing: 3 }}>
               DOSYA BİLANÇOSU
             </div>
@@ -750,7 +649,7 @@ export const OgretmenVideo: React.FC = () => {
               </div>
             </div>
             <div style={{ fontSize: 34, fontStyle: "italic", fontFamily: playfairItalicFamily, color: COLORS.navy }}>
-              “Usul, esasın koruyucusudur.”
+              “Tarafsızlık olmadan disiplin adaleti olmaz.”
             </div>
           </div>
         )}
@@ -758,8 +657,8 @@ export const OgretmenVideo: React.FC = () => {
         {/* BEAT 6: ÖĞRETMENLER NE DİYOR? & CTA */}
         {activeBeat === 6 && (
           <div style={{ textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center", gap: 30 }}>
-            <div style={{ fontSize: 52, fontWeight: 700, color: COLORS.navyDark, lineHeight: 1.2 }}>
-              Senin veya bir meslektaşının başına geldi mi?
+            <div style={{ fontSize: 50, fontWeight: 700, color: COLORS.navyDark, lineHeight: 1.2 }}>
+              Senin veya bir meslektaşının başına böyle bir olay geldi mi?
             </div>
             <div
               style={{
@@ -777,7 +676,7 @@ export const OgretmenVideo: React.FC = () => {
             </div>
             <div
               style={{
-                marginTop: 18,
+                marginTop: 14,
                 backgroundColor: COLORS.navyDark,
                 border: `3px solid ${COLORS.goldBright}`,
                 borderRadius: 20,
@@ -797,9 +696,7 @@ export const OgretmenVideo: React.FC = () => {
         )}
       </div>
 
-      {/* ====================================================================
-          DYNAMIC WORD-SYNCED SUBTITLE BAR (Bottom Safe Zone)
-         ==================================================================== */}
+      {/* DYNAMIC WORD-SYNCED SUBTITLE BAR */}
       <div
         style={{
           position: "absolute",

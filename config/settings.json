@@ -2,7 +2,7 @@
   "project_name": "GYSKAMU Öğretmen VideoLab",
   "brand_name": "GYSKAMU",
   "brand_handle": "@gyskamu",
-  "gemini_api_key": "AIzaSyC3GiCewGE9Uv7w0R6stgnm51cRZysiaF8",
+  "gemini_api_key": "",
   "tts": {
     "model": "gemini-2.5-flash-preview-tts",
     "voice_name": "Charon",

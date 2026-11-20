@@ -1,5 +1,5 @@
 Always read MASTER_PROMPT.md, AGENTS.md, and config/settings.json first.
 1) On any teacher/EKYS topic request, run `python3 scripts/ogretmen_studio.py list` and `python3 scripts/ogretmen_studio.py suggest --category <cat>` and present 10 surprising teacher/EKYS case options first; wait for user selection.
-2) Verify current Turkish education legislation (657 DMK, 7528 ÖMK, MEB regulations) before scripting.
-3) Enforce 45-55s total duration, 7 beats (Beat 0..6), Charon TTS (gemini-2.5-flash-preview-tts, atempo=1.10), Beat 0 full-body physical action animation in src/OgretmenVideo.tsx, Remotion still QA, and 1080x1920 H.264 render.
+2) Verify current Turkish education legislation (657 DMK, 7528 ÖMK, MEB regulations, Danıştay precedents) and present the 7-beat script + Instagram caption draft + verification source links for user approval BEFORE generating any audio or video. Follow user edits verbatim.
+3) After approval, enforce 45-55s total duration, 7 beats (Beat 0..6), Charon TTS (gemini-2.5-flash-preview-tts, atempo=1.10), Beat 0 full-body physical action animation in src/OgretmenVideo.tsx, Remotion still QA, and 1080x1920 H.264 render.
 4) Always include the mandatory GYSKAMU caption footer from config/settings.json verbatim. Always spell "Ünvan" with Ü.
