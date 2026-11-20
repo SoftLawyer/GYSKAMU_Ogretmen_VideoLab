@@ -1,33 +1,33 @@
 {
-  "totalDuration": 53.0359,
+  "totalDuration": 47.1527,
   "beats": [
     {
       "start": 0.0,
-      "end": 10.1881
+      "end": 9.261
     },
     {
-      "start": 10.1881,
-      "end": 16.5757
+      "start": 9.261,
+      "end": 12.4646
     },
     {
-      "start": 16.5757,
-      "end": 23.1097
+      "start": 12.4646,
+      "end": 17.8219
     },
     {
-      "start": 23.1097,
-      "end": 32.9351
+      "start": 17.8219,
+      "end": 27.1159
     },
     {
-      "start": 32.9351,
-      "end": 41.2603
+      "start": 27.1159,
+      "end": 33.3856
     },
     {
-      "start": 41.2603,
-      "end": 45.1972
+      "start": 33.3856,
+      "end": 40.2056
     },
     {
-      "start": 45.1972,
-      "end": 53.0359
+      "start": 40.2056,
+      "end": 47.1527
     }
   ],
   "segments": [
@@ -36,12 +36,12 @@
       "beat": 0,
       "text": "Okulda öğretmen ile müdür arasında sert bir tartışma çıktı.",
       "raw_range": [
-        0.0,
-        0.0
+        0.26,
+        3.54
       ],
       "start": 0.18,
-      "end": 3.3505,
-      "duration": 3.1705,
+      "end": 3.1576,
+      "duration": 2.9776,
       "sub_chunks": [
         {
           "words": [
@@ -56,7 +56,7 @@
             3
           ],
           "start": 0.18,
-          "end": 2.0386
+          "end": 1.9255
         },
         {
           "words": [
@@ -69,8 +69,8 @@
             0,
             2
           ],
-          "start": 2.0386,
-          "end": 3.3505
+          "start": 1.9255,
+          "end": 3.1576
         }
       ]
     },
@@ -79,12 +79,12 @@
       "beat": 0,
       "text": "Müdür hemen kendi eliyle tutanak tuttu.",
       "raw_range": [
-        0.0,
-        0.0
+        4.04,
+        6.2
       ],
-      "start": 3.4705,
-      "end": 5.6715,
-      "duration": 2.201,
+      "start": 3.2776,
+      "end": 5.2457,
+      "duration": 1.9682,
       "sub_chunks": [
         {
           "words": [
@@ -97,8 +97,8 @@
             0,
             2
           ],
-          "start": 3.4705,
-          "end": 4.8606
+          "start": 3.2776,
+          "end": 4.5207
         },
         {
           "words": [
@@ -109,8 +109,8 @@
             0,
             1
           ],
-          "start": 4.8606,
-          "end": 5.6715
+          "start": 4.5207,
+          "end": 5.2457
         }
       ]
     },
@@ -119,12 +119,12 @@
       "beat": 0,
       "text": "Savunmasını alıp hemen kınama cezası kesti.",
       "raw_range": [
-        0.0,
-        0.0
+        6.66,
+        9.14
       ],
-      "start": 5.7915,
-      "end": 8.4236,
-      "duration": 2.6321,
+      "start": 5.3657,
+      "end": 7.632,
+      "duration": 2.2662,
       "sub_chunks": [
         {
           "words": [
@@ -136,8 +136,8 @@
             0,
             2
           ],
-          "start": 5.7915,
-          "end": 7.1702
+          "start": 5.3657,
+          "end": 6.5528
         },
         {
           "words": [
@@ -149,8 +149,8 @@
             0,
             1
           ],
-          "start": 7.1702,
-          "end": 8.4236
+          "start": 6.5528,
+          "end": 7.632
         }
       ]
     },
@@ -159,12 +159,12 @@
       "beat": 0,
       "text": "Peki bu ceza geçerli mi?",
       "raw_range": [
-        0.0,
-        0.0
+        9.76,
+        11.2
       ],
-      "start": 8.5436,
-      "end": 9.9881,
-      "duration": 1.4446,
+      "start": 7.752,
+      "end": 9.061,
+      "duration": 1.3091,
       "sub_chunks": [
         {
           "words": [
@@ -179,8 +179,8 @@
             3,
             4
           ],
-          "start": 8.5436,
-          "end": 9.9881
+          "start": 7.752,
+          "end": 9.061
         }
       ]
     },
@@ -189,12 +189,12 @@
       "beat": 1,
       "text": "İlk akla gelen yanıt: Müdür disiplin amiri, yetkisi var.",
       "raw_range": [
-        0.0,
-        0.0
+        12.06,
+        13.2
       ],
-      "start": 10.1881,
-      "end": 13.5907,
-      "duration": 3.4025,
+      "start": 9.261,
+      "end": 10.3107,
+      "duration": 1.0497,
       "sub_chunks": [
         {
           "words": [
@@ -207,8 +207,8 @@
             0,
             3
           ],
-          "start": 10.1881,
-          "end": 11.4872
+          "start": 9.261,
+          "end": 9.6618
         },
         {
           "words": [
@@ -223,8 +223,8 @@
             2,
             3
           ],
-          "start": 11.4872,
-          "end": 13.5907
+          "start": 9.6618,
+          "end": 10.3107
         }
       ]
     },
@@ -233,12 +233,12 @@
       "beat": 1,
       "text": "Ancak hukuk burada net bir kırmızı çizgi çizer.",
       "raw_range": [
-        0.0,
-        0.0
+        13.44,
+        15.44
       ],
-      "start": 13.7107,
-      "end": 16.3757,
-      "duration": 2.6651,
+      "start": 10.4307,
+      "end": 12.2646,
+      "duration": 1.8339,
       "sub_chunks": [
         {
           "words": [
@@ -252,8 +252,8 @@
             1,
             3
           ],
-          "start": 13.7107,
-          "end": 15.217
+          "start": 10.4307,
+          "end": 11.4672
         },
         {
           "words": [
@@ -265,8 +265,8 @@
             0,
             1
           ],
-          "start": 15.217,
-          "end": 16.3757
+          "start": 11.4672,
+          "end": 12.2646
         }
       ]
     },
@@ -275,12 +275,12 @@
       "beat": 2,
       "text": "657 sayılı Kanunda müdür normalde yetkilidir.",
       "raw_range": [
-        0.0,
-        0.0
+        16.12,
+        18.62
       ],
-      "start": 16.5757,
-      "end": 19.5868,
-      "duration": 3.0111,
+      "start": 12.4646,
+      "end": 14.7437,
+      "duration": 2.2791,
       "sub_chunks": [
         {
           "words": [
@@ -292,8 +292,8 @@
             0,
             2
           ],
-          "start": 16.5757,
-          "end": 17.8075
+          "start": 12.4646,
+          "end": 13.397
         },
         {
           "words": [
@@ -305,8 +305,8 @@
             0,
             2
           ],
-          "start": 17.8075,
-          "end": 19.5868
+          "start": 13.397,
+          "end": 14.7437
         }
       ]
     },
@@ -315,12 +315,12 @@
       "beat": 2,
       "text": "Ama bu olayda tartışmanın bizzat tarafı ve şikayetçisidir.",
       "raw_range": [
-        0.0,
-        0.0
+        19.34,
+        22.36
       ],
-      "start": 19.7068,
-      "end": 22.9097,
-      "duration": 3.2029,
+      "start": 14.8637,
+      "end": 17.6219,
+      "duration": 2.7581,
       "sub_chunks": [
         {
           "words": [
@@ -332,8 +332,8 @@
           "highlight": [
             3
           ],
-          "start": 19.7068,
-          "end": 21.1116
+          "start": 14.8637,
+          "end": 16.0734
         },
         {
           "words": [
@@ -346,8 +346,8 @@
             1,
             3
           ],
-          "start": 21.1116,
-          "end": 22.9097
+          "start": 16.0734,
+          "end": 17.6219
         }
       ]
     },
@@ -356,12 +356,12 @@
       "beat": 3,
       "text": "İşte burada temel bir ilke devreye girer:",
       "raw_range": [
-        0.0,
-        0.0
+        22.84,
+        26.08
       ],
-      "start": 23.1097,
-      "end": 25.2594,
-      "duration": 2.1496,
+      "start": 17.8219,
+      "end": 20.776,
+      "duration": 2.9542,
       "sub_chunks": [
         {
           "words": [
@@ -377,8 +377,8 @@
             2,
             4
           ],
-          "start": 23.1097,
-          "end": 25.2594
+          "start": 17.8219,
+          "end": 20.776
         }
       ]
     },
@@ -387,12 +387,12 @@
       "beat": 3,
       "text": "Kimse kendi davasının hâkimi olamaz.",
       "raw_range": [
-        0.0,
-        0.0
+        26.8,
+        28.9
       ],
-      "start": 25.3594,
-      "end": 27.6049,
-      "duration": 2.2455,
+      "start": 20.876,
+      "end": 22.7944,
+      "duration": 1.9183,
       "sub_chunks": [
         {
           "words": [
@@ -407,8 +407,8 @@
             2,
             3
           ],
-          "start": 25.3594,
-          "end": 27.6049
+          "start": 20.876,
+          "end": 22.7944
         }
       ]
     },
@@ -417,12 +417,12 @@
       "beat": 3,
       "text": "Danıştay kararları bu konuda çok nettir.",
       "raw_range": [
-        0.0,
-        0.0
+        29.38,
+        31.64
       ],
-      "start": 27.7449,
-      "end": 30.0406,
-      "duration": 2.2957,
+      "start": 22.9344,
+      "end": 25.0,
+      "duration": 2.0656,
       "sub_chunks": [
         {
           "words": [
@@ -438,8 +438,8 @@
             1,
             5
           ],
-          "start": 27.7449,
-          "end": 30.0406
+          "start": 22.9344,
+          "end": 25.0
         }
       ]
     },
@@ -448,12 +448,12 @@
       "beat": 3,
       "text": "Olayın tarafı olan amir tarafsızlığını yitirir.",
       "raw_range": [
-        0.0,
-        0.0
+        32.1,
+        34.06
       ],
-      "start": 30.1606,
-      "end": 32.7351,
-      "duration": 2.5745,
+      "start": 25.12,
+      "end": 26.9159,
+      "duration": 1.7959,
       "sub_chunks": [
         {
           "words": [
@@ -466,8 +466,8 @@
             1,
             3
           ],
-          "start": 30.1606,
-          "end": 31.4479
+          "start": 25.12,
+          "end": 26.0179
         },
         {
           "words": [
@@ -478,8 +478,8 @@
             0,
             1
           ],
-          "start": 31.4479,
-          "end": 32.7351
+          "start": 26.0179,
+          "end": 26.9159
         }
       ]
     },
@@ -488,12 +488,12 @@
       "beat": 4,
       "text": "Sonuç ne mi olur?",
       "raw_range": [
-        0.0,
-        0.0
+        34.58,
+        36.94
       ],
-      "start": 32.9351,
-      "end": 34.0336,
-      "duration": 1.0985,
+      "start": 27.1159,
+      "end": 29.2698,
+      "duration": 2.154,
       "sub_chunks": [
         {
           "words": [
@@ -506,8 +506,8 @@
             0,
             1
           ],
-          "start": 32.9351,
-          "end": 34.0336
+          "start": 27.1159,
+          "end": 29.2698
         }
       ]
     },
@@ -516,12 +516,12 @@
       "beat": 4,
       "text": "Soruşturmayı üst amir veya tarafsız muhakkik yürütmeliydi.",
       "raw_range": [
-        0.0,
-        0.0
+        37.42,
+        38.3
       ],
-      "start": 34.1536,
-      "end": 37.4532,
-      "duration": 3.2996,
+      "start": 29.3898,
+      "end": 30.1951,
+      "duration": 0.8052,
       "sub_chunks": [
         {
           "words": [
@@ -534,8 +534,8 @@
             1,
             2
           ],
-          "start": 34.1536,
-          "end": 35.6587
+          "start": 29.3898,
+          "end": 29.7571
         },
         {
           "words": [
@@ -547,8 +547,8 @@
             0,
             1
           ],
-          "start": 35.6587,
-          "end": 37.4532
+          "start": 29.7571,
+          "end": 30.1951
         }
       ]
     },
@@ -557,12 +557,12 @@
       "beat": 4,
       "text": "Müdürün kestiği kınama cezası İdare Mahkemesinde iptal edilir.",
       "raw_range": [
-        0.0,
-        0.0
+        38.78,
+        41.92
       ],
-      "start": 37.5732,
-      "end": 41.0603,
-      "duration": 3.4871,
+      "start": 30.3151,
+      "end": 33.1856,
+      "duration": 2.8706,
       "sub_chunks": [
         {
           "words": [
@@ -575,8 +575,8 @@
             2,
             3
           ],
-          "start": 37.5732,
-          "end": 39.231
+          "start": 30.3151,
+          "end": 31.6798
         },
         {
           "words": [
@@ -590,8 +590,8 @@
             1,
             2
           ],
-          "start": 39.231,
-          "end": 41.0603
+          "start": 31.6798,
+          "end": 33.1856
         }
       ]
     },
@@ -600,12 +600,12 @@
       "beat": 5,
       "text": "Sonuçta elde bir tutanak var,",
       "raw_range": [
-        0.0,
-        0.0
+        42.4,
+        45.84
       ],
-      "start": 41.2603,
-      "end": 43.0212,
-      "duration": 1.7609,
+      "start": 33.3856,
+      "end": 36.5198,
+      "duration": 3.1341,
       "sub_chunks": [
         {
           "words": [
@@ -619,8 +619,8 @@
             2,
             3
           ],
-          "start": 41.2603,
-          "end": 43.0212
+          "start": 33.3856,
+          "end": 36.5198
         }
       ]
     },
@@ -629,12 +629,12 @@
       "beat": 5,
       "text": "ama hukuken geçerli bir ceza yok.",
       "raw_range": [
-        0.0,
-        0.0
+        46.36,
+        50.1
       ],
-      "start": 43.1012,
-      "end": 44.9972,
-      "duration": 1.896,
+      "start": 36.5998,
+      "end": 40.0056,
+      "duration": 3.4058,
       "sub_chunks": [
         {
           "words": [
@@ -650,8 +650,8 @@
             4,
             5
           ],
-          "start": 43.1012,
-          "end": 44.9972
+          "start": 36.5998,
+          "end": 40.0056
         }
       ]
     },
@@ -660,12 +660,12 @@
       "beat": 6,
       "text": "Senin veya bir meslektaşının başına böyle bir olay geldi mi?",
       "raw_range": [
-        0.0,
-        0.0
+        50.46,
+        53.44
       ],
-      "start": 45.1972,
-      "end": 48.4778,
-      "duration": 3.2806,
+      "start": 40.2056,
+      "end": 42.9174,
+      "duration": 2.7118,
       "sub_chunks": [
         {
           "words": [
@@ -678,8 +678,8 @@
             0,
             3
           ],
-          "start": 45.1972,
-          "end": 46.7541
+          "start": 40.2056,
+          "end": 41.4926
         },
         {
           "words": [
@@ -694,8 +694,8 @@
             3,
             4
           ],
-          "start": 46.7541,
-          "end": 48.4778
+          "start": 41.4926,
+          "end": 42.9174
         }
       ]
     },
@@ -704,12 +704,12 @@
       "beat": 6,
       "text": "Deneyimini yorumlara yaz.",
       "raw_range": [
-        0.0,
-        0.0
+        53.84,
+        55.02
       ],
-      "start": 48.5978,
-      "end": 49.9322,
-      "duration": 1.3344,
+      "start": 43.0374,
+      "end": 44.124,
+      "duration": 1.0866,
       "sub_chunks": [
         {
           "words": [
@@ -721,8 +721,8 @@
             0,
             1
           ],
-          "start": 48.5978,
-          "end": 49.9322
+          "start": 43.0374,
+          "end": 44.124
         }
       ]
     },
@@ -731,12 +731,12 @@
       "beat": 6,
       "text": "Yeni öğretmen dosyaları için GYSKAMU'yu takip et.",
       "raw_range": [
-        0.0,
-        0.0
+        55.44,
+        58.291
       ],
-      "start": 50.0522,
-      "end": 52.7359,
-      "duration": 2.6837,
+      "start": 44.244,
+      "end": 46.8527,
+      "duration": 2.6086,
       "sub_chunks": [
         {
           "words": [
@@ -749,8 +749,8 @@
             1,
             2
           ],
-          "start": 50.0522,
-          "end": 51.6177
+          "start": 44.244,
+          "end": 45.7657
         },
         {
           "words": [
@@ -762,8 +762,8 @@
             0,
             1
           ],
-          "start": 51.6177,
-          "end": 52.7359
+          "start": 45.7657,
+          "end": 46.8527
         }
       ]
     }
