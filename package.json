@@ -1,0 +1,24 @@
+{
+  "name": "gyskamu-ogretmen-videolab",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "studio": "remotion studio",
+    "audio": "python3 generate_charon_v2.py",
+    "render": "remotion render src/index.ts OgretmenDosya out/gyskamu_ogretmen_dosya.mp4 --codec=h264 --crf=18",
+    "suggest": "python3 scripts/ogretmen_studio.py suggest",
+    "validate": "python3 scripts/ogretmen_studio.py validate",
+    "list": "python3 scripts/ogretmen_studio.py list"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.242",
+    "@remotion/google-fonts": "4.0.242",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "4.0.242"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "typescript": "^5.5.4"
+  }
+}

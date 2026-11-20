@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0",
+  "workflow_locks": {
+    "step_1_ten_options_rule": "Kullanıcı bir öğretmenlik/EKYS alanı veya konu istediğinde (ör. 'EKYS konusu', 'öğretmen hakları', 'disiplin', 'ek ders ve nöbet', 'izin ve tayin') doğrudan video üretimine geçilmez. Önce daha önce işlenmemiş 10 adet şaşırtıcı, çoğu öğretmenin yanlış bildiği veya merak uyandıran vaka/dosya seçeneği (başlık + 1-2 cümlelik olay kancası + ilgili kanun/yönetmelik maddesi) numaralı liste halinde sunulur ve kullanıcının seçimi beklenir.",
+    "step_2_legislation_verification_lock": "MEB yönetmelikleri, EKYS kuralları, 7528 sayılı Öğretmenlik Mesleği Kanunu (ÖMK) ve 657 sayılı DMK uygulamaları sık güncellendiği için, seçilen konunun madde numarası ve yürürlük durumu üretim öncesinde mutlaka web'den doğrulanır.",
+    "step_3_duration_lock": "Tüm videolar 45 ile 55 saniye arasında olmak zorundadır (45.0s <= totalDuration <= 55.5s). Bunun için seslendirme metni 7 bölüm (Beat 0..6) ve 16-20 konuşma segmenti halinde, toplam 100-128 kelime aralığında kurgulanır.",
+    "step_4_action_animation_lock": "Beat 0 (Olay Anı / 01/07) asla sabit portre veya sadece yazı olamaz. Olayın fiziksel aksiyonu (ör. okul müdürünün tebliğ uzatması, öğretmenin dersten/nöbetten çağrılması, disiplin zarfı, sınav salonu/okul koridoru sahnesi, şok tepkisi vb.) FullBodyCharacter ve vektör aksiyon animasyonlarıyla bizzat sahnelenir.",
+    "step_5_luxury_design_lock": "Üstte '♦ DOSYA NO: [X]' (@gyskamu) plaketi, altında koyu lacivert-espresso (#102033) ve antik altın (#C5A059) kaplamalı 7 kapsüllü lüks ilerleme paneli (BÖLÜM 01/07..07/07 ve % TAMAMLANDI göstergesi), sıcak parşömen (#F3EEE4) zemin standarttır.",
+    "step_6_visual_qa_lock": "Tam MP4 render öncesinde veya sonrasında npx remotion still ile sahne kareleri alınarak yazı çakışması/taşma olmadığı doğrulanır.",
+    "step_7_caption_and_spelling_lock": "Video hazırlandığında Instagram Reels açıklama (caption) metni de otomatik olarak verilir ve altına config/settings.json içindeki 'GYSKAMU size; ...' sabit bloğu kelimesi kelimesine eklenir. 'Ünvan' her zaman Ü ile yazılır; CTA'da 'her hafta' değil 'her seferinde' kullanılır."
+  },
+  "palette": {
+    "bg_parchment": "#F3EEE4",
+    "card_ivory": "#FAF6EE",
+    "card_dark": "#EAE1D0",
+    "ink_navy": "#102033",
+    "ink_navy_soft": "#1D3552",
+    "ink_espresso": "#1C1510",
+    "gold_accent": "#C5A059",
+    "gold_dark": "#8C6D32",
+    "gold_bright": "#E5C882",
+    "crimson_verdict": "#9E212B",
+    "forest_ok": "#1F5E3B",
+    "text_muted": "#6E655A"
+  }
+}

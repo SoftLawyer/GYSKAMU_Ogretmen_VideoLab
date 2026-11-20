@@ -1,0 +1,9 @@
+node_modules/
+out/
+out_stills/
+.DS_Store
+__pycache__/
+*.pyc
+public/audio/charon_v2_*.wav
+public/audio/master_audio.wav
+.env

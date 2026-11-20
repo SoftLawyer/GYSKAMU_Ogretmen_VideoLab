@@ -1,0 +1,364 @@
+{
+  "categories": {
+    "ekys": [
+      {
+        "id": "ekys_01",
+        "title": "EKYS'den 90 Puan Aldı Ama Müdür Olamadı! (Yönetici Yetiştirme Programı Şartı)",
+        "hook": "Türkiye derecesi yaptı, 90 puanla sınavı geçti... Ama atama ekranı açıldığında doğrudan müdür olamayacağını öğrendi!",
+        "summary": "Güncel MEB Eğitim Kurumları Yönetici Görevlendirme Yönetmeliği'ne göre EKYS yazılı sınavından en az 60 puan almak tek başına yönetici ataması için yetmez; Milli Eğitim Akademisi yönetici yetiştirme programı süreci ve ek değerlendirme kriterleri belirleyicidir.",
+        "laws": ["7528 sayılı Öğretmenlik Mesleği Kanunu", "MEB Eğitim Kurumları Yönetici Görevlendirme Yönetmeliği (güncel sürüm doğrulanmalı)"]
+      },
+      {
+        "id": "ekys_02",
+        "title": "Müdür Yardımcısından Doğrudan Müdürlüğe Geçiş: Otomatik Hak mı, Tuzak mı?",
+        "hook": "4 yıl müdür yardımcılığı yaptı, 'artık müdürlüğe doğrudan geçerim' dedi... Başvurusu sistemden reddedildi!",
+        "summary": "Müdür yardımcılığı yapmış olmak otomatik müdürlük hakkı vermez. Müdürlük başvurusu için yönetmelikte sayılan belirli görev süreleri (kurucu müdürlük, müdür başyardımcılığı veya belirli süre müdür yardımcılığı) ve sınav/akademi şartları ayrı ayrı aranır.",
+        "laws": ["MEB Eğitim Kurumları Yönetici Görevlendirme Yönetmeliği", "7528 sayılı ÖMK"]
+      },
+      {
+        "id": "ekys_03",
+        "title": "Aynı Okulda 8 Yıl Müdürlük Yaptı: 9. Yılda Ne Olur?",
+        "hook": "Okulunu zirveye taşıdı, herkes memnundu... Ama 8. yılın sonunda aynı okulda kalması kanunen imkânsız hale geldi!",
+        "summary": "Eğitim kurumu yöneticileri 4 yıllık sürelerle görevlendirilir ve aynı ünvanla aynı eğitim kurumunda en fazla 8 yıl (4+4) görev yapabilirler. 8 yılın sonunda aynı okulda yeniden görevlendirilemezler; başka kurumlara başvurmak zorundadırlar.",
+        "laws": ["MEB Eğitim Kurumları Yönetici Görevlendirme Yönetmeliği (Görev Süresi ve 8 Yıl Sınırı)"]
+      },
+      {
+        "id": "ekys_04",
+        "title": "Yöneticiliği Kendi İsteğiyle Bırakan Öğretmen 1 Yıl Ceza mı Yer?",
+        "hook": "Sağlık ve aile gerekçesiyle müdür yardımcılığından istifa etti... Ertesi dönem tekrar başvurmak isteyince 'yasaklısın' yanıtını aldı!",
+        "summary": "Yöneticilik görevinden kendi isteğiyle ayrılanlar, yönetmelikte öngörülen bekleme süresi (1 yıl) dolmadan yeniden yöneticilik görevlendirmesine başvuramazlar.",
+        "laws": ["MEB Eğitim Kurumları Yönetici Görevlendirme Yönetmeliği (Yöneticilikten Ayrılma)"]
+      },
+      {
+        "id": "ekys_05",
+        "title": "EKYS'de Yaş Sınırı Var mı? 55 Yaşındaki Öğretmen Müdür Olabilir mi?",
+        "hook": "25 yıllık kıdemli öğretmen EKYS'ye hazırlanıyordu... Öğretmenler odasında 'yaşın geçti, giremezsin' dediler!",
+        "summary": "EKYS'ye başvuru ve eğitim kurumu yöneticiliğine görevlendirmede üst yaş sınırı bulunmaz; genel emeklilik yaş haddine kadar şartları taşıyan her öğretmen başvurabilir.",
+        "laws": ["MEB Eğitim Kurumları Yönetici Görevlendirme Yönetmeliği", "657 sayılı DMK"]
+      },
+      {
+        "id": "ekys_06",
+        "title": "Sözlü Mülakat Kaldırıldı mı? EKYS Puanı Tek Başına Yeter mi?",
+        "hook": "'Torpil var, mülakatta elerler' diye sınava girmedi... Oysa yönetmelikte mülakatın kaderi çoktan değişmişti!",
+        "summary": "Yönetici görevlendirme sisteminde yapılan son düzenlemelerle sözlü sınav/mülakat uygulaması ve puan ağırlıkları köklü değişikliğe uğramıştır. Başvuru öncesi yürürlükteki yönetmelik maddesi ve Akademi süreci mutlaka kontrol edilmelidir.",
+        "laws": ["7528 sayılı ÖMK", "MEB Eğitim Kurumları Yönetici Görevlendirme Yönetmeliği"]
+      },
+      {
+        "id": "ekys_07",
+        "title": "Her Branştan Öğretmen Her Okula Müdür Olabilir mi?",
+        "hook": "Lise branş öğretmeni ilkokula, sınıf öğretmeni meslek lisesine müdürlük tercih etti... Sistem neden kırmızı yaktı?",
+        "summary": "Eğitim kurumlarına yönetici görevlendirmelerinde okul türüne göre branş önceliği ve şartı aranır; örneğin anaokulu, ilkokul, imam hatip ve mesleki-teknik okullarda ilgili alandan aylık karşılığı okutabileceği ders bulunan öğretmenlere öncelik veya zorunlu şart uygulanır.",
+        "laws": ["MEB Eğitim Kurumları Yönetici Görevlendirme Yönetmeliği (Müdürlük Özel Şartları)"]
+      },
+      {
+        "id": "ekys_08",
+        "title": "Vekaleten Müdürlük Yaptığı 3 Yıl EKYS'de Boşa mı Gitti?",
+        "hook": "3 yıl boyunca okulun tüm yükünü vekaleten sırtladı... Asaleten başvuruda bu sürenin sayılıp sayılmayacağını görünce şoke oldu!",
+        "summary": "Vekaleten veya geçici görevlendirme ile yürütülen yöneticilik sürelerinin asaleten yöneticilik başvurusundaki hizmet süresi şartına ve değerlendirme puanına etkisi yönetmelikte ayrı düzenlenmiştir; çoğu kişi vekalet süresinin tamamen boşa gittiğini sanır.",
+        "laws": ["MEB Eğitim Kurumları Yönetici Görevlendirme Yönetmeliği (Yöneticilik Sürelerinin Hesaplanması)"]
+      },
+      {
+        "id": "ekys_09",
+        "title": "Kınama Cezası Alan Öğretmen EKYS ile Yönetici Olabilir mi?",
+        "hook": "3 yıl önce küçük bir tutanak yüzünden kınama cezası aldı... EKYS'yi kazandı ama 'disiplin engeli' ile karşılaştı!",
+        "summary": "Yönetici olarak görevlendirileceklerde son 4 yıl içinde adli veya idari soruşturma sonucu yöneticilik görevi üzerinden alınmamış olmak ve belirli disiplin cezalarını (aylıktan kesme, kademe ilerlemesinin durdurulması vb.) almamış olmak gibi şartlar aranır; uyarma/kınama ile ağır cezaların etkisi farklıdır.",
+        "laws": ["657 sayılı DMK m. 125 & m. 133", "MEB Eğitim Kurumları Yönetici Görevlendirme Yönetmeliği"]
+      },
+      {
+        "id": "ekys_10",
+        "title": "Görev Süresi Dolan Müdür 4 Yıl Sonra Otomatik Uzatılır mı?",
+        "hook": "4 yıl doldu, hiçbir başvuru yapmadan koltuğunda oturmaya devam etti... Temmuz ayında kararnamesinin bittiğini öğrendi!",
+        "summary": "Eğitim kurumu yöneticilerinin 4 yıllık görev süresi dolduğunda görev otomatik olarak uzamaz. Yeniden görevlendirme takviminde elektronik ortamda başvuru yapıp değerlendirme puanıyla sıralamaya girmeyen yöneticinin görevi sona erer ve öğretmenliğe döner.",
+        "laws": ["MEB Eğitim Kurumları Yönetici Görevlendirme Yönetmeliği (Yeniden Görevlendirme)"]
+      }
+    ],
+    "ogretmen_haklari": [
+      {
+        "id": "hak_01",
+        "title": "Yaz Tatili Öğretmenin Yıllık İzni midir? (657 DMK m. 102-103 Gerçeği)",
+        "hook": "Okul müdürü 'yazın zaten tatildesin, yıllık izin hakkın yok' dedi... Peki 657 sayılı Kanun gerçekten ne diyor?",
+        "summary": "657 sayılı DMK m. 103'e göre öğretmenler yaz tatili ile dinlenme tatillerinde izinli sayılırlar ve bunlara hastalık ve diğer mazeret izinleri dışında ayrıca yıllık izin verilmez. Ancak yaz tatili sadece 'tatil' değil, kanunen yıllık iznin karşılığıdır ve seminer/görevlendirme sınırları kanunla çizilmiştir.",
+        "laws": ["657 sayılı DMK m. 102 ve m. 103", "MEB İzin Yönergesi"]
+      },
+      {
+        "id": "hak_02",
+        "title": "Norm Kadro Fazlası Öğretmen Re'sen İstemediği İlçeye Sürülebilir mi?",
+        "hook": "Okulda ders saati düştü, norm fazlası ilan edildi... Tercih yapmazsa 80 km ötedeki ilçeye re'sen atanacağını öğrendi!",
+        "summary": "Norm kadro fazlası öğretmenlere önce ilçe/il içi tercih hakkı tanınır; tercih yapmayan veya tercihine yerleşemeyenler idarece re'sen atanabilir. Ancak Danıştay kararlarına göre aile bütünlüğü, ulaşım makuliyeti ve hizmet puanı üstünlüğü gözetilmeden yapılan keyfi re'sen atamalar idari yargıdan dönebilmektedir.",
+        "laws": ["MEB Öğretmen Atama ve Yer Değiştirme Yönetmeliği", "Danıştay İdari Dava Kararları"]
+      },
+      {
+        "id": "hak_03",
+        "title": "Aynı Okulda 12 Yıl Kuralı: Rotasyon Gerçekten Uygulanıyor mu?",
+        "hook": "Aynı okulda 13. yılına girdi, 'artık kimse beni buradan kıpırdatamaz' dedi... Oysa kanunda 12 yıl rotasyon maddesi hâlâ duruyor!",
+        "summary": "MEB Öğretmen Atama ve Yer Değiştirme Yönetmeliği'nde aynı eğitim kurumunda azami 12 yıl çalışma sınırı yer alır; ancak uygulamada çeşitli istisnalar, ertelemeler ve 7528 sayılı ÖMK kapsamındaki yeni düzenlemeler belirleyicidir.",
+        "laws": ["7528 sayılı ÖMK", "MEB Öğretmen Atama ve Yer Değiştirme Yönetmeliği"]
+      },
+      {
+        "id": "hak_04",
+        "title": "Memuriyetten İstifa Eden Öğretmen Bir Daha Öğretmenliğe Dönebilir mi?",
+        "hook": "Özel sektöre geçmek için istifa dilekçesini verdi... 2 yıl sonra pişman olup dönmek istediğinde 6 ay mı, 1 yıl mı, yoksa ömür boyu mu bekleyecek?",
+        "summary": "657 sayılı DMK m. 92 ve m. 97 uyarınca usulüne uygun çekilenler 6 ay, usulsüz çekilenler 1 yıl geçmeden dönemez; ayrıca memurluktan istifa hakkı en fazla 2 defa kullanılabilir (m. 92) ve dönüşte kadro/kontenjan şartı aranır.",
+        "laws": ["657 sayılı DMK m. 92, m. 94, m. 97"]
+      },
+      {
+        "id": "hak_05",
+        "title": "Veli Öğretmeni Sınıfta Gizlice Videoya Çekti: Suç mu, Hak mı?",
+        "hook": "Veli tartışma anında telefonunu çıkarıp öğretmeni okul koridorunda kayda aldı ve WhatsApp grubunda paylaştı!",
+        "summary": "Öğretmenin izni olmadan okul ortamında ses/görüntü kaydı alıp paylaşmak TCK m. 133 ve m. 134 kapsamında haberleşmenin/özel hayatın gizliliğini ihlal ve kişisel verileri hukuka aykırı yayma (TCK m. 136) suçunu oluşturabilir; ayrıca 7528 ÖMK ile eğitim çalışanlarına yönelik şiddette cezalar yarı oranında artırılmıştır.",
+        "laws": ["7528 sayılı ÖMK m. 33 (Eğitim Çalışanlarına Yönelik Şiddet)", "TCK m. 133, m. 134, m. 136"]
+      },
+      {
+        "id": "hak_06",
+        "title": "Okulda Öğrenci Kavgasını Ayırırken Yaralanan Öğretmen İş Kazası Sayılır mı?",
+        "hook": "Teneffüste iki öğrenciyi ayırırken kolu kırıldı... 'Memurda iş kazası olmaz' dediler, oysa kanun başka bir hak tanıyor!",
+        "summary": "Devlet memuru olan öğretmenler için görev sırasında ve görev sebebiyle meydana gelen yaralanmalar 5510 sayılı Kanun kapsamında 'vazife malullüğü' ve görev kazası hükümlerine tabidir; tutanak tutulması hak kaybını önler.",
+        "laws": ["5510 sayılı Sosyal Sigortalar ve Genel Sağlık Sigortası Kanunu m. 47", "657 sayılı DMK"]
+      },
+      {
+        "id": "hak_07",
+        "title": "Hafta Sonu Zorunlu Seminer / Hizmet İçi Eğitim: Öğretmen Katılmazsa Ceza Alır mı?",
+        "hook": "Müdür cuma akşamı mesaj attı: 'Cumartesi sabah 9'da okulda zorunlu toplantı var!' Gitmeyen öğretmen soruşturma mı yer?",
+        "summary": "Resmi görevlendirme (Valilik/MEB onayı) bulunmayan hafta sonu etkinlikleri keyfi zorunluluk yaratmaz; ancak resmi onaylı hizmet içi eğitimler görev sayılır ve ek ders/harcırah kurallarına tabidir.",
+        "laws": ["657 sayılı DMK m. 11 (Amir Emirleri)", "MEB Hizmetiçi Eğitim Yönetmeliği"]
+      },
+      {
+        "id": "hak_08",
+        "title": "WhatsApp'tan Gece 23:00'te Gelen Müdür Emri Resmi Tebliğ Sayılır mı?",
+        "hook": "Gece 23:15'te okul WhatsApp grubuna bir görev yazısı atıldı... Sabah görmeyen öğretmene tutanak tutuldu!",
+        "summary": "7201 sayılı Tebligat Kanunu ve 657 DMK uyarınca resmi tebligat yazılı, imza karşılığı veya DYS/resmi elektronik tebligat yoluyla yapılır. Mesai dışı WhatsApp mesajı tek başına hukuken geçerli resmi tebligat değildir.",
+        "laws": ["7201 sayılı Tebligat Kanunu", "657 sayılı DMK m. 11"]
+      },
+      {
+        "id": "hak_09",
+        "title": "Öğretmen Kendi Çocuğunun Sınıfına Girebilir mi? Mevzuat Yasaklıyor mu?",
+        "hook": "Kendi çocuğunun 1. sınıfına öğretmen olmak istedi... İdare 'yasak' dedi, peki yönetmelikte böyle bir yasak gerçekten var mı?",
+        "summary": "MEB mevzuatında öğretmenin kendi çocuğunun sınıfında ders vermesini açıkça yasaklayan genel bir kanun maddesi bulunmamakla birlikte, ölçme-değerlendirme tarafsızlığı ve okul idaresinin sınıf dağıtım yetkisi gereği idari takdir gündeme gelir.",
+        "laws": ["MEB Okul Öncesi Eğitim ve İlköğretim Kurumları Yönetmeliği", "657 sayılı DMK m. 7 (Tarafsızlık)"]
+      },
+      {
+        "id": "hak_10",
+        "title": "Uzman Öğretmenlik ve Başöğretmenlikte 10 Yıl / 20 Yıl Hesabına Neler Dahil?",
+        "hook": "Ücretsiz doğum izni ve askerlik süresi yüzünden 10 yılı 4 ay eksik çıktı... Başvurusu reddedilince hangi sürelerin sayıldığını araştırdı!",
+        "summary": "7528 sayılı ÖMK kapsamında uzman öğretmenlikte 10 yıl, başöğretmenlikte 20 yıl öğretmenlik süresi aranır. Aday öğretmenlik ve sözleşmeli öğretmenlik süreleri dahil edilirken, aylıksız izinlerin büyük kısmı bu süreye sayılmaz.",
+        "laws": ["7528 sayılı Öğretmenlik Mesleği Kanunu m. 20", "Öğretmenlik Mesleği Kariyer Basamakları Yönetmeliği"]
+      }
+    ],
+    "izin_tayin": [
+      {
+        "id": "izin_01",
+        "title": "10 Günlük Mazeret İzni: Müdür 'Vermiyorum' Diyebilir mi? (657 DMK m. 104)",
+        "hook": "Acil ailevi sorunu çıktı, 3 gün mazeret izni istedi... Müdür 'dersin boş geçer, vermiyorum' diye reddetti!",
+        "summary": "657 DMK m. 104/A-B'deki evlilik (7 gün), babalık (10 gün), ölüm (7 gün) izinleri 'bağlı yetki'dir, amir reddedemez! Ancak m. 104/C'deki 10 günlük genel mazeret izni amirin takdirine (uygun görüşüne) bağlıdır; fakat öğretmenler için m. 104/C'nin uygulanmasında yıllık izin farkı kritik rol oynar.",
+        "laws": ["657 sayılı DMK m. 104", "MEB İzin Yönergesi"]
+      },
+      {
+        "id": "izin_02",
+        "title": "Doğum Sonrası Yarım Zamanlı Çalışma: Öğretmen Maaşı Yarım mı Yatar?",
+        "hook": "Doğum izni bitti, çocuğuna bakmak için yarım zamanlı çalışmak istedi... 'Öğretmenlere bu hak yok' dediler!",
+        "summary": "657 DMK Ek Madde 43 uyarınca doğum yapan memur (öğretmenler dahil) çocuğun mecburi ilköğretim çağına kadar yarım zamanlı çalışma talep edebilir; ancak uygulama yönetmeliği ve öğretmenlerin haftalık ders/ek ders saatlerine yansıması kritik detaylar içerir.",
+        "laws": ["657 sayılı DMK Ek Madde 43", "Devlet Memurlarının Yarım Zamanlı Çalışma Hakkının Kullanımına İlişkin Yönetmelik"]
+      },
+      {
+        "id": "izin_03",
+        "title": "Sağlık Özrü Tayini Sadece Yaz ve Yarıyıl Tatilinde mi Yapılır?",
+        "hook": "Ekim ayında ağır bir teşhis konuldu, tedavisi başka ildeydi... 'Şubat tatilini bekle' dediler!",
+        "summary": "Kural olarak mazerete bağlı yer değiştirmeler yarıyıl ve yaz tatillerinde yapılır; ancak hayati tehlike taşıyan ve görev yapılan yerde tedavisi mümkün olmayan acil sağlık mazeretlerinde takvim dışı (yıl içinde) atama istisnası gündeme gelebilir.",
+        "laws": ["MEB Öğretmen Atama ve Yer Değiştirme Yönetmeliği", "Devlet Memurlarının Yer Değiştirme Suretiyle Atanmalarına İlişkin Yönetmelik"]
+      },
+      {
+        "id": "izin_04",
+        "title": "Aylıksız İzinden Erken Dönmek İsteyen Öğretmen Hemen Başlayabilir mi?",
+        "hook": "24 aylık doğum sonrası ücretsiz iznin 10. ayında maddi sebeple okula dönmek istedi... Müdür 'izin süren bitmeden dönemezsin' dedi!",
+        "summary": "Aylıksız izin süresinin bitiminden önce mazereti ortadan kalkan veya erken dönmek isteyen öğretmen, idareye yazılı dilekçe vererek görevine dönebilir; ancak izin bitiminde 10 gün içinde göreve başlamayan memur çekilmiş (müstafi) sayılır.",
+        "laws": ["657 sayılı DMK m. 108", "MEB İzin Yönergesi"]
+      },
+      {
+        "id": "izin_05",
+        "title": "Cuma Günü Alınan 1 Günlük Rapor Hafta Sonunu da Kapsar mı?",
+        "hook": "Cuma günü 1 günlük sağlık raporu aldı, pazartesi okula döndü... Cumartesi-Pazar da raporlu sayılıp ek dersi mi kesilir?",
+        "summary": "Cuma günü alınan 1 günlük tek hekim raporu yalnızca cuma gününü kapsar, hafta sonuna otomatik uzamaz. Ancak cuma + pazartesi kesintisiz 4 gün rapor alınırsa hafta sonu da rapor süresine dahil edilir.",
+        "laws": ["657 sayılı DMK m. 105", "Devlet Memurlarına Verilecek Hastalık Raporları Yönetmeliği"]
+      },
+      {
+        "id": "izin_06",
+        "title": "Tek Hekim Raporunda 40 Gün Sınırı Aşılırsa Ne Olur?",
+        "hook": "Yıl içinde parça parça aldığı sağlık raporları 42 güne ulaştı... Okul idaresi 41. günün raporunu kabul etmedi!",
+        "summary": "Memurlara bir takvim yılı içinde tek hekim tarafından verilen hastalık raporlarının toplamı 40 günü geçemez. 40 günü aşan raporların mutlaka sağlık kurulu (heyet) raporu olması gerekir; aksi halde geçersiz sayılır ve izinsiz devamsızlık riski doğar.",
+        "laws": ["Devlet Memurlarına Verilecek Hastalık Raporları ile Hastalık ve Refakat İznine İlişkin Usul ve Esaslar Hakkında Yönetmelik m. 6"]
+      },
+      {
+        "id": "izin_07",
+        "title": "Süt İzni Öğretmenin Ders Programına Göre Kesilebilir mi?",
+        "hook": "Yeni doğum yapan öğretmen günde 3 saat süt izni istedi... Müdür 'dersin bölünür, sadece 1 saat çıkabilirsin' dedi!",
+        "summary": "657 DMK m. 104/D'ye göre kadın memura ilk 6 ay günde 3 saat, ikinci 6 ay günde 1,5 saat süt izni verilir ve süt izninin hangi saatlerde kullanılacağını seçme hakkı **tamamen anneye aittir**, amir bunu kısıtlayamaz.",
+        "laws": ["657 sayılı DMK m. 104/D", "MEB İzin Yönergesi"]
+      },
+      {
+        "id": "izin_08",
+        "title": "Zorunlu Hizmet Bölgesi: Kimler Zorunlu Hizmetten Ömür Boyu Muaf?",
+        "hook": "Doğu görevini tamamlamadan tayin istedi, herkes 'imkânsız' dedi... Ama özel bir istisna sayesinde tamamen muaf çıktı!",
+        "summary": "Zorunlu çalışma yükümlülüğü; belirli tarih öncesi atananlar, engelli öğretmenler, eşi/kendisi ağır sağlık mazeretli olanlar, şehit/gazi yakınları gibi yasal istisnalarda ertelenebilir veya tamamen muafiyet sağlanabilir.",
+        "laws": ["MEB Öğretmen Atama ve Yer Değiştirme Yönetmeliği (Zorunlu Çalışma Yükümlülüğü Muafiyetleri)"]
+      },
+      {
+        "id": "izin_09",
+        "title": "Eş Durumu Tayininde Özel Sektörde Çalışan Eş İçin 360 Gün Şartı!",
+        "hook": "Eşi özel şirkette 11 aydır sigortalıydı... Tayin ekranında 30 gün eksik olduğu için bütün yıl ailesinden ayrı kaldı!",
+        "summary": "Özel sektörde çalışan eşin yanına aile birliği mazeretiyle tayin isteyebilmek için son 2 yıl içinde en az 360 gün sosyal güvenlik primi ödenmiş olması ve hâlen çalışıyor olması şartı aranır.",
+        "laws": ["MEB Öğretmen Atama ve Yer Değiştirme Yönetmeliği (Aile Birliği Mazereti)"]
+      },
+      {
+        "id": "izin_10",
+        "title": "Refakat İzni Sadece Anne-Baba İçin mi, Kardeş İçin de Alınabilir mi?",
+        "hook": "Ağır ameliyat geçiren kardeşine bakmak için refakat izni istedi... Müdür 'sadece eş ve çocuk için olur' dedi!",
+        "summary": "657 DMK m. 105 son fıkra açıkça 'ana, baba, eş ve çocukları ile **kardeşlerinden** birinin ağır bir kaza geçirmesi veya tedavisi uzun süren bir hastalığı bulunması' halinde 3 aya kadar (gerekirse bir katına kadar) maaşlı refakat izni tanır!",
+        "laws": ["657 sayılı DMK m. 105 (Refakat İzni)"]
+      }
+    ],
+    "disiplin_sorusturma": [
+      {
+        "id": "dis_01",
+        "title": "Savunma Alınmadan Verilen Disiplin Cezası Anında İptal Olur! (7 Gün Kuralı)",
+        "hook": "Müdür 'savunmanı yarın sabaha kadar getir' dedi ve 2 gün sonra uyarma cezası tebliğ etti!",
+        "summary": "Anayasa m. 129 ve 657 DMK m. 130 uyarınca memura savunma için **en az 7 gün** süre verilmesi zorunludur. 7 günden az süre verilerek veya savunma alınmadan verilen her disiplin cezası idare mahkemesinde doğrudan iptal edilir.",
+        "laws": ["Anayasa m. 129/2", "657 sayılı DMK m. 130 (Savunma Hakkı)"]
+      },
+      {
+        "id": "dis_02",
+        "title": "CİMER'e İsimsiz Şikayet Geldi: Öğretmen Hakkında Soruşturma Açılabilir mi?",
+        "hook": "Velilerden biri sahte isimle CİMER'e asılsız şikayet yazdı... Okula müfettiş geldi!",
+        "summary": "3071 sayılı Dilekçe Hakkının Kullanılmasına Dair Kanun m. 6 uyarınca belli bir konuyu ihtiva etmeyen, somut delile dayanmayan ve ad-soyad-imza taşımayan ihbarlar işleme alınmaz; ancak somut ve ciddi bulgular varsa idare resen inceleme başlatabilir.",
+        "laws": ["3071 sayılı Dilekçe Hakkı Kanunu m. 6", "4483 sayılı Kanun m. 4"]
+      },
+      {
+        "id": "dis_03",
+        "title": "Disiplin Cezasında 1 Aylık Zamanaşımı: İdare Geç Kalırsa Ceza Düşer!",
+        "hook": "6 ay önce yaşanan bir olay için öğretmene birden uyarma soruşturması açıldı... Dosya aslında çoktan zamanaşımına uğramıştı!",
+        "summary": "657 DMK m. 127'ye göre uyarma, kınama, aylıktan kesme ve kademe ilerlemesinin durdurulması cezalarında fiilin öğrenildiği tarihten itibaren **1 ay** içinde soruşturmaya başlanmazsa disiplin cezası verme yetkisi zamanaşımına uğrar!",
+        "laws": ["657 sayılı DMK m. 127 (Zamanaşımı)"]
+      },
+      {
+        "id": "dis_04",
+        "title": "Müdür Hem Şikayetçi Hem Disiplin Amiri Olup Ceza Verebilir mi?",
+        "hook": "Öğretmen okul müdürüyle tartıştı... Ertesi gün müdür kendi tuttuğu tutanakla öğretmene kınama cezası kesti!",
+        "summary": "Danıştay'ın yerleşik içtihatlarına göre 'tarafsızlık ilkesi' gereği olayın bizzat tarafı veya mağduru olan okul müdürü, kendi yaşadığı tartışmada disiplin amiri sıfatıyla ceza veremez; soruşturma bir üst amir veya tarafsız muhakkik tarafından yürütülmelidir.",
+        "laws": ["Danıştay İDDK & 12. Daire Kararları (Tarafsızlık İlkesi)", "657 sayılı DMK m. 126"]
+      },
+      {
+        "id": "dis_05",
+        "title": "Disiplin Cezasına İtiraz Süresi Sadece 7 Gün! (Kaçıran Ne Yapar?)",
+        "hook": "Cezayı aldıktan 15 gün sonra itiraz dilekçesi verdi... 'Süren geçti' diyerek reddettiler. Peki dava hakkı da mı yandı?",
+        "summary": "657 DMK m. 135'e göre disiplin cezasına idari itiraz süresi **7 gün**dür. Ancak 7 günlük idari itiraz süresini kaçıran öğretmen, tebliğden itibaren **60 gün** içinde doğrudan İdare Mahkemesi'nde iptal davası açabilir!",
+        "laws": ["657 sayılı DMK m. 135", "2577 sayılı İYUK m. 7 (60 Günlük Dava Süresi)"]
+      },
+      {
+        "id": "dis_06",
+        "title": "Uyarma ve Kınama Cezaları Ömür Boyu Sicilde mi Kalır? (5 Yıl Silinme Hakkı)",
+        "hook": "6 yıl önce aldığı uyarma cezası yüzünden hâlâ tedirgindi... Dilekçe verse özlük dosyasından sildirebileceğini bilmiyordu!",
+        "summary": "657 DMK m. 133 uyarınca uyarma ve kınama cezaları **5 yıl**, aylıktan kesme ve kademe ilerlemesinin durdurulması cezaları **10 yıl** sonra memurun yazılı başvurusuyla özlük dosyasından silinebilir.",
+        "laws": ["657 sayılı DMK m. 133 (Disiplin Cezalarının Bir Süre Sonra Özlük Dosyasından Silinmesi)"]
+      },
+      {
+        "id": "dis_07",
+        "title": "Öğretmene Sosyal Medya Paylaşımı Yüzünden Ceza Verilebilir mi?",
+        "hook": "Kişisel Instagram hesabından eğitim sistemini eleştiren bir paylaşım yaptı... İdare hemen soruşturma başlattı!",
+        "summary": "Anayasa Mahkemesi ve Danıştay kararlarına göre öğretmenin hakaret, gizli bilgi ifşası veya öğrenci mahremiyeti ihlali içermeyen genel eleştirileri ifade özgürlüğü kapsamındadır; ancak öğrenci fotoğrafını izinsiz paylaşmak ciddi disiplin ve KVKK ihlalidir.",
+        "laws": ["Anayasa m. 26 (İfade Özgürlüğü)", "657 sayılı DMK m. 125", "6698 sayılı KVKK"]
+      },
+      {
+        "id": "dis_08",
+        "title": "Görevden Uzaklaştırma (Açığa Alma) En Fazla Kaç Ay Sürebilir?",
+        "hook": "Soruşturma gerekçesiyle açığa alındı, 4 ay geçti hâlâ geri çağrılmadı... Kanunen 3 ay sınırı olduğunu bilmiyordu!",
+        "summary": "657 DMK m. 145'e göre disiplin soruşturması sebebiyle görevden uzaklaştırma **en çok 3 ay** devam edebilir. Bu süre sonunda hakkında karar verilmemişse memur görevine başlatılır (ceza kovuşturması istisnası hariç).",
+        "laws": ["657 sayılı DMK m. 137 - m. 145 (Görevden Uzaklaştırma)"]
+      },
+      {
+        "id": "dis_09",
+        "title": "İyi Hal İndirimi (Bir Alt Ceza): İdare Uygulamak Zorunda mı?",
+        "hook": "15 yıllık tertemiz sicili vardı, ilk kez hata yaptı... İdare bir alt cezayı hiç değerlendirmeden en ağır cezayı verdi!",
+        "summary": "657 DMK m. 125 uyarınca geçmiş hizmetleri olumlu ve ödül/başarı belgesi bulunan memur için bir derece hafif ceza uygulanması idarece **mutlaka değerlendirilmek** zorundadır; gerekçesiz reddedilmesi mahkemede iptal sebebidir.",
+        "laws": ["657 sayılı DMK m. 125 (Bir Alt Ceza Uygulaması)", "Danıştay Kararları"]
+      },
+      {
+        "id": "dis_10",
+        "title": "Derse 5 Dakika Geç Kalan Öğretmene Doğrudan Aylıktan Kesme Verilebilir mi?",
+        "hook": "Trafik yüzünden derse 5 dakika geç girdi, müdür 'görevi terk ettin' diye aylıktan kesme istedi!",
+        "summary": "Disiplin hukukunda 'ölçülülük ve tipiklik' ilkesi geçerlidir. Göreve özürsüz geç kalmak en fazla uyarma (657 m. 125/A-b) kapsamında değerlendirilebilir; özürsüz 1-2 gün göreve gelmeme (aylıktan kesme) ile karıştırılamaz.",
+        "laws": ["657 sayılı DMK m. 125/A-b ve m. 125/C-b"]
+      }
+    ],
+    "ek_ders_nobet": [
+      {
+        "id": "ekders_01",
+        "title": "Nöbet Görevi Her Öğretmen İçin Zorunlu mudur? (20 Yıl / 25 Yıl & Hamilelik Muafiyeti)",
+        "hook": "22 yıllık kadın öğretmen hamilelik sonrası nöbetten muafiyet istedi... Müdür 'herkes nöbet tutacak' dedi!",
+        "summary": "MEB yönetmeliklerine göre hamile öğretmenlere hamileliğin 24. haftasından doğum sonrası 2 yıl sonrasına kadar nöbet görevi verilmez; ayrıca engelli öğretmenler ile hizmet süresi kadınlarda 20, erkeklerde 25 yılı dolduran öğretmenler istememeleri halinde nöbetten muaftır!",
+        "laws": ["MEB Okul Öncesi Eğitim ve İlköğretim Kurumları Yönetmeliği m. 44", "MEB Ortaöğretim Kurumları Yönetmeliği m. 91"]
+      },
+      {
+        "id": "ekders_02",
+        "title": "Yüksek Lisans ve Doktora Yapan Öğretmenin Ek Dersi Neden Fazla Yatar?",
+        "hook": "Yüksek lisans diplomasını aldı ama 2 yıl boyunca MEBBİS'e işletmedi... Her ay cebinden ciddi ek ders farkı uçup gitti!",
+        "summary": "Toplu Sözleşme hükümleri uyarınca fiilen girilen dersler için yüksek lisanslı öğretmenlere %7, doktoralı öğretmenlere %20 artırımlı ek ders ücreti ödenir. Ancak artırım nöbet, hazırlık-planlama gibi fiilen girilmeyen derslerde değil, fiili ders saatlerinde uygulanır.",
+        "laws": ["Kamu Görevlileri Toplu Sözleşmesi (Eğitim, Öğretim ve Bilim Hizmet Kolu)", "MEB Yönetici ve Öğretmenlerinin Ders ve Ek Ders Saatlerine İlişkin Karar"]
+      },
+      {
+        "id": "ekders_03",
+        "title": "Kar Tatilinde Öğretmenin Ek Ders Ücreti Kesilir mi?",
+        "hook": "Valilik kar nedeniyle okulları 2 gün tatil etti... Ay sonunda bordrosuna bakan öğretmen ek dersinin kesilip kesilmediğini merak etti!",
+        "summary": "MEB Ek Ders Kararı m. 16 ve Toplu Sözleşme gereği idari izin, kar tatili ve genel hayatı etkileyen salgın/afet tatillerinde öğretmenlerin o günkü fiili ders ve görevleri yapılmış sayılır; ek ders ücretleri kesilmez!",
+        "laws": ["MEB Ders ve Ek Ders Saatlerine İlişkin Karar m. 16", "Toplu Sözleşme Hükümleri"]
+      },
+      {
+        "id": "ekders_04",
+        "title": "Öğretmene Haftada 2 Gün Nöbet Yazılabilir mi? Ücreti Ödenir mi?",
+        "hook": "Okulda öğretmen az diye haftada 2 gün nöbet yazıldı... Ama bordroda sadece 3 saatlik tek nöbet ücreti yattı!",
+        "summary": "Kural olarak öğretmene haftada 1 günden fazla nöbet görevi verilemez (zorunlu haller dışında). Verilse bile Toplu Sözleşme gereği haftada en fazla **3 saat** nöbet ek ders ücreti ödenir; ikinci nöbetin ek ders ücreti yoktur.",
+        "laws": ["MEB Kurum Yönetmelikleri", "Toplu Sözleşme (Örgün Eğitim Kurumlarında Ek Ders Ücreti / Nöbet)"]
+      },
+      {
+        "id": "ekders_05",
+        "title": "1 Gün Sevk / Rapor Alan Öğretmenin Tüm Haftalık Ek Dersi mi Yanar?",
+        "hook": "Çarşamba günü 1 gün rapor aldı... Ay sonunda sadece o günün değil, 8 saat ek dersinin kesildiğini görünce şaşırdı!",
+        "summary": "Ek ders ücreti, aylık karşılığı maaş görevini (sınıf öğretmeninde 18, branş öğretmeninde 15 saat) doldurduktan sonra başlar. 1 gün rapor alındığında o günkü dersler maaş karşılığından düşülebildiği için hazırlık-planlama ve toplam ek ders hesabında zincirleme kesinti oluşabilir.",
+        "laws": ["MEB Yönetici ve Öğretmenlerinin Ders ve Ek Ders Saatlerine İlişkin Karar"]
+      },
+      {
+        "id": "ekders_06",
+        "title": "Branş Öğretmenine 21 Saatin Üzerinde Zorla Ders Verilebilir mi?",
+        "hook": "Haftalık 28 saat ders programı verildi... Öğretmen 'istemiyorum' dedi, müdür 'almak zorundasın' dedi!",
+        "summary": "Branş öğretmenleri 15 saat maaş karşılığı + 6 saat zorunlu ek ders = toplam **21 saate kadar** ders almak zorundadır. 21 saatin üzerindeki (30 saate kadar olan) ek dersler ise ancak öğretmenin **isteğine** bağlıdır; zorla verilemez!",
+        "laws": ["MEB Ders ve Ek Ders Saatlerine İlişkin Karar m. 5 ve m. 6"]
+      },
+      {
+        "id": "ekders_07",
+        "title": "DYK (Destekleme ve Yetiştirme Kursu) Ek Dersi Neden 2 Kat Ödenir?",
+        "hook": "Normal derste 1 saatlik ek ders alırken, hafta sonu DYK kursunda bordrosunun ikiye katlandığını fark etti!",
+        "summary": "657 DMK m. 176 uyarınca MEB'e bağlı örgün ve yaygın eğitim kurumlarında açılan Destekleme ve Yetiştirme Kurslarında (DYK) fiilen okutulan derslerin ek ders ücreti **%100 artırımlı** (iki katı) olarak ödenir.",
+        "laws": ["657 sayılı DMK m. 176", "MEB Destekleme ve Yetiştirme Kursları Yönergesi"]
+      },
+      {
+        "id": "ekders_08",
+        "title": "Okul Gezisine Giden Öğretmenin Ek Dersi Kesilir mi?",
+        "hook": "Öğrencileri müze gezisine götürdü, bütün gün sorumluluk aldı... Ay sonunda 'derse girmedin' diye ek dersi kesildi!",
+        "summary": "Resmi onaylı sosyal etkinlik, gezi veya tören görevlendirmelerinde ders görevini fiilen yerine getirmiş sayılma şartı (m. 16) devreye girer; resmi görevlendirme onayı alınmadan çıkılan etkinliklerde ek ders kaybı yaşanabilir.",
+        "laws": ["MEB Ders ve Ek Ders Saatlerine İlişkin Karar m. 16", "MEB Sosyal Etkinlikler Yönetmeliği"]
+      },
+      {
+        "id": "ekders_09",
+        "title": "Müdür Yardımcısının Dersine Girmediği Gün Ek Dersi Kesilir mi?",
+        "hook": "Haftada 6 saat girmesi gereken derse mazeret nedeniyle girmedi... Yönetim görevi ek dersi de mi kesilir?",
+        "summary": "Okul yöneticileri haftada en az 6 saat aylık karşılığı derse girmek zorundadır. Girilmeyen zorunlu ders saatleri o haftanın yönetim ek dersinden düşülür.",
+        "laws": ["MEB Ders ve Ek Ders Saatlerine İlişkin Karar m. 5 ve m. 10"]
+      },
+      {
+        "id": "ekders_10",
+        "title": "Boş Geçen Derse 'Doldur' Diye Sokulan Öğretmene Ek Ders Ödenir mi?",
+        "hook": "Müdür 'diğer öğretmen raporlu, onun sınıfına girip boşluğu doldur' dedi... Ay sonunda 1 kuruş ek ders yatmadı!",
+        "summary": "Resmi görevlendirme ve ders programı/ek ders onayı olmadan, sadece sözlü ricayla başkasının boş dersine girilen saatler bordroya yansımaz; ek ders ödenebilmesi için yazılı görevlendirme ve dersin fiilen işlenmesi gerekir.",
+        "laws": ["MEB Ders ve Ek Ders Saatlerine İlişkin Karar m. 9 ve m. 16"]
+      }
+    ]
+  }
+}

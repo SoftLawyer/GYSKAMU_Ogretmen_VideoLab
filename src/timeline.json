@@ -1,0 +1,249 @@
+{
+  "totalDuration": 49.5,
+  "beats": [
+    { "start": 0.0, "end": 10.2 },
+    { "start": 10.2, "end": 15.8 },
+    { "start": 15.8, "end": 22.4 },
+    { "start": 22.4, "end": 31.2 },
+    { "start": 31.2, "end": 38.6 },
+    { "start": 38.6, "end": 43.2 },
+    { "start": 43.2, "end": 49.5 }
+  ],
+  "segments": [
+    {
+      "id": "b0_s0",
+      "beat": 0,
+      "text": "Müdür odaya çağırdı, önüne bir tutanak koydu.",
+      "start": 0.2,
+      "end": 2.9,
+      "duration": 2.7,
+      "sub_chunks": [
+        { "words": ["Müdür", "odaya", "çağırdı,"], "highlight": [0], "start": 0.2, "end": 1.5 },
+        { "words": ["önüne", "bir", "tutanak", "koydu."], "highlight": [2, 3], "start": 1.5, "end": 2.9 }
+      ]
+    },
+    {
+      "id": "b0_s1",
+      "beat": 0,
+      "text": "Yarın sabaha kadar savunmanı getir dedi.",
+      "start": 3.05,
+      "end": 5.5,
+      "duration": 2.45,
+      "sub_chunks": [
+        { "words": ["Yarın", "sabaha", "kadar"], "highlight": [0, 1], "start": 3.05, "end": 4.25 },
+        { "words": ["savunmanı", "getir", "dedi."], "highlight": [0, 1], "start": 4.25, "end": 5.5 }
+      ]
+    },
+    {
+      "id": "b0_s2",
+      "beat": 0,
+      "text": "İki gün sonra da uyarma cezası tebliğ edildi.",
+      "start": 5.65,
+      "end": 8.2,
+      "duration": 2.55,
+      "sub_chunks": [
+        { "words": ["İki", "gün", "sonra", "da"], "highlight": [0, 1], "start": 5.65, "end": 6.85 },
+        { "words": ["uyarma", "cezası", "tebliğ", "edildi."], "highlight": [0, 1], "start": 6.85, "end": 8.2 }
+      ]
+    },
+    {
+      "id": "b0_s3",
+      "beat": 0,
+      "text": "Peki bu ceza hukuken geçerli mi?",
+      "start": 8.35,
+      "end": 10.0,
+      "duration": 1.65,
+      "sub_chunks": [
+        { "words": ["Peki", "bu", "ceza", "hukuken", "geçerli", "mi?"], "highlight": [2, 4, 5], "start": 8.35, "end": 10.0 }
+      ]
+    },
+    {
+      "id": "b1_s0",
+      "beat": 1,
+      "text": "Çoğu öğretmen müdür yazdıysa yapacak bir şey yok sanır.",
+      "start": 10.2,
+      "end": 13.0,
+      "duration": 2.8,
+      "sub_chunks": [
+        { "words": ["Çoğu", "öğretmen", "müdür", "yazdıysa"], "highlight": [0, 1], "start": 10.2, "end": 11.6 },
+        { "words": ["yapacak", "bir", "şey", "yok", "sanır."], "highlight": [3, 4], "start": 11.6, "end": 13.0 }
+      ]
+    },
+    {
+      "id": "b1_s1",
+      "beat": 1,
+      "text": "Ama mevzuat burada bambaşka bir kırmızı çizgi çizer.",
+      "start": 13.15,
+      "end": 15.6,
+      "duration": 2.45,
+      "sub_chunks": [
+        { "words": ["Ama", "mevzuat", "burada"], "highlight": [1], "start": 13.15, "end": 14.3 },
+        { "words": ["bambaşka", "bir", "kırmızı", "çizgi", "çizer."], "highlight": [2, 3], "start": 14.3, "end": 15.6 }
+      ]
+    },
+    {
+      "id": "b2_s0",
+      "beat": 2,
+      "text": "Anayasa m. 129 ve 657 sayılı Kanun açık.",
+      "start": 15.8,
+      "end": 18.8,
+      "duration": 3.0,
+      "sub_chunks": [
+        { "words": ["Anayasa", "m.", "129", "ve"], "highlight": [0, 2], "start": 15.8, "end": 17.3 },
+        { "words": ["657", "sayılı", "Kanun", "açık."], "highlight": [0, 2, 3], "start": 17.3, "end": 18.8 }
+      ]
+    },
+    {
+      "id": "b2_s1",
+      "beat": 2,
+      "text": "Memura savunma hakkı tanınmadan disiplin cezası verilemez.",
+      "start": 18.95,
+      "end": 22.2,
+      "duration": 3.25,
+      "sub_chunks": [
+        { "words": ["Memura", "savunma", "hakkı", "tanınmadan"], "highlight": [1, 2], "start": 18.95, "end": 20.6 },
+        { "words": ["disiplin", "cezası", "verilemez."], "highlight": [0, 1, 2], "start": 20.6, "end": 22.2 }
+      ]
+    },
+    {
+      "id": "b3_s0",
+      "beat": 3,
+      "text": "Üstelik bu savunma için süre keyfi belirlenemez.",
+      "start": 22.4,
+      "end": 24.5,
+      "duration": 2.1,
+      "sub_chunks": [
+        { "words": ["Üstelik", "bu", "savunma", "için"], "highlight": [2], "start": 22.4, "end": 23.4 },
+        { "words": ["süre", "keyfi", "belirlenemez."], "highlight": [1, 2], "start": 23.4, "end": 24.5 }
+      ]
+    },
+    {
+      "id": "b3_s1",
+      "beat": 3,
+      "text": "Kanun en az 7 gün süre verilmesini zorunlu kılar.",
+      "start": 24.65,
+      "end": 26.8,
+      "duration": 2.15,
+      "sub_chunks": [
+        { "words": ["Kanun", "en", "az", "7", "gün"], "highlight": [2, 3, 4], "start": 24.65, "end": 25.7 },
+        { "words": ["süre", "verilmesini", "zorunlu", "kılar."], "highlight": [2, 3], "start": 25.7, "end": 26.8 }
+      ]
+    },
+    {
+      "id": "b3_s2",
+      "beat": 3,
+      "text": "Yarına kadar getir demek açık bir usul hatasıdır.",
+      "start": 26.95,
+      "end": 29.0,
+      "duration": 2.05,
+      "sub_chunks": [
+        { "words": ["Yarına", "kadar", "getir", "demek"], "highlight": [0, 1], "start": 26.95, "end": 27.95 },
+        { "words": ["açık", "bir", "usul", "hatasıdır."], "highlight": [2, 3], "start": 27.95, "end": 29.0 }
+      ]
+    },
+    {
+      "id": "b3_s3",
+      "beat": 3,
+      "text": "İdare bu kuralı çiğnerse işlem baştan sakattır.",
+      "start": 29.1,
+      "end": 31.0,
+      "duration": 1.9,
+      "sub_chunks": [
+        { "words": ["İdare", "bu", "kuralı", "çiğnerse"], "highlight": [2, 3], "start": 29.1, "end": 30.05 },
+        { "words": ["işlem", "baştan", "sakattır."], "highlight": [1, 2], "start": 30.05, "end": 31.0 }
+      ]
+    },
+    {
+      "id": "b4_s0",
+      "beat": 4,
+      "text": "Peki sonuç ne olur?",
+      "start": 31.2,
+      "end": 32.6,
+      "duration": 1.4,
+      "sub_chunks": [
+        { "words": ["Peki", "sonuç", "ne", "olur?"], "highlight": [1, 2], "start": 31.2, "end": 32.6 }
+      ]
+    },
+    {
+      "id": "b4_s1",
+      "beat": 4,
+      "text": "7 günden az süreyle verilen her disiplin cezası,",
+      "start": 32.75,
+      "end": 35.5,
+      "duration": 2.75,
+      "sub_chunks": [
+        { "words": ["7", "günden", "az", "süreyle"], "highlight": [0, 1, 2], "start": 32.75, "end": 34.1 },
+        { "words": ["verilen", "her", "disiplin", "cezası,"], "highlight": [2, 3], "start": 34.1, "end": 35.5 }
+      ]
+    },
+    {
+      "id": "b4_s2",
+      "beat": 4,
+      "text": "İdare Mahkemesinde doğrudan iptal edilir.",
+      "start": 35.65,
+      "end": 38.4,
+      "duration": 2.75,
+      "sub_chunks": [
+        { "words": ["İdare", "Mahkemesinde"], "highlight": [0, 1], "start": 35.65, "end": 37.0 },
+        { "words": ["doğrudan", "iptal", "edilir."], "highlight": [1, 2], "start": 37.0, "end": 38.4 }
+      ]
+    },
+    {
+      "id": "b5_s0",
+      "beat": 5,
+      "text": "Kısacası tutanak var, imza var,",
+      "start": 38.6,
+      "end": 40.7,
+      "duration": 2.1,
+      "sub_chunks": [
+        { "words": ["Kısacası", "tutanak", "var,", "imza", "var,"], "highlight": [1, 3], "start": 38.6, "end": 40.7 }
+      ]
+    },
+    {
+      "id": "b5_s1",
+      "beat": 5,
+      "text": "ama hukuken geçerli bir ceza yok.",
+      "start": 40.8,
+      "end": 43.0,
+      "duration": 2.2,
+      "sub_chunks": [
+        { "words": ["ama", "hukuken", "geçerli", "bir", "ceza", "yok."], "highlight": [2, 4, 5], "start": 40.8, "end": 43.0 }
+      ]
+    },
+    {
+      "id": "b6_s0",
+      "beat": 6,
+      "text": "Senin veya bir meslektaşının başına böyle bir durum geldi mi?",
+      "start": 43.2,
+      "end": 45.8,
+      "duration": 2.6,
+      "sub_chunks": [
+        { "words": ["Senin", "veya", "bir", "meslektaşının"], "highlight": [0, 3], "start": 43.2, "end": 44.5 },
+        { "words": ["başına", "böyle", "bir", "durum", "geldi", "mi?"], "highlight": [3, 4], "start": 44.5, "end": 45.8 }
+      ]
+    },
+    {
+      "id": "b6_s1",
+      "beat": 6,
+      "text": "Deneyimini yorumlara yaz.",
+      "start": 45.95,
+      "end": 47.4,
+      "duration": 1.45,
+      "sub_chunks": [
+        { "words": ["Deneyimini", "yorumlara", "yaz."], "highlight": [0, 1], "start": 45.95, "end": 47.4 }
+      ]
+    },
+    {
+      "id": "b6_s2",
+      "beat": 6,
+      "text": "Yeni öğretmen dosyaları için GYSKAMU'yu takip et.",
+      "start": 47.55,
+      "end": 49.5,
+      "duration": 1.95,
+      "sub_chunks": [
+        { "words": ["Yeni", "öğretmen", "dosyaları", "için"], "highlight": [1, 2], "start": 47.55, "end": 48.55 },
+        { "words": ["GYSKAMU'yu", "takip", "et."], "highlight": [0, 1], "start": 48.55, "end": 49.5 }
+      ]
+    }
+  ]
+}
