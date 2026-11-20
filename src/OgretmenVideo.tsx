@@ -423,68 +423,68 @@ export const OgretmenVideo: React.FC = () => {
       >
         {/* BEAT 0: ACTION SCENE — Öğretmenler Odasında Tartışma + Tutanak + Kınama Cezası */}
         {activeBeat === 0 && (
-          <div style={{ width: "100%", height: "100%", position: "relative", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "space-between" }}>
+          <div style={{ width: "100%", height: "100%", position: "relative", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 28 }}>
             <div style={{ textAlign: "center" }}>
-              <div style={{ fontFamily: monoFamily, fontSize: 20, color: COLORS.crimson, fontWeight: 700, letterSpacing: 3 }}>
+              <div style={{ fontFamily: monoFamily, fontSize: 21, color: COLORS.crimson, fontWeight: 700, letterSpacing: 3 }}>
                 OKULDA TARTIŞMA · HEMEN CEZA
               </div>
-              <div style={{ fontSize: 48, fontWeight: 700, color: COLORS.navyDark, marginTop: 8, lineHeight: 1.15 }}>
+              <div style={{ fontSize: 50, fontWeight: 700, color: COLORS.navyDark, marginTop: 10, lineHeight: 1.15 }}>
                 Tartıştığı Öğretmene Kendi Cezayı Kesti!
               </div>
             </div>
 
-            <svg width={860} height={560} viewBox="0 0 860 560">
+            <svg width={860} height={580} viewBox="0 0 860 580">
               {/* School Board / Wall */}
-              <rect x={60} y={18} width={740} height={175} rx={12} fill={COLORS.navyDark} stroke={COLORS.gold} strokeWidth={4} />
-              <text x={430} y={84} textAnchor="middle" fill={COLORS.goldBright} fontFamily={monoFamily} fontSize={25} fontWeight={700} letterSpacing={3}>
+              <rect x={60} y={14} width={740} height={175} rx={12} fill={COLORS.navyDark} stroke={COLORS.gold} strokeWidth={4} />
+              <text x={430} y={80} textAnchor="middle" fill={COLORS.goldBright} fontFamily={monoFamily} fontSize={25} fontWeight={700} letterSpacing={3}>
                 OLAY TESPİT TUTANAĞI
               </text>
-              <text x={430} y={134} textAnchor="middle" fill={COLORS.creamCard} fontFamily={playfairItalicFamily} fontSize={29}>
+              <text x={430} y={130} textAnchor="middle" fill={COLORS.creamCard} fontFamily={playfairItalicFamily} fontSize={29}>
                 Tutanak: Okul Müdürü · Ceza: Kınama Cezası
               </text>
 
               {/* Conflict Lightning / Tension Sparks between them */}
               {!handedDoc && (
-                <g transform={`translate(430, 270) scale(${sparkPulse})`}>
+                <g transform={`translate(430, 290) scale(${sparkPulse})`}>
                   <polygon points="-14,-44 10,-8 -4,-8 18,40 -14,4 2,4" fill={COLORS.crimson} stroke={COLORS.goldBright} strokeWidth={2.5} />
                   <circle cx={0} cy={0} r={46} fill="none" stroke={COLORS.crimson} strokeWidth={2.5} strokeDasharray="8 6" opacity={0.65} />
                 </g>
               )}
 
               {/* Floor Line */}
-              <line x1={40} y1={470} x2={820} y2={470} stroke={COLORS.divider} strokeWidth={4} />
+              <line x1={40} y1={500} x2={820} y2={500} stroke={COLORS.divider} strokeWidth={4} />
 
               {/* Principal */}
               <FullBodyCharacter
                 x={245}
-                y={470}
+                y={500}
                 coatColor={COLORS.navyDark}
                 accentColor={COLORS.crimson}
                 gesture={handedDoc ? "handDocumentRight" : "argueRight"}
                 gestureProg={arguePhase}
-                scale={1.08}
+                scale={1.12}
                 label="OKUL MÜDÜRÜ"
               />
 
               {/* Desk */}
-              <rect x={368} y={372} width={124} height={98} rx={6} fill={COLORS.goldDark} stroke={COLORS.navyDark} strokeWidth={3} />
-              <rect x={354} y={360} width={152} height={18} rx={4} fill={COLORS.gold} stroke={COLORS.navyDark} strokeWidth={2.5} />
+              <rect x={368} y={400} width={124} height={100} rx={6} fill={COLORS.goldDark} stroke={COLORS.navyDark} strokeWidth={3} />
+              <rect x={354} y={388} width={152} height={18} rx={4} fill={COLORS.gold} stroke={COLORS.navyDark} strokeWidth={2.5} />
 
               {/* Teacher */}
               <FullBodyCharacter
                 x={615}
-                y={470}
+                y={500}
                 coatColor={COLORS.navySoft}
                 accentColor={COLORS.gold}
                 gesture={handedDoc ? "shock" : "argueLeft"}
                 gestureProg={arguePhase}
-                scale={1.08}
+                scale={1.12}
                 label="ÖĞRETMEN"
               />
             </svg>
 
-            {t >= b0s2Start + 0.3 && (
-              <div style={{ position: "absolute", bottom: 24 }}>
+            <div style={{ minHeight: 96, display: "flex", alignItems: "center", justifyContent: "center" }}>
+              {t >= b0s2Start + 0.3 && (
                 <OfficialStamp
                   text="KINAMA CEZASI · GEÇERLİ Mİ?"
                   color={COLORS.crimson}
@@ -493,9 +493,10 @@ export const OgretmenVideo: React.FC = () => {
                     fps,
                     config: { damping: 12 },
                   })}
+                  rotateDeg={-4}
                 />
-              </div>
-            )}
+              )}
+            </div>
           </div>
         )}
 

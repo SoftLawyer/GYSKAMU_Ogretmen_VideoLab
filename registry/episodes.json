@@ -1,4 +1,23 @@
 {
-  "last_dosya_no": 0,
-  "episodes": []
+  "last_dosya_no": 1,
+  "episodes": [
+    {
+      "dosya_no": 1,
+      "id": "dosya_001",
+      "category": "disiplin_sorusturma",
+      "title": "Müdür Hem Tartışmanın Tarafı Hem Disiplin Amiri Olup Ceza Verebilir mi?",
+      "hook": "Okulda öğretmen ile müdür arasında sert bir tartışma çıktı. Müdür kendi tutanağıyla kınama cezası kesti!",
+      "laws": [
+        "657 sayılı DMK m. 126 (Disiplin Cezası Vermeye Yetkili Amirler)",
+        "657 sayılı DMK m. 135 (7 Gün İtiraz)",
+        "2577 sayılı İYUK m. 7 (60 Gün İptal Davası)",
+        "Danıştay İçtihatları (Tarafsızlık ve Objektiflik İlkesi — Nemo Iudex in Causa Sua)"
+      ],
+      "duration_sec": 53.04,
+      "voice": "tr-TR-AhmetNeural",
+      "video_path": "episodes/dosya_001/gyskamu_ogretmen_dosya_1.mp4",
+      "caption_path": "episodes/dosya_001/caption.txt",
+      "created_at": "2026-11-20"
+    }
+  ]
 }

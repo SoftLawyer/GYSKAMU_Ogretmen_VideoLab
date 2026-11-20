@@ -2,6 +2,7 @@ import os
 import sys
 import json
 import wave
+import asyncio
 import subprocess
 import numpy as np
 from google import genai
@@ -317,12 +318,29 @@ def make_sfx_whoosh(sr=44100):
     return filtered * env * 0.12
 
 
-def build_audio_and_timeline():
-    with wave.open(RAW_WAV, "rb") as wf:
-        raw_sr = wf.getframerate()
-        raw_samples = np.frombuffer(wf.readframes(wf.getnframes()), dtype=np.int16).astype(np.float32) / 32768.0
+def synthesize_edge_segments(voice="tr-TR-AhmetNeural", rate="+6%", pitch="-2Hz"):
+    import edge_tts
 
-    ranges = find_best_segments(raw_samples, raw_sr)
+    async def _gen_all():
+        for seg in SEGMENTS_DEF:
+            mp3_tmp = os.path.join(OUT_DIR, f"edge_{seg['id']}.mp3")
+            wav_out = os.path.join(OUT_DIR, f"charon_v2_{seg['id']}.wav")
+            spoken = seg.get("spoken_text", seg["text"])
+            comm = edge_tts.Communicate(spoken, voice=voice, rate=rate, pitch=pitch)
+            await comm.save(mp3_tmp)
+            subprocess.run([
+                "ffmpeg", "-y", "-i", mp3_tmp,
+                "-af", "silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.04,areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.04,areverse,afade=t=in:st=0:d=0.015",
+                "-ar", "44100", "-ac", "1", wav_out
+            ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+            if os.path.exists(mp3_tmp):
+                os.remove(mp3_tmp)
+
+    asyncio.run(_gen_all())
+    print(f"✅ Edge Neural TTS ({voice}) synthesized {len(SEGMENTS_DEF)} segments.")
+
+
+def build_audio_and_timeline(engine="charon"):
     sr = 44100
     master_samples = []
     cur_t = 0.18
@@ -331,18 +349,27 @@ def build_audio_and_timeline():
     timeline_segments = []
     beat_ranges = {}
 
+    if engine == "charon":
+        with wave.open(RAW_WAV, "rb") as wf:
+            raw_sr = wf.getframerate()
+            raw_samples = np.frombuffer(wf.readframes(wf.getnframes()), dtype=np.int16).astype(np.float32) / 32768.0
+        ranges = find_best_segments(raw_samples, raw_sr)
+    else:
+        ranges = [(0.0, 0.0)] * len(SEGMENTS_DEF)
+
     for seg, (t0, t1) in zip(SEGMENTS_DEF, ranges):
         seg_wav = os.path.join(OUT_DIR, f"charon_v2_{seg['id']}.wav")
-        raw_dur = max(0.20, (t1 - t0) / TEMPO)
-        fade_out_st = max(0.05, raw_dur - 0.03)
-        subprocess.run([
-            "ffmpeg", "-y",
-            "-ss", f"{t0:.3f}", "-to", f"{t1:.3f}",
-            "-i", RAW_WAV,
-            "-af", f"atempo={TEMPO:.2f},afade=t=in:st=0:d=0.02,afade=t=out:st={fade_out_st:.3f}:d=0.025",
-            "-ar", str(sr), "-ac", "1",
-            seg_wav
-        ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
+        if engine == "charon":
+            raw_dur = max(0.20, (t1 - t0) / TEMPO)
+            fade_out_st = max(0.05, raw_dur - 0.03)
+            subprocess.run([
+                "ffmpeg", "-y",
+                "-ss", f"{t0:.3f}", "-to", f"{t1:.3f}",
+                "-i", RAW_WAV,
+                "-af", f"atempo={TEMPO:.2f},afade=t=in:st=0:d=0.02,afade=t=out:st={fade_out_st:.3f}:d=0.025",
+                "-ar", str(sr), "-ac", "1",
+                seg_wav
+            ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, check=True)
 
         with wave.open(seg_wav, "rb") as wf:
             raw = wf.readframes(wf.getnframes())
@@ -464,6 +491,11 @@ def build_audio_and_timeline():
 
 
 if __name__ == "__main__":
-    if "--skip-tts" not in sys.argv or not os.path.exists(RAW_WAV):
-        synthesize_charon()
-    build_audio_and_timeline()
+    engine = "edge" if "--engine" in sys.argv and "edge" in sys.argv else "charon"
+    if engine == "edge":
+        synthesize_edge_segments()
+        build_audio_and_timeline(engine="edge")
+    else:
+        if "--skip-tts" not in sys.argv or not os.path.exists(RAW_WAV):
+            synthesize_charon()
+        build_audio_and_timeline(engine="charon")
