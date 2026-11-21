@@ -1,33 +1,33 @@
 {
-  "totalDuration": 53.4829,
+  "totalDuration": 54.141,
   "beats": [
     {
       "start": 0.0,
-      "end": 9.3715
+      "end": 10.4836
     },
     {
-      "start": 9.3715,
-      "end": 14.0192
+      "start": 10.4836,
+      "end": 15.5583
     },
     {
-      "start": 14.0192,
-      "end": 19.281
+      "start": 15.5583,
+      "end": 21.7357
     },
     {
-      "start": 19.281,
-      "end": 31.7557
+      "start": 21.7357,
+      "end": 35.0871
     },
     {
-      "start": 31.7557,
-      "end": 39.8901
+      "start": 35.0871,
+      "end": 43.5705
     },
     {
-      "start": 39.8901,
-      "end": 46.9672
+      "start": 43.5705,
+      "end": 47.3174
     },
     {
-      "start": 46.9672,
-      "end": 53.4829
+      "start": 47.3174,
+      "end": 54.141
     }
   ],
   "segments": [
@@ -36,12 +36,12 @@
       "beat": 0,
       "text": "Dersin tam ortasında kapı çalınmadan açıldı.",
       "raw_range": [
-        0.0,
-        2.98
+        0.22,
+        2.56
       ],
       "start": 0.18,
-      "end": 2.5886,
-      "duration": 2.4086,
+      "end": 2.3241,
+      "duration": 2.1441,
       "sub_chunks": [
         {
           "words": [
@@ -54,7 +54,7 @@
             2
           ],
           "start": 0.18,
-          "end": 1.3003
+          "end": 1.1773
         },
         {
           "words": [
@@ -66,8 +66,8 @@
             0,
             1
           ],
-          "start": 1.3003,
-          "end": 2.5886
+          "start": 1.1773,
+          "end": 2.3241
         }
       ]
     },
@@ -76,12 +76,12 @@
       "beat": 0,
       "text": "Okul müdürü içeri dalıp öğrencilerin önünde öğretmeni azarladı.",
       "raw_range": [
-        3.76,
-        7.76
+        2.82,
+        6.14
       ],
-      "start": 2.7086,
-      "end": 5.9443,
-      "duration": 3.2357,
+      "start": 2.4441,
+      "end": 5.4602,
+      "duration": 3.0161,
       "sub_chunks": [
         {
           "words": [
@@ -94,8 +94,8 @@
             0,
             1
           ],
-          "start": 2.7086,
-          "end": 3.9089
+          "start": 2.4441,
+          "end": 3.563
         },
         {
           "words": [
@@ -108,8 +108,8 @@
             0,
             3
           ],
-          "start": 3.9089,
-          "end": 5.9443
+          "start": 3.563,
+          "end": 5.4602
         }
       ]
     },
@@ -118,12 +118,12 @@
       "beat": 0,
       "text": "Herkesin gözü önünde sesi yükseldi, öğretmeni rencide etti.",
       "raw_range": [
-        8.52,
-        10.84
+        6.38,
+        9.66
       ],
-      "start": 6.0643,
-      "end": 7.9337,
-      "duration": 1.8694,
+      "start": 5.5802,
+      "end": 8.5582,
+      "duration": 2.978,
       "sub_chunks": [
         {
           "words": [
@@ -137,8 +137,8 @@
             3,
             4
           ],
-          "start": 6.0643,
-          "end": 7.1924
+          "start": 5.5802,
+          "end": 7.3773
         },
         {
           "words": [
@@ -150,8 +150,8 @@
             1,
             2
           ],
-          "start": 7.1924,
-          "end": 7.9337
+          "start": 7.3773,
+          "end": 8.5582
         }
       ]
     },
@@ -160,12 +160,12 @@
       "beat": 0,
       "text": "Peki müdürün böyle bir yetkisi var mı?",
       "raw_range": [
-        11.04,
-        12.42
+        10.18,
+        11.94
       ],
-      "start": 8.0537,
-      "end": 9.1715,
-      "duration": 1.1177,
+      "start": 8.6782,
+      "end": 10.2836,
+      "duration": 1.6054,
       "sub_chunks": [
         {
           "words": [
@@ -182,8 +182,8 @@
             5,
             6
           ],
-          "start": 8.0537,
-          "end": 9.1715
+          "start": 8.6782,
+          "end": 10.2836
         }
       ]
     },
@@ -192,12 +192,12 @@
       "beat": 1,
       "text": "Çoğu kişi müdür amirdir, istediğini söyler sanır.",
       "raw_range": [
-        13.4,
-        15.5
+        12.24,
+        14.98
       ],
-      "start": 9.3715,
-      "end": 11.0652,
-      "duration": 1.6938,
+      "start": 10.4836,
+      "end": 12.9744,
+      "duration": 2.4908,
       "sub_chunks": [
         {
           "words": [
@@ -210,8 +210,8 @@
             2,
             3
           ],
-          "start": 9.3715,
-          "end": 10.2184
+          "start": 10.4836,
+          "end": 11.729
         },
         {
           "words": [
@@ -223,8 +223,8 @@
             0,
             2
           ],
-          "start": 10.2184,
-          "end": 11.0652
+          "start": 11.729,
+          "end": 12.9744
         }
       ]
     },
@@ -233,12 +233,12 @@
       "beat": 1,
       "text": "Ama hukuk sınıf kapısında net bir sınır çizer.",
       "raw_range": [
-        16.48,
-        19.74
+        15.2,
+        17.68
       ],
-      "start": 11.1852,
-      "end": 13.8192,
-      "duration": 2.634,
+      "start": 13.0944,
+      "end": 15.3583,
+      "duration": 2.2639,
       "sub_chunks": [
         {
           "words": [
@@ -251,8 +251,8 @@
             1,
             2
           ],
-          "start": 11.1852,
-          "end": 12.6485
+          "start": 13.0944,
+          "end": 14.3521
         },
         {
           "words": [
@@ -265,8 +265,8 @@
             0,
             2
           ],
-          "start": 12.6485,
-          "end": 13.8192
+          "start": 14.3521,
+          "end": 15.3583
         }
       ]
     },
@@ -275,12 +275,12 @@
       "beat": 2,
       "text": "657 sayılı Kanun m. 10 açıkça emreder:",
       "raw_range": [
-        20.28,
-        23.02
+        17.94,
+        21.4
       ],
-      "start": 14.0192,
-      "end": 16.2389,
-      "duration": 2.2198,
+      "start": 15.5583,
+      "end": 18.7051,
+      "duration": 3.1468,
       "sub_chunks": [
         {
           "words": [
@@ -295,8 +295,8 @@
             3,
             4
           ],
-          "start": 14.0192,
-          "end": 15.3391
+          "start": 15.5583,
+          "end": 17.4294
         },
         {
           "words": [
@@ -307,8 +307,8 @@
             0,
             1
           ],
-          "start": 15.3391,
-          "end": 16.2389
+          "start": 17.4294,
+          "end": 18.7051
         }
       ]
     },
@@ -317,12 +317,12 @@
       "beat": 2,
       "text": "Amir, memura hakkaniyet içinde davranmak zorundadır.",
       "raw_range": [
-        24.06,
-        27.42
+        21.6,
+        24.58
       ],
-      "start": 16.3589,
-      "end": 19.081,
-      "duration": 2.722,
+      "start": 18.8251,
+      "end": 21.5357,
+      "duration": 2.7106,
       "sub_chunks": [
         {
           "words": [
@@ -334,8 +334,8 @@
           "highlight": [
             2
           ],
-          "start": 16.3589,
-          "end": 17.9601
+          "start": 18.8251,
+          "end": 20.4196
         },
         {
           "words": [
@@ -346,8 +346,8 @@
             0,
             1
           ],
-          "start": 17.9601,
-          "end": 19.081
+          "start": 20.4196,
+          "end": 21.5357
         }
       ]
     },
@@ -356,12 +356,12 @@
       "beat": 3,
       "text": "Öğrencilerin huzurunda öğretmeni küçük düşürmek amirlik yetkisi değildir.",
       "raw_range": [
-        28.2,
-        31.34
+        24.82,
+        28.64
       ],
-      "start": 19.281,
-      "end": 21.815,
-      "duration": 2.5341,
+      "start": 21.7357,
+      "end": 25.2118,
+      "duration": 3.4761,
       "sub_chunks": [
         {
           "words": [
@@ -373,8 +373,8 @@
             0,
             1
           ],
-          "start": 19.281,
-          "end": 20.4072
+          "start": 21.7357,
+          "end": 23.2806
         },
         {
           "words": [
@@ -389,8 +389,8 @@
             1,
             4
           ],
-          "start": 20.4072,
-          "end": 21.815
+          "start": 23.2806,
+          "end": 25.2118
         }
       ]
     },
@@ -399,12 +399,12 @@
       "beat": 3,
       "text": "Bu davranış açık bir mobbing ve itibar ihlalidir.",
       "raw_range": [
-        32.3,
-        36.6
+        28.86,
+        31.48
       ],
-      "start": 21.915,
-      "end": 25.3868,
-      "duration": 3.4718,
+      "start": 25.3118,
+      "end": 27.6981,
+      "duration": 2.3863,
       "sub_chunks": [
         {
           "words": [
@@ -417,8 +417,8 @@
           "highlight": [
             4
           ],
-          "start": 21.915,
-          "end": 23.9402
+          "start": 25.3118,
+          "end": 26.7038
         },
         {
           "words": [
@@ -430,8 +430,8 @@
             1,
             2
           ],
-          "start": 23.9402,
-          "end": 25.3868
+          "start": 26.7038,
+          "end": 27.6981
         }
       ]
     },
@@ -440,12 +440,12 @@
       "beat": 3,
       "text": "Üstelik 7528 sayılı Kanun m. 33 devrededir.",
       "raw_range": [
-        37.3,
-        40.44
+        31.72,
+        35.78
       ],
-      "start": 25.5068,
-      "end": 28.0501,
-      "duration": 2.5432,
+      "start": 27.8181,
+      "end": 31.5158,
+      "duration": 3.6978,
       "sub_chunks": [
         {
           "words": [
@@ -458,8 +458,8 @@
             1,
             3
           ],
-          "start": 25.5068,
-          "end": 27.0206
+          "start": 27.8181,
+          "end": 30.0191
         },
         {
           "words": [
@@ -471,8 +471,8 @@
             0,
             1
           ],
-          "start": 27.0206,
-          "end": 28.0501
+          "start": 30.0191,
+          "end": 31.5158
         }
       ]
     },
@@ -481,12 +481,12 @@
       "beat": 3,
       "text": "Öğretmene görevinden dolayı hakarette ceza yarı oranında artar.",
       "raw_range": [
-        41.24,
-        45.42
+        35.98,
+        39.56
       ],
-      "start": 28.1701,
-      "end": 31.5557,
-      "duration": 3.3857,
+      "start": 31.6358,
+      "end": 34.8871,
+      "duration": 3.2513,
       "sub_chunks": [
         {
           "words": [
@@ -499,8 +499,8 @@
             0,
             3
           ],
-          "start": 28.1701,
-          "end": 30.1906
+          "start": 31.6358,
+          "end": 33.5761
         },
         {
           "words": [
@@ -514,8 +514,8 @@
             2,
             3
           ],
-          "start": 30.1906,
-          "end": 31.5557
+          "start": 33.5761,
+          "end": 34.8871
         }
       ]
     },
@@ -524,12 +524,12 @@
       "beat": 4,
       "text": "Peki öğretmen ne yapabilir?",
       "raw_range": [
-        46.34,
-        50.18
+        39.8,
+        41.24
       ],
-      "start": 31.7557,
-      "end": 34.8562,
-      "duration": 3.1005,
+      "start": 35.0871,
+      "end": 36.3903,
+      "duration": 1.3032,
       "sub_chunks": [
         {
           "words": [
@@ -542,8 +542,8 @@
             1,
             2
           ],
-          "start": 31.7557,
-          "end": 34.8562
+          "start": 35.0871,
+          "end": 36.3903
         }
       ]
     },
@@ -552,12 +552,12 @@
       "beat": 4,
       "text": "Danıştay kararlarına göre idareye manevi tazminat davası açabilir.",
       "raw_range": [
-        51.22,
-        52.84
+        41.44,
+        45.12
       ],
-      "start": 34.9762,
-      "end": 36.2893,
-      "duration": 1.3131,
+      "start": 36.5103,
+      "end": 39.8498,
+      "duration": 3.3394,
       "sub_chunks": [
         {
           "words": [
@@ -570,8 +570,8 @@
             0,
             1
           ],
-          "start": 34.9762,
-          "end": 35.6428
+          "start": 36.5103,
+          "end": 38.2057
         },
         {
           "words": [
@@ -585,8 +585,8 @@
             1,
             2
           ],
-          "start": 35.6428,
-          "end": 36.2893
+          "start": 38.2057,
+          "end": 39.8498
         }
       ]
     },
@@ -595,12 +595,12 @@
       "beat": 4,
       "text": "Hakaret ve görevi kötüye kullanmadan savcılığa suç duyurusunda bulunabilir.",
       "raw_range": [
-        53.58,
-        57.64
+        45.3,
+        49.04
       ],
-      "start": 36.4093,
-      "end": 39.6901,
-      "duration": 3.2808,
+      "start": 39.9698,
+      "end": 43.3705,
+      "duration": 3.4007,
       "sub_chunks": [
         {
           "words": [
@@ -615,8 +615,8 @@
             2,
             3
           ],
-          "start": 36.4093,
-          "end": 38.0054
+          "start": 39.9698,
+          "end": 41.6242
         },
         {
           "words": [
@@ -630,8 +630,8 @@
             1,
             2
           ],
-          "start": 38.0054,
-          "end": 39.6901
+          "start": 41.6242,
+          "end": 43.3705
         }
       ]
     },
@@ -640,12 +640,12 @@
       "beat": 5,
       "text": "Kısacası amirlik yetkisi var,",
       "raw_range": [
-        58.32,
-        62.22
+        49.24,
+        50.9
       ],
-      "start": 39.8901,
-      "end": 43.0431,
-      "duration": 3.153,
+      "start": 43.5705,
+      "end": 45.0792,
+      "duration": 1.5087,
       "sub_chunks": [
         {
           "words": [
@@ -658,8 +658,8 @@
             1,
             2
           ],
-          "start": 39.8901,
-          "end": 43.0431
+          "start": 43.5705,
+          "end": 45.0792
         }
       ]
     },
@@ -668,12 +668,12 @@
       "beat": 5,
       "text": "ama sınıfta öğretmeni azarlama hakkı yok.",
       "raw_range": [
-        63.34,
-        67.86
+        51.0,
+        53.16
       ],
-      "start": 43.1231,
-      "end": 46.7672,
-      "duration": 3.6441,
+      "start": 45.1592,
+      "end": 47.1174,
+      "duration": 1.9582,
       "sub_chunks": [
         {
           "words": [
@@ -689,8 +689,8 @@
             4,
             5
           ],
-          "start": 43.1231,
-          "end": 46.7672
+          "start": 45.1592,
+          "end": 47.1174
         }
       ]
     },
@@ -699,12 +699,12 @@
       "beat": 6,
       "text": "Senin okulunda böyle bir olay yaşandı mı?",
       "raw_range": [
-        68.78,
-        70.84
+        53.42,
+        55.4
       ],
-      "start": 46.9672,
-      "end": 48.6328,
-      "duration": 1.6656,
+      "start": 47.3174,
+      "end": 49.1198,
+      "duration": 1.8024,
       "sub_chunks": [
         {
           "words": [
@@ -721,8 +721,8 @@
             4,
             5
           ],
-          "start": 46.9672,
-          "end": 48.6328
+          "start": 47.3174,
+          "end": 49.1198
         }
       ]
     },
@@ -731,12 +731,12 @@
       "beat": 6,
       "text": "Yorumlarda paylaş, birlikte konuşalım.",
       "raw_range": [
-        71.28,
-        73.42
+        55.58,
+        57.4
       ],
-      "start": 48.7528,
-      "end": 50.485,
-      "duration": 1.7323,
+      "start": 49.2398,
+      "end": 50.9056,
+      "duration": 1.6658,
       "sub_chunks": [
         {
           "words": [
@@ -749,8 +749,8 @@
             0,
             1
           ],
-          "start": 48.7528,
-          "end": 50.485
+          "start": 49.2398,
+          "end": 50.9056
         }
       ]
     },
@@ -759,12 +759,12 @@
       "beat": 6,
       "text": "Yeni öğretmen dosyaları için GYSKAMU'yu takip et.",
       "raw_range": [
-        74.06,
-        77.251
+        57.68,
+        60.76
       ],
-      "start": 50.605,
-      "end": 53.1829,
-      "duration": 2.5778,
+      "start": 51.0256,
+      "end": 53.841,
+      "duration": 2.8154,
       "sub_chunks": [
         {
           "words": [
@@ -777,8 +777,8 @@
             1,
             2
           ],
-          "start": 50.605,
-          "end": 52.1087
+          "start": 51.0256,
+          "end": 52.6679
         },
         {
           "words": [
@@ -790,8 +790,8 @@
             0,
             1
           ],
-          "start": 52.1087,
-          "end": 53.1829
+          "start": 52.6679,
+          "end": 53.841
         }
       ]
     }

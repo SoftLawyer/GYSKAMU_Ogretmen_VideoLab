@@ -28,13 +28,13 @@ if os.path.exists(_ENV_PATH):
                 os.environ.setdefault(_k.strip(), _v.strip().strip('"').strip("'"))
 
 API_KEY = os.environ.get("GEMINI_API_KEY", _SETTINGS.get("gemini_api_key", ""))
-TEMPO = float(os.environ.get("CHARON_TEMPO", _SETTINGS["tts"].get("atempo", 1.10)))
+TEMPO = 1.10
 VOICE_NAME = _SETTINGS["tts"].get("voice_name", "Charon")
 TTS_MODEL = _SETTINGS["tts"].get("model", "gemini-2.5-flash-preview-tts")
 
 # ============================================================================
 # DOSYA NO: 2 — Müdür Ders Ortasında Sınıfa Girip Öğrencilerin Önünde Öğretmeni Azarlayabilir mi?
-# Hedef: 7 Bölüm (Beat 0..6), 20 Segment -> 45.0s - 55.0s
+# Hedef: 7 Bölüm (Beat 0..6), 20 Segment, TEMPO = 1.10 (HukukLA ile birebir) -> 45.0s - 55.0s
 # ============================================================================
 PROMPT_TEXT = """Aşağıdaki metni genç, karizmatik, tok, merak uyandıran ve akıcı bir Türkçe belgesel/Reels anlatıcısı tonuyla oku. Her satır arasında çok kısa ve doğal bir es ver; aynı satır içinde duraksama yapma:
 
@@ -209,60 +209,92 @@ def detect_islands(samples, sr, min_sil_ms=260, thresh=0.012):
     return segments
 
 
+def _spoken_lines():
+    # Extract the exact spoken lines from PROMPT_TEXT (skipping the first instruction line)
+    lines = [l.strip() for l in PROMPT_TEXT.strip().splitlines()[1:] if l.strip()]
+    if len(lines) == len(SEGMENTS_DEF):
+        return lines
+    return [s["text"] for s in SEGMENTS_DEF]
+
+
+def _alignment_score(segs, spoken_lines):
+    total_dur = sum(b - a for a, b in segs)
+    char_lens = [len(l) for l in spoken_lines]
+    total_chars = max(1, sum(char_lens))
+    err = 0.0
+    for (a, b), c in zip(segs, char_lens):
+        exp = total_dur * (c / total_chars)
+        err += ((b - a) - exp) ** 2
+    return err
+
+
 def find_best_segments(samples, sr):
     target_n = len(SEGMENTS_DEF)
-    for thresh in [0.012, 0.010, 0.015, 0.008]:
-        for min_sil in range(180, 560, 20):
+    spoken_lines = _spoken_lines()
+
+    # Evaluate ALL candidate thresholds/min_sil that yield target_n islands AND pick lowest duration-mismatch score,
+    # plus compare against DP merge of fine islands so a comma pause NEVER shifts all subsequent subtitles!
+    candidates = []
+    for thresh in [0.012, 0.010, 0.015, 0.008, 0.018]:
+        for min_sil in range(180, 620, 20):
             segs = detect_islands(samples, sr, min_sil_ms=min_sil, thresh=thresh)
             if len(segs) == target_n:
-                print(f"Matched {target_n} segments cleanly at thresh={thresh}, min_sil={min_sil}ms")
-                return segs
+                sc = _alignment_score(segs, spoken_lines)
+                candidates.append((sc, f"sweep(thresh={thresh}, min_sil={min_sil}ms)", segs))
 
-    fine = detect_islands(samples, sr, min_sil_ms=140, thresh=0.012)
-    print(f"Sweeping fallback: fine has {len(fine)} islands (target={target_n})")
-    if len(fine) < target_n:
-        t0 = fine[0][0] if fine else 0.0
-        t1 = fine[-1][1] if fine else len(samples) / sr
-        total_chars = sum(len(s["text"]) for s in SEGMENTS_DEF)
-        cur = t0
-        res = []
-        for s in SEGMENTS_DEF:
-            d = (t1 - t0) * (len(s["text"]) / total_chars)
-            res.append((round(cur, 3), round(cur + d, 3)))
-            cur += d
-        return res
+    # Also build DP merge from fine islands (120ms) using SPOKEN line lengths (not display text!)
+    fine = detect_islands(samples, sr, min_sil_ms=120, thresh=0.012)
+    if len(fine) >= target_n:
+        M = len(fine)
+        K = target_n
+        total_speech_dur = sum(b - a for a, b in fine)
+        char_lens = [len(l) for l in spoken_lines]
+        total_chars = max(1, sum(char_lens))
+        expected_durs = [total_speech_dur * (c / total_chars) for c in char_lens]
 
-    M = len(fine)
-    K = target_n
-    total_speech_dur = sum(b - a for a, b in fine)
-    char_lens = [len(s["text"]) for s in SEGMENTS_DEF]
-    total_chars = sum(char_lens)
-    expected_durs = [total_speech_dur * (c / total_chars) for c in char_lens]
+        INF = 1e18
+        dp = [[INF] * (M + 1) for _ in range(K + 1)]
+        parent = [[-1] * (M + 1) for _ in range(K + 1)]
+        dp[0][0] = 0.0
+        for k in range(1, K + 1):
+            exp_d = expected_durs[k - 1]
+            for j in range(k, M + 1):
+                for i in range(k - 1, j):
+                    dur_ij = fine[j - 1][1] - fine[i][0]
+                    internal_sil = sum(fine[idx + 1][0] - fine[idx][1] for idx in range(i, j - 1))
+                    # Penalize large silence gaps inside merged island & duration mismatch strongly
+                    cost = dp[k - 1][i] + ((dur_ij - exp_d) ** 2) * 3.0 + (internal_sil * 2.5) ** 2
+                    if cost < dp[k][j]:
+                        dp[k][j] = cost
+                        parent[k][j] = i
 
-    INF = 1e18
-    dp = [[INF] * (M + 1) for _ in range(K + 1)]
-    parent = [[-1] * (M + 1) for _ in range(K + 1)]
-    dp[0][0] = 0.0
-    for k in range(1, K + 1):
-        exp_d = expected_durs[k - 1]
-        for j in range(k, M + 1):
-            for i in range(k - 1, j):
-                dur_ij = fine[j - 1][1] - fine[i][0]
-                internal_sil = sum(fine[idx + 1][0] - fine[idx][1] for idx in range(i, j - 1))
-                cost = dp[k - 1][i] + ((dur_ij - exp_d) ** 2) + (internal_sil * 4.0) ** 2
-                if cost < dp[k][j]:
-                    dp[k][j] = cost
-                    parent[k][j] = i
+        bounds = []
+        cur_j = M
+        for k in range(K, 0, -1):
+            prev_i = parent[k][cur_j]
+            bounds.append((fine[prev_i][0], fine[cur_j - 1][1]))
+            cur_j = prev_i
+        bounds.reverse()
+        sc = _alignment_score(bounds, spoken_lines)
+        candidates.append((sc, f"DP({M}->{K})", bounds))
 
-    bounds = []
-    cur_j = M
-    for k in range(K, 0, -1):
-        prev_i = parent[k][cur_j]
-        bounds.append((fine[prev_i][0], fine[cur_j - 1][1]))
-        cur_j = prev_i
-    bounds.reverse()
-    print(f"DP merged {M} islands into {len(bounds)} segments.")
-    return bounds
+    if candidates:
+        candidates.sort(key=lambda x: x[0])
+        best_sc, best_label, best_segs = candidates[0]
+        print(f"Selected best alignment: {best_label} (score={best_sc:.3f})")
+        return best_segs
+
+    # Final proportional fallback
+    t0 = fine[0][0] if fine else 0.0
+    t1 = fine[-1][1] if fine else len(samples) / sr
+    total_chars = max(1, sum(len(l) for l in spoken_lines))
+    cur = t0
+    res = []
+    for l in spoken_lines:
+        d = (t1 - t0) * (len(l) / total_chars)
+        res.append((round(cur, 3), round(cur + d, 3)))
+        cur += d
+    return res
 
 
 def make_sfx_bell(sr=44100):
