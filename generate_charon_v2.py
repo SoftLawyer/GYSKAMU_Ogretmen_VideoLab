@@ -28,124 +28,126 @@ if os.path.exists(_ENV_PATH):
                 os.environ.setdefault(_k.strip(), _v.strip().strip('"').strip("'"))
 
 API_KEY = os.environ.get("GEMINI_API_KEY", _SETTINGS.get("gemini_api_key", ""))
-TEMPO = float(_SETTINGS["tts"].get("atempo", 1.10))
+TEMPO = float(os.environ.get("CHARON_TEMPO", _SETTINGS["tts"].get("atempo", 1.10)))
 VOICE_NAME = _SETTINGS["tts"].get("voice_name", "Charon")
 TTS_MODEL = _SETTINGS["tts"].get("model", "gemini-2.5-flash-preview-tts")
 
 # ============================================================================
-# DOSYA NO: 1 — Müdür Hem Tartışmanın Tarafı Hem Disiplin Amiri Olup Ceza Verebilir mi?
+# DOSYA NO: 2 — Müdür Ders Ortasında Sınıfa Girip Öğrencilerin Önünde Öğretmeni Azarlayabilir mi?
 # Hedef: 7 Bölüm (Beat 0..6), 20 Segment -> 45.0s - 55.0s
 # ============================================================================
 PROMPT_TEXT = """Aşağıdaki metni genç, karizmatik, tok, merak uyandıran ve akıcı bir Türkçe belgesel/Reels anlatıcısı tonuyla oku. Her satır arasında çok kısa ve doğal bir es ver; aynı satır içinde duraksama yapma:
 
-Okulda öğretmen ile müdür arasında sert bir tartışma çıktı.
-Müdür hemen kendi eliyle tutanak tuttu.
-Savunmasını alıp hemen kınama cezası kesti.
-Peki bu ceza geçerli mi?
+Dersin tam ortasında kapı çalınmadan açıldı.
+Okul müdürü içeri dalıp öğrencilerin önünde öğretmeni azarladı.
+Herkesin gözü önünde sesi yükseldi, öğretmeni rencide etti.
+Peki müdürün böyle bir yetkisi var mı?
 
-İlk akla gelen yanıt: Müdür disiplin amiri, yetkisi var.
-Ancak hukuk burada net bir kırmızı çizgi çizer.
+Çoğu kişi müdür amirdir, istediğini söyler sanır.
+Ama hukuk sınıf kapısında net bir sınır çizer.
 
-Altı yüz elli yedi sayılı kanunda müdür normalde yetkilidir.
-Ama bu olayda tartışmanın bizzat tarafı ve şikayetçisidir.
+Altı yüz elli yedi sayılı kanun madde on açıkça emreder:
+Amir, memura hakkaniyet içinde davranmak zorundadır.
 
-İşte burada temel bir ilke devreye girer:
-Kimse kendi davasının hakimi olamaz.
-Danıştay kararları bu konuda çok nettir.
-Olayın tarafı olan amir tarafsızlığını yitirir.
+Öğrencilerin huzurunda öğretmeni küçük düşürmek amirlik yetkisi değildir.
+Bu davranış açık bir mobbing ve itibar ihlalidir.
+Üstelik yedi bin beş yüz yirmi sekiz sayılı kanun madde otuz üç devrededir.
+Öğretmene görevinden dolayı hakarette ceza yarı oranında artar.
 
-Sonuç ne mi olur?
-Soruşturmayı üst amir veya tarafsız muhakkik yürütmeliydi.
-Müdürün kestiği kınama cezası İdare Mahkemesinde iptal edilir.
+Peki öğretmen ne yapabilir?
+Danıştay kararlarına göre idareye manevi tazminat davası açabilir.
+Hakaret ve görevi kötüye kullanmadan savcılığa suç duyurusunda bulunabilir.
 
-Sonuçta elde bir tutanak var,
-ama hukuken geçerli bir ceza yok.
+Kısacası amirlik yetkisi var,
+ama sınıfta öğretmeni azarlama hakkı yok.
 
-Senin veya bir meslektaşının başına böyle bir olay geldi mi?
-Deneyimini yorumlara yaz.
+Senin okulunda böyle bir olay yaşandı mı?
+Yorumlarda paylaş, birlikte konuşalım.
 Yeni öğretmen dosyaları için GYSKAMU'yu takip et."""
 
 SEGMENTS_DEF = [
     # Beat 0
-    {"id": "b0_s0", "beat": 0, "text": "Okulda öğretmen ile müdür arasında sert bir tartışma çıktı.", "sub_chunks": [
-        {"words": ["Okulda", "öğretmen", "ile", "müdür", "arasında"], "highlight": [1, 3]},
-        {"words": ["sert", "bir", "tartışma", "çıktı."], "highlight": [0, 2]}
+    {"id": "b0_s0", "beat": 0, "text": "Dersin tam ortasında kapı çalınmadan açıldı.", "sub_chunks": [
+        {"words": ["Dersin", "tam", "ortasında"], "highlight": [0, 2]},
+        {"words": ["kapı", "çalınmadan", "açıldı."], "highlight": [0, 1]}
     ], "pause_after": 0.12},
-    {"id": "b0_s1", "beat": 0, "text": "Müdür hemen kendi eliyle tutanak tuttu.", "sub_chunks": [
-        {"words": ["Müdür", "hemen", "kendi", "eliyle"], "highlight": [0, 2]},
-        {"words": ["tutanak", "tuttu."], "highlight": [0, 1]}
+    {"id": "b0_s1", "beat": 0, "text": "Okul müdürü içeri dalıp öğrencilerin önünde öğretmeni azarladı.", "sub_chunks": [
+        {"words": ["Okul", "müdürü", "içeri", "dalıp"], "highlight": [0, 1]},
+        {"words": ["öğrencilerin", "önünde", "öğretmeni", "azarladı."], "highlight": [0, 3]}
     ], "pause_after": 0.12},
-    {"id": "b0_s2", "beat": 0, "text": "Savunmasını alıp hemen kınama cezası kesti.", "sub_chunks": [
-        {"words": ["Savunmasını", "alıp", "hemen"], "highlight": [0, 2]},
-        {"words": ["kınama", "cezası", "kesti."], "highlight": [0, 1]}
+    {"id": "b0_s2", "beat": 0, "text": "Herkesin gözü önünde sesi yükseldi, öğretmeni rencide etti.", "sub_chunks": [
+        {"words": ["Herkesin", "gözü", "önünde", "sesi", "yükseldi,"], "highlight": [3, 4]},
+        {"words": ["öğretmeni", "rencide", "etti."], "highlight": [1, 2]}
     ], "pause_after": 0.12},
-    {"id": "b0_s3", "beat": 0, "text": "Peki bu ceza geçerli mi?", "sub_chunks": [
-        {"words": ["Peki", "bu", "ceza", "geçerli", "mi?"], "highlight": [2, 3, 4]}
+    {"id": "b0_s3", "beat": 0, "text": "Peki müdürün böyle bir yetkisi var mı?", "sub_chunks": [
+        {"words": ["Peki", "müdürün", "böyle", "bir", "yetkisi", "var", "mı?"], "highlight": [4, 5, 6]}
     ], "pause_after": 0.20},
 
     # Beat 1
-    {"id": "b1_s0", "beat": 1, "text": "İlk akla gelen yanıt: Müdür disiplin amiri, yetkisi var.", "sub_chunks": [
-        {"words": ["İlk", "akla", "gelen", "yanıt:"], "highlight": [0, 3]},
-        {"words": ["Müdür", "disiplin", "amiri,", "yetkisi", "var."], "highlight": [1, 2, 3]}
+    {"id": "b1_s0", "beat": 1, "text": "Çoğu kişi müdür amirdir, istediğini söyler sanır.", "sub_chunks": [
+        {"words": ["Çoğu", "kişi", "müdür", "amirdir,"], "highlight": [2, 3]},
+        {"words": ["istediğini", "söyler", "sanır."], "highlight": [0, 2]}
     ], "pause_after": 0.12},
-    {"id": "b1_s1", "beat": 1, "text": "Ancak hukuk burada net bir kırmızı çizgi çizer.", "sub_chunks": [
-        {"words": ["Ancak", "hukuk", "burada", "net", "bir"], "highlight": [1, 3]},
-        {"words": ["kırmızı", "çizgi", "çizer."], "highlight": [0, 1]}
+    {"id": "b1_s1", "beat": 1, "text": "Ama hukuk sınıf kapısında net bir sınır çizer.", "sub_chunks": [
+        {"words": ["Ama", "hukuk", "sınıf", "kapısında"], "highlight": [1, 2]},
+        {"words": ["net", "bir", "sınır", "çizer."], "highlight": [0, 2]}
     ], "pause_after": 0.20},
 
     # Beat 2
-    {"id": "b2_s0", "beat": 2, "text": "657 sayılı Kanunda müdür normalde yetkilidir.", "sub_chunks": [
-        {"words": ["657", "sayılı", "Kanunda"], "highlight": [0, 2]},
-        {"words": ["müdür", "normalde", "yetkilidir."], "highlight": [0, 2]}
+    {"id": "b2_s0", "beat": 2, "text": "657 sayılı Kanun m. 10 açıkça emreder:", "sub_chunks": [
+        {"words": ["657", "sayılı", "Kanun", "m.", "10"], "highlight": [0, 3, 4]},
+        {"words": ["açıkça", "emreder:"], "highlight": [0, 1]}
     ], "pause_after": 0.12},
-    {"id": "b2_s1", "beat": 2, "text": "Ama bu olayda tartışmanın bizzat tarafı ve şikayetçisidir.", "sub_chunks": [
-        {"words": ["Ama", "bu", "olayda", "tartışmanın"], "highlight": [3]},
-        {"words": ["bizzat", "tarafı", "ve", "şikayetçisidir."], "highlight": [1, 3]}
+    {"id": "b2_s1", "beat": 2, "text": "Amir, memura hakkaniyet içinde davranmak zorundadır.", "sub_chunks": [
+        {"words": ["Amir,", "memura", "hakkaniyet", "içinde"], "highlight": [2]},
+        {"words": ["davranmak", "zorundadır."], "highlight": [0, 1]}
     ], "pause_after": 0.20},
 
     # Beat 3
-    {"id": "b3_s0", "beat": 3, "text": "İşte burada temel bir ilke devreye girer:", "sub_chunks": [
-        {"words": ["İşte", "burada", "temel", "bir", "ilke", "devreye", "girer:"], "highlight": [2, 4]}
+    {"id": "b3_s0", "beat": 3, "text": "Öğrencilerin huzurunda öğretmeni küçük düşürmek amirlik yetkisi değildir.", "sub_chunks": [
+        {"words": ["Öğrencilerin", "huzurunda", "öğretmeni"], "highlight": [0, 1]},
+        {"words": ["küçük", "düşürmek", "amirlik", "yetkisi", "değildir."], "highlight": [0, 1, 4]}
     ], "pause_after": 0.10},
-    {"id": "b3_s1", "beat": 3, "text": "Kimse kendi davasının hâkimi olamaz.", "sub_chunks": [
-        {"words": ["Kimse", "kendi", "davasının", "hâkimi", "olamaz."], "highlight": [0, 2, 3]}
-    ], "pause_after": 0.14},
-    {"id": "b3_s2", "beat": 3, "text": "Danıştay kararları bu konuda çok nettir.", "sub_chunks": [
-        {"words": ["Danıştay", "kararları", "bu", "konuda", "çok", "nettir."], "highlight": [0, 1, 5]}
+    {"id": "b3_s1", "beat": 3, "text": "Bu davranış açık bir mobbing ve itibar ihlalidir.", "sub_chunks": [
+        {"words": ["Bu", "davranış", "açık", "bir", "mobbing"], "highlight": [4]},
+        {"words": ["ve", "itibar", "ihlalidir."], "highlight": [1, 2]}
     ], "pause_after": 0.12},
-    {"id": "b3_s3", "beat": 3, "text": "Olayın tarafı olan amir tarafsızlığını yitirir.", "sub_chunks": [
-        {"words": ["Olayın", "tarafı", "olan", "amir"], "highlight": [1, 3]},
-        {"words": ["tarafsızlığını", "yitirir."], "highlight": [0, 1]}
+    {"id": "b3_s2", "beat": 3, "text": "Üstelik 7528 sayılı Kanun m. 33 devrededir.", "sub_chunks": [
+        {"words": ["Üstelik", "7528", "sayılı", "Kanun"], "highlight": [1, 3]},
+        {"words": ["m.", "33", "devrededir."], "highlight": [0, 1]}
+    ], "pause_after": 0.12},
+    {"id": "b3_s3", "beat": 3, "text": "Öğretmene görevinden dolayı hakarette ceza yarı oranında artar.", "sub_chunks": [
+        {"words": ["Öğretmene", "görevinden", "dolayı", "hakarette"], "highlight": [0, 3]},
+        {"words": ["ceza", "yarı", "oranında", "artar."], "highlight": [1, 2, 3]}
     ], "pause_after": 0.20},
 
     # Beat 4
-    {"id": "b4_s0", "beat": 4, "text": "Sonuç ne mi olur?", "sub_chunks": [
-        {"words": ["Sonuç", "ne", "mi", "olur?"], "highlight": [0, 1]}
+    {"id": "b4_s0", "beat": 4, "text": "Peki öğretmen ne yapabilir?", "sub_chunks": [
+        {"words": ["Peki", "öğretmen", "ne", "yapabilir?"], "highlight": [1, 2]}
     ], "pause_after": 0.12},
-    {"id": "b4_s1", "beat": 4, "text": "Soruşturmayı üst amir veya tarafsız muhakkik yürütmeliydi.", "sub_chunks": [
-        {"words": ["Soruşturmayı", "üst", "amir", "veya"], "highlight": [1, 2]},
-        {"words": ["tarafsız", "muhakkik", "yürütmeliydi."], "highlight": [0, 1]}
+    {"id": "b4_s1", "beat": 4, "text": "Danıştay kararlarına göre idareye manevi tazminat davası açabilir.", "sub_chunks": [
+        {"words": ["Danıştay", "kararlarına", "göre", "idareye"], "highlight": [0, 1]},
+        {"words": ["manevi", "tazminat", "davası", "açabilir."], "highlight": [0, 1, 2]}
     ], "pause_after": 0.12},
-    {"id": "b4_s2", "beat": 4, "text": "Müdürün kestiği kınama cezası İdare Mahkemesinde iptal edilir.", "sub_chunks": [
-        {"words": ["Müdürün", "kestiği", "kınama", "cezası"], "highlight": [2, 3]},
-        {"words": ["İdare", "Mahkemesinde", "iptal", "edilir."], "highlight": [0, 1, 2]}
+    {"id": "b4_s2", "beat": 4, "text": "Hakaret ve görevi kötüye kullanmadan savcılığa suç duyurusunda bulunabilir.", "sub_chunks": [
+        {"words": ["Hakaret", "ve", "görevi", "kötüye", "kullanmadan"], "highlight": [0, 2, 3]},
+        {"words": ["savcılığa", "suç", "duyurusunda", "bulunabilir."], "highlight": [0, 1, 2]}
     ], "pause_after": 0.20},
 
     # Beat 5
-    {"id": "b5_s0", "beat": 5, "text": "Sonuçta elde bir tutanak var,", "sub_chunks": [
-        {"words": ["Sonuçta", "elde", "bir", "tutanak", "var,"], "highlight": [2, 3]}
+    {"id": "b5_s0", "beat": 5, "text": "Kısacası amirlik yetkisi var,", "sub_chunks": [
+        {"words": ["Kısacası", "amirlik", "yetkisi", "var,"], "highlight": [1, 2]}
     ], "pause_after": 0.08},
-    {"id": "b5_s1", "beat": 5, "text": "ama hukuken geçerli bir ceza yok.", "sub_chunks": [
-        {"words": ["ama", "hukuken", "geçerli", "bir", "ceza", "yok."], "highlight": [2, 4, 5]}
+    {"id": "b5_s1", "beat": 5, "text": "ama sınıfta öğretmeni azarlama hakkı yok.", "sub_chunks": [
+        {"words": ["ama", "sınıfta", "öğretmeni", "azarlama", "hakkı", "yok."], "highlight": [3, 4, 5]}
     ], "pause_after": 0.20},
 
     # Beat 6
-    {"id": "b6_s0", "beat": 6, "text": "Senin veya bir meslektaşının başına böyle bir olay geldi mi?", "sub_chunks": [
-        {"words": ["Senin", "veya", "bir", "meslektaşının"], "highlight": [0, 3]},
-        {"words": ["başına", "böyle", "bir", "olay", "geldi", "mi?"], "highlight": [3, 4]}
+    {"id": "b6_s0", "beat": 6, "text": "Senin okulunda böyle bir olay yaşandı mı?", "sub_chunks": [
+        {"words": ["Senin", "okulunda", "böyle", "bir", "olay", "yaşandı", "mı?"], "highlight": [1, 4, 5]}
     ], "pause_after": 0.12},
-    {"id": "b6_s1", "beat": 6, "text": "Deneyimini yorumlara yaz.", "sub_chunks": [
-        {"words": ["Deneyimini", "yorumlara", "yaz."], "highlight": [0, 1]}
+    {"id": "b6_s1", "beat": 6, "text": "Yorumlarda paylaş, birlikte konuşalım.", "sub_chunks": [
+        {"words": ["Yorumlarda", "paylaş,", "birlikte", "konuşalım."], "highlight": [0, 1]}
     ], "pause_after": 0.12},
     {"id": "b6_s2", "beat": 6, "text": "Yeni öğretmen dosyaları için GYSKAMU'yu takip et.", "sub_chunks": [
         {"words": ["Yeni", "öğretmen", "dosyaları", "için"], "highlight": [1, 2]},
