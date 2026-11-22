@@ -1,5 +1,5 @@
 {
-  "last_dosya_no": 2,
+  "last_dosya_no": 3,
   "episodes": [
     {
       "dosya_no": 1,
@@ -36,6 +36,24 @@
       "video_path": "episodes/dosya_002/gyskamu_ogretmen_dosya_2.mp4",
       "caption_path": "episodes/dosya_002/caption.txt",
       "created_at": "2026-11-21"
+    },
+    {
+      "dosya_no": 3,
+      "id": "dosya_003",
+      "category": "ogretmen_haklari",
+      "title": "Müdür Öğretmenin Şahsi Telefonunu Velilere İzinsiz Dağıtabilir mi?",
+      "hook": "Gece saat 23:00'te öğretmenin telefonu susmadan çalmaya başladı. Müdür şahsi numarasını velilere dağıtmıştı!",
+      "laws": [
+        "T.C. Anayasası m. 20 (Özel Hayatın Gizliliği ve Kişisel Verilerin Korunması)",
+        "6698 sayılı KVKK m. 5 & m. 12 (Açık Rıza ve Veri Güvenliği)",
+        "5237 sayılı TCK m. 136 (Verileri Hukuka Aykırı Verme/Yayma: 2-4 Yıl Hapis)",
+        "5237 sayılı TCK m. 137 (Kamu Görevlisi Tarafından İşlenmesi: +%50 Artırım)"
+      ],
+      "duration_sec": 55.38,
+      "voice": "Charon",
+      "video_path": "episodes/dosya_003/gyskamu_ogretmen_dosya_3.mp4",
+      "caption_path": "episodes/dosya_003/caption.txt",
+      "created_at": "2026-11-22"
     }
   ]
 }

@@ -1,171 +1,175 @@
 {
-  "totalDuration": 54.141,
+  "totalDuration": 55.3804,
   "beats": [
     {
       "start": 0.0,
-      "end": 10.4836
+      "end": 12.1708
     },
     {
-      "start": 10.4836,
-      "end": 15.5583
+      "start": 12.1708,
+      "end": 17.3864
     },
     {
-      "start": 15.5583,
-      "end": 21.7357
+      "start": 17.3864,
+      "end": 24.0468
     },
     {
-      "start": 21.7357,
-      "end": 35.0871
+      "start": 24.0468,
+      "end": 37.0924
     },
     {
-      "start": 35.0871,
-      "end": 43.5705
+      "start": 37.0924,
+      "end": 44.8582
     },
     {
-      "start": 43.5705,
-      "end": 47.3174
+      "start": 44.8582,
+      "end": 48.6728
     },
     {
-      "start": 47.3174,
-      "end": 54.141
+      "start": 48.6728,
+      "end": 55.3804
     }
   ],
   "segments": [
     {
       "id": "b0_s0",
       "beat": 0,
-      "text": "Dersin tam ortasında kapı çalınmadan açıldı.",
+      "text": "Gece saat 23:00'te öğretmenin telefonu susmadan çalmaya başladı.",
       "raw_range": [
-        0.22,
-        2.56
+        0.16,
+        4.1
       ],
       "start": 0.18,
-      "end": 2.3241,
-      "duration": 2.1441,
+      "end": 3.5271,
+      "duration": 3.3471,
       "sub_chunks": [
         {
           "words": [
-            "Dersin",
-            "tam",
-            "ortasında"
+            "Gece",
+            "saat",
+            "23:00'te",
+            "öğretmenin"
           ],
           "highlight": [
             0,
             2
           ],
           "start": 0.18,
-          "end": 1.1773
+          "end": 1.7207
         },
         {
           "words": [
-            "kapı",
-            "çalınmadan",
-            "açıldı."
+            "telefonu",
+            "susmadan",
+            "çalmaya",
+            "başladı."
           ],
           "highlight": [
             0,
             1
           ],
-          "start": 1.1773,
-          "end": 2.3241
+          "start": 1.7207,
+          "end": 3.5271
         }
       ]
     },
     {
       "id": "b0_s1",
       "beat": 0,
-      "text": "Okul müdürü içeri dalıp öğrencilerin önünde öğretmeni azarladı.",
+      "text": "Okul müdürü, öğretmenden izinsiz şahsi numarasını velilere dağıtmıştı.",
       "raw_range": [
-        2.82,
-        6.14
+        4.58,
+        8.92
       ],
-      "start": 2.4441,
-      "end": 5.4602,
-      "duration": 3.0161,
+      "start": 3.6071,
+      "end": 7.2956,
+      "duration": 3.6886,
       "sub_chunks": [
         {
           "words": [
             "Okul",
-            "müdürü",
-            "içeri",
-            "dalıp"
+            "müdürü,",
+            "öğretmenden",
+            "izinsiz"
           ],
           "highlight": [
             0,
-            1
+            1,
+            3
           ],
-          "start": 2.4441,
-          "end": 3.563
+          "start": 3.6071,
+          "end": 5.3178
         },
         {
           "words": [
-            "öğrencilerin",
-            "önünde",
-            "öğretmeni",
-            "azarladı."
+            "şahsi",
+            "numarasını",
+            "velilere",
+            "dağıtmıştı."
           ],
           "highlight": [
             0,
+            1,
             3
           ],
-          "start": 3.563,
-          "end": 5.4602
+          "start": 5.3178,
+          "end": 7.2956
         }
       ]
     },
     {
       "id": "b0_s2",
       "beat": 0,
-      "text": "Herkesin gözü önünde sesi yükseldi, öğretmeni rencide etti.",
+      "text": "Yetmedi, öğretmeni bir de veli WhatsApp grubuna eklemişti.",
       "raw_range": [
-        6.38,
-        9.66
+        9.48,
+        12.92
       ],
-      "start": 5.5802,
-      "end": 8.5582,
-      "duration": 2.978,
+      "start": 7.3756,
+      "end": 10.2987,
+      "duration": 2.9231,
       "sub_chunks": [
         {
           "words": [
-            "Herkesin",
-            "gözü",
-            "önünde",
-            "sesi",
-            "yükseldi,"
+            "Yetmedi,",
+            "öğretmeni",
+            "bir",
+            "de"
           ],
           "highlight": [
-            3,
-            4
+            0
           ],
-          "start": 5.5802,
-          "end": 7.3773
+          "start": 7.3756,
+          "end": 8.6576
         },
         {
           "words": [
-            "öğretmeni",
-            "rencide",
-            "etti."
+            "veli",
+            "WhatsApp",
+            "grubuna",
+            "eklemişti."
           ],
           "highlight": [
+            0,
             1,
             2
           ],
-          "start": 7.3773,
-          "end": 8.5582
+          "start": 8.6576,
+          "end": 10.2987
         }
       ]
     },
     {
       "id": "b0_s3",
       "beat": 0,
-      "text": "Peki müdürün böyle bir yetkisi var mı?",
+      "text": "Peki müdürün böyle bir hakkı var mı?",
       "raw_range": [
-        10.18,
-        11.94
+        13.52,
+        15.46
       ],
-      "start": 8.6782,
-      "end": 10.2836,
-      "duration": 1.6054,
+      "start": 10.3787,
+      "end": 12.0308,
+      "duration": 1.6521,
       "sub_chunks": [
         {
           "words": [
@@ -173,7 +177,7 @@
             "müdürün",
             "böyle",
             "bir",
-            "yetkisi",
+            "hakkı",
             "var",
             "mı?"
           ],
@@ -182,325 +186,322 @@
             5,
             6
           ],
-          "start": 8.6782,
-          "end": 10.2836
+          "start": 10.3787,
+          "end": 12.0308
         }
       ]
     },
     {
       "id": "b1_s0",
       "beat": 1,
-      "text": "Çoğu kişi müdür amirdir, istediğini söyler sanır.",
+      "text": "Çoğu öğretmen okul iletişimidir, mecburen verilir sanır.",
       "raw_range": [
-        12.24,
-        14.98
+        16.16,
+        19.46
       ],
-      "start": 10.4836,
-      "end": 12.9744,
-      "duration": 2.4908,
+      "start": 12.1708,
+      "end": 14.982,
+      "duration": 2.8113,
       "sub_chunks": [
         {
           "words": [
             "Çoğu",
-            "kişi",
-            "müdür",
-            "amirdir,"
+            "öğretmen",
+            "okul",
+            "iletişimidir,"
           ],
           "highlight": [
-            2,
-            3
+            0,
+            1
           ],
-          "start": 10.4836,
-          "end": 11.729
+          "start": 12.1708,
+          "end": 13.8064
         },
         {
           "words": [
-            "istediğini",
-            "söyler",
+            "mecburen",
+            "verilir",
             "sanır."
           ],
           "highlight": [
             0,
             2
           ],
-          "start": 11.729,
-          "end": 12.9744
+          "start": 13.8064,
+          "end": 14.982
         }
       ]
     },
     {
       "id": "b1_s1",
       "beat": 1,
-      "text": "Ama hukuk sınıf kapısında net bir sınır çizer.",
+      "text": "Ama kanun burada çok ağır bir ceza öngörür.",
       "raw_range": [
-        15.2,
-        17.68
+        19.88,
+        22.44
       ],
-      "start": 13.0944,
-      "end": 15.3583,
-      "duration": 2.2639,
+      "start": 15.062,
+      "end": 17.2464,
+      "duration": 2.1844,
       "sub_chunks": [
         {
           "words": [
             "Ama",
-            "hukuk",
-            "sınıf",
-            "kapısında"
+            "kanun",
+            "burada",
+            "çok"
           ],
           "highlight": [
-            1,
-            2
+            1
           ],
-          "start": 13.0944,
-          "end": 14.3521
+          "start": 15.062,
+          "end": 16.1022
         },
         {
           "words": [
-            "net",
+            "ağır",
             "bir",
-            "sınır",
-            "çizer."
+            "ceza",
+            "öngörür."
           ],
           "highlight": [
             0,
             2
           ],
-          "start": 14.3521,
-          "end": 15.3583
+          "start": 16.1022,
+          "end": 17.2464
         }
       ]
     },
     {
       "id": "b2_s0",
       "beat": 2,
-      "text": "657 sayılı Kanun m. 10 açıkça emreder:",
+      "text": "Anayasa m. 20 ve 6698 sayılı KVKK açık.",
       "raw_range": [
-        17.94,
-        21.4
+        23.2,
+        27.36
       ],
-      "start": 15.5583,
-      "end": 18.7051,
-      "duration": 3.1468,
+      "start": 17.3864,
+      "end": 20.923,
+      "duration": 3.5366,
       "sub_chunks": [
         {
           "words": [
-            "657",
-            "sayılı",
-            "Kanun",
+            "Anayasa",
             "m.",
-            "10"
+            "20",
+            "ve"
           ],
           "highlight": [
             0,
-            3,
-            4
+            2
           ],
-          "start": 15.5583,
-          "end": 17.4294
+          "start": 17.3864,
+          "end": 18.8755
         },
         {
           "words": [
-            "açıkça",
-            "emreder:"
+            "6698",
+            "sayılı",
+            "KVKK",
+            "açık."
           ],
           "highlight": [
             0,
-            1
+            2,
+            3
           ],
-          "start": 17.4294,
-          "end": 18.7051
+          "start": 18.8755,
+          "end": 20.923
         }
       ]
     },
     {
       "id": "b2_s1",
       "beat": 2,
-      "text": "Amir, memura hakkaniyet içinde davranmak zorundadır.",
+      "text": "Öğretmenin şahsi cep telefonu, korunan kişisel veridir.",
       "raw_range": [
-        21.6,
-        24.58
+        27.9,
+        31.32
       ],
-      "start": 18.8251,
-      "end": 21.5357,
-      "duration": 2.7106,
+      "start": 21.003,
+      "end": 23.9068,
+      "duration": 2.9038,
       "sub_chunks": [
         {
           "words": [
-            "Amir,",
-            "memura",
-            "hakkaniyet",
-            "içinde"
+            "Öğretmenin",
+            "şahsi",
+            "cep",
+            "telefonu,"
           ],
           "highlight": [
-            2
+            1,
+            3
           ],
-          "start": 18.8251,
-          "end": 20.4196
+          "start": 21.003,
+          "end": 22.6162
         },
         {
           "words": [
-            "davranmak",
-            "zorundadır."
+            "korunan",
+            "kişisel",
+            "veridir."
           ],
           "highlight": [
-            0,
-            1
+            1,
+            2
           ],
-          "start": 20.4196,
-          "end": 21.5357
+          "start": 22.6162,
+          "end": 23.9068
         }
       ]
     },
     {
       "id": "b3_s0",
       "beat": 3,
-      "text": "Öğrencilerin huzurunda öğretmeni küçük düşürmek amirlik yetkisi değildir.",
+      "text": "Resmi iletişim yalnızca okulun kurumsal kanallarıyla yürütülür.",
       "raw_range": [
-        24.82,
-        28.64
+        31.98,
+        35.48
       ],
-      "start": 21.7357,
-      "end": 25.2118,
-      "duration": 3.4761,
+      "start": 24.0468,
+      "end": 27.0249,
+      "duration": 2.9781,
       "sub_chunks": [
         {
           "words": [
-            "Öğrencilerin",
-            "huzurunda",
-            "öğretmeni"
+            "Resmi",
+            "iletişim",
+            "yalnızca",
+            "okulun"
+          ],
+          "highlight": [
+            0,
+            2
+          ],
+          "start": 24.0468,
+          "end": 25.4878
+        },
+        {
+          "words": [
+            "kurumsal",
+            "kanallarıyla",
+            "yürütülür."
           ],
           "highlight": [
             0,
             1
           ],
-          "start": 21.7357,
-          "end": 23.2806
-        },
-        {
-          "words": [
-            "küçük",
-            "düşürmek",
-            "amirlik",
-            "yetkisi",
-            "değildir."
-          ],
-          "highlight": [
-            0,
-            1,
-            4
-          ],
-          "start": 23.2806,
-          "end": 25.2118
+          "start": 25.4878,
+          "end": 27.0249
         }
       ]
     },
     {
       "id": "b3_s1",
       "beat": 3,
-      "text": "Bu davranış açık bir mobbing ve itibar ihlalidir.",
+      "text": "Açık rıza olmadan numarayı paylaşmak TCK m. 136 suçudur.",
       "raw_range": [
-        28.86,
-        31.48
+        35.98,
+        40.4
       ],
-      "start": 25.3118,
-      "end": 27.6981,
-      "duration": 2.3863,
+      "start": 27.1049,
+      "end": 30.8572,
+      "duration": 3.7523,
       "sub_chunks": [
         {
           "words": [
-            "Bu",
-            "davranış",
-            "açık",
-            "bir",
-            "mobbing"
+            "Açık",
+            "rıza",
+            "olmadan",
+            "numarayı",
+            "paylaşmak"
           ],
           "highlight": [
-            4
+            0,
+            1
           ],
-          "start": 25.3118,
-          "end": 26.7038
+          "start": 27.1049,
+          "end": 29.561
         },
         {
           "words": [
-            "ve",
-            "itibar",
-            "ihlalidir."
+            "TCK",
+            "m.",
+            "136",
+            "suçudur."
           ],
           "highlight": [
-            1,
-            2
+            0,
+            2,
+            3
           ],
-          "start": 26.7038,
-          "end": 27.6981
+          "start": 29.561,
+          "end": 30.8572
         }
       ]
     },
     {
       "id": "b3_s2",
       "beat": 3,
-      "text": "Üstelik 7528 sayılı Kanun m. 33 devrededir.",
+      "text": "Cezası 2 yıldan 4 yıla kadar hapistir.",
       "raw_range": [
-        31.72,
-        35.78
+        40.9,
+        43.46
       ],
-      "start": 27.8181,
-      "end": 31.5158,
-      "duration": 3.6978,
+      "start": 30.9372,
+      "end": 33.1078,
+      "duration": 2.1705,
       "sub_chunks": [
         {
           "words": [
-            "Üstelik",
-            "7528",
-            "sayılı",
-            "Kanun"
+            "Cezası",
+            "2",
+            "yıldan",
+            "4",
+            "yıla",
+            "kadar",
+            "hapistir."
           ],
           "highlight": [
             1,
-            3
+            3,
+            6
           ],
-          "start": 27.8181,
-          "end": 30.0191
-        },
-        {
-          "words": [
-            "m.",
-            "33",
-            "devrededir."
-          ],
-          "highlight": [
-            0,
-            1
-          ],
-          "start": 30.0191,
-          "end": 31.5158
+          "start": 30.9372,
+          "end": 33.1078
         }
       ]
     },
     {
       "id": "b3_s3",
       "beat": 3,
-      "text": "Öğretmene görevinden dolayı hakarette ceza yarı oranında artar.",
+      "text": "Üstelik kamu görevlisi yetkisini kötüye kullanırsa ceza yarı oranında artar.",
       "raw_range": [
-        35.98,
-        39.56
+        43.96,
+        48.4
       ],
-      "start": 31.6358,
-      "end": 34.8871,
-      "duration": 3.2513,
+      "start": 33.1878,
+      "end": 36.9524,
+      "duration": 3.7646,
       "sub_chunks": [
         {
           "words": [
-            "Öğretmene",
-            "görevinden",
-            "dolayı",
-            "hakarette"
+            "Üstelik",
+            "kamu",
+            "görevlisi",
+            "yetkisini",
+            "kötüye",
+            "kullanırsa"
           ],
           "highlight": [
-            0,
-            3
+            1,
+            2,
+            4
           ],
-          "start": 31.6358,
-          "end": 33.5761
+          "start": 33.1878,
+          "end": 35.6975
         },
         {
           "words": [
@@ -514,215 +515,227 @@
             2,
             3
           ],
-          "start": 33.5761,
-          "end": 34.8871
+          "start": 35.6975,
+          "end": 36.9524
         }
       ]
     },
     {
       "id": "b4_s0",
       "beat": 4,
-      "text": "Peki öğretmen ne yapabilir?",
+      "text": "Peki sonuç ne olur?",
       "raw_range": [
-        39.8,
-        41.24
+        48.96,
+        50.1
       ],
-      "start": 35.0871,
-      "end": 36.3903,
-      "duration": 1.3032,
+      "start": 37.0924,
+      "end": 38.0607,
+      "duration": 0.9683,
       "sub_chunks": [
         {
           "words": [
             "Peki",
-            "öğretmen",
+            "sonuç",
             "ne",
-            "yapabilir?"
+            "olur?"
           ],
           "highlight": [
             1,
             2
           ],
-          "start": 35.0871,
-          "end": 36.3903
+          "start": 37.0924,
+          "end": 38.0607
         }
       ]
     },
     {
       "id": "b4_s1",
       "beat": 4,
-      "text": "Danıştay kararlarına göre idareye manevi tazminat davası açabilir.",
+      "text": "Öğretmen mesai dışında veli aramalarına cevap vermek zorunda değildir.",
       "raw_range": [
-        41.44,
-        45.12
+        50.6,
+        54.3
       ],
-      "start": 36.5103,
-      "end": 39.8498,
-      "duration": 3.3394,
+      "start": 38.1407,
+      "end": 41.2794,
+      "duration": 3.1388,
       "sub_chunks": [
         {
           "words": [
-            "Danıştay",
-            "kararlarına",
-            "göre",
-            "idareye"
+            "Öğretmen",
+            "mesai",
+            "dışında",
+            "veli",
+            "aramalarına"
           ],
           "highlight": [
-            0,
-            1
-          ],
-          "start": 36.5103,
-          "end": 38.2057
-        },
-        {
-          "words": [
-            "manevi",
-            "tazminat",
-            "davası",
-            "açabilir."
-          ],
-          "highlight": [
-            0,
             1,
             2
           ],
-          "start": 38.2057,
-          "end": 39.8498
+          "start": 38.1407,
+          "end": 39.9148
+        },
+        {
+          "words": [
+            "cevap",
+            "vermek",
+            "zorunda",
+            "değildir."
+          ],
+          "highlight": [
+            2,
+            3
+          ],
+          "start": 39.9148,
+          "end": 41.2794
         }
       ]
     },
     {
       "id": "b4_s2",
       "beat": 4,
-      "text": "Hakaret ve görevi kötüye kullanmadan savcılığa suç duyurusunda bulunabilir.",
+      "text": "İzinsiz paylaşım yapan amir hakkında savcılığa suç duyurusu yapılabilir.",
       "raw_range": [
-        45.3,
-        49.04
+        54.76,
+        58.72
       ],
-      "start": 39.9698,
-      "end": 43.3705,
-      "duration": 3.4007,
+      "start": 41.3594,
+      "end": 44.7182,
+      "duration": 3.3588,
       "sub_chunks": [
         {
           "words": [
-            "Hakaret",
-            "ve",
-            "görevi",
-            "kötüye",
-            "kullanmadan"
+            "İzinsiz",
+            "paylaşım",
+            "yapan",
+            "amir",
+            "hakkında"
           ],
           "highlight": [
             0,
-            2,
+            1,
             3
           ],
-          "start": 39.9698,
-          "end": 41.6242
+          "start": 41.3594,
+          "end": 43.0624
         },
         {
           "words": [
             "savcılığa",
             "suç",
-            "duyurusunda",
-            "bulunabilir."
+            "duyurusu",
+            "yapılabilir."
           ],
           "highlight": [
             0,
             1,
             2
           ],
-          "start": 41.6242,
-          "end": 43.3705
+          "start": 43.0624,
+          "end": 44.7182
         }
       ]
     },
     {
       "id": "b5_s0",
       "beat": 5,
-      "text": "Kısacası amirlik yetkisi var,",
+      "text": "Kısacası kurumsal iletişim var,",
       "raw_range": [
-        49.24,
-        50.9
+        59.22,
+        61.02
       ],
-      "start": 43.5705,
-      "end": 45.0792,
-      "duration": 1.5087,
+      "start": 44.8582,
+      "end": 46.3822,
+      "duration": 1.524,
       "sub_chunks": [
         {
           "words": [
             "Kısacası",
-            "amirlik",
-            "yetkisi",
+            "kurumsal",
+            "iletişim",
             "var,"
           ],
           "highlight": [
             1,
             2
           ],
-          "start": 43.5705,
-          "end": 45.0792
+          "start": 44.8582,
+          "end": 46.3822
         }
       ]
     },
     {
       "id": "b5_s1",
       "beat": 5,
-      "text": "ama sınıfta öğretmeni azarlama hakkı yok.",
+      "text": "ama şahsi numarayı izinsiz dağıtma hakkı yok.",
       "raw_range": [
-        51.0,
-        53.16
+        61.34,
+        63.78
       ],
-      "start": 45.1592,
-      "end": 47.1174,
-      "duration": 1.9582,
+      "start": 46.4622,
+      "end": 48.5328,
+      "duration": 2.0707,
       "sub_chunks": [
         {
           "words": [
             "ama",
-            "sınıfta",
-            "öğretmeni",
-            "azarlama",
+            "şahsi",
+            "numarayı",
+            "izinsiz",
+            "dağıtma",
             "hakkı",
             "yok."
           ],
           "highlight": [
+            1,
             3,
-            4,
-            5
+            6
           ],
-          "start": 45.1592,
-          "end": 47.1174
+          "start": 46.4622,
+          "end": 48.5328
         }
       ]
     },
     {
       "id": "b6_s0",
       "beat": 6,
-      "text": "Senin okulunda böyle bir olay yaşandı mı?",
+      "text": "Senin numaran da iznin olmadan velilere verildi mi?",
       "raw_range": [
-        53.42,
-        55.4
+        64.3,
+        66.94
       ],
-      "start": 47.3174,
-      "end": 49.1198,
-      "duration": 1.8024,
+      "start": 48.6728,
+      "end": 50.9139,
+      "duration": 2.241,
       "sub_chunks": [
         {
           "words": [
             "Senin",
-            "okulunda",
-            "böyle",
-            "bir",
-            "olay",
-            "yaşandı",
-            "mı?"
+            "numaran",
+            "da",
+            "iznin",
+            "olmadan"
           ],
           "highlight": [
             1,
-            4,
-            5
+            3,
+            4
           ],
-          "start": 47.3174,
-          "end": 49.1198
+          "start": 48.6728,
+          "end": 50.0174
+        },
+        {
+          "words": [
+            "velilere",
+            "verildi",
+            "mi?"
+          ],
+          "highlight": [
+            0,
+            1
+          ],
+          "start": 50.0174,
+          "end": 50.9139
         }
       ]
     },
@@ -731,12 +744,12 @@
       "beat": 6,
       "text": "Yorumlarda paylaş, birlikte konuşalım.",
       "raw_range": [
-        55.58,
-        57.4
+        67.32,
+        69.2
       ],
-      "start": 49.2398,
-      "end": 50.9056,
-      "duration": 1.6658,
+      "start": 50.9939,
+      "end": 52.5939,
+      "duration": 1.6,
       "sub_chunks": [
         {
           "words": [
@@ -749,8 +762,8 @@
             0,
             1
           ],
-          "start": 49.2398,
-          "end": 50.9056
+          "start": 50.9939,
+          "end": 52.5939
         }
       ]
     },
@@ -759,12 +772,12 @@
       "beat": 6,
       "text": "Yeni öğretmen dosyaları için GYSKAMU'yu takip et.",
       "raw_range": [
-        57.68,
-        60.76
+        69.58,
+        72.611
       ],
-      "start": 51.0256,
-      "end": 53.841,
-      "duration": 2.8154,
+      "start": 52.6739,
+      "end": 55.2404,
+      "duration": 2.5666,
       "sub_chunks": [
         {
           "words": [
@@ -777,8 +790,8 @@
             1,
             2
           ],
-          "start": 51.0256,
-          "end": 52.6679
+          "start": 52.6739,
+          "end": 54.1711
         },
         {
           "words": [
@@ -790,8 +803,8 @@
             0,
             1
           ],
-          "start": 52.6679,
-          "end": 53.841
+          "start": 54.1711,
+          "end": 55.2404
         }
       ]
     }
