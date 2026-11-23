@@ -1,0 +1,150 @@
+{
+  "id": "gy_001",
+  "title": "Müdür Yerine Derse Girecek Kimse Yok Diyerek Mazeret İznini Reddedebilir mi?",
+  "handle": "@gyskamu",
+  "scenes": [
+    {
+      "id": "s01_kanca_a",
+      "art": "S01KancaA",
+      "kicker": "OKUL MÜDÜRLÜĞÜ · MAZERET İZNİ",
+      "headline": ["Mazeret dilekçeni", "müdüre *uzattın*"],
+      "footer": "657 DMK m.104 · MAZERET İZNİ",
+      "dark": false,
+      "beats": [
+        { "say": "Dilekçeni okul müdürüne uzattın.", "pill": "Dilekçeni okul *müdürüne* uzattın.", "sfx": ["pop"] },
+        { "say": "Yerine girecek öğretmen yok dedi.", "pill": "“Yerine girecek *öğretmen yok*” dedi.", "sfx": ["thud"] },
+        { "say": "İznini onaylamıyorum deyip geri çevirdi.", "pill": "“İznini *onaylamıyorum*” deyip çevirdi.", "sfx": ["stamp"] }
+      ]
+    },
+    {
+      "id": "s02_kanca_b",
+      "art": "S02KancaB",
+      "kicker": "MEVZUAT GERÇEĞİ",
+      "headline": ["Müdürün böyle bir", "yetkisi *yok*"],
+      "footer": "657 DMK m.104/B · BAĞLI YETKİ",
+      "dark": false,
+      "beats": [
+        { "say": "Peki müdür bunu yapabilir mi?", "pill": "Peki müdür bunu *yapabilir* mi?", "sfx": ["pop"] },
+        { "say": "Kanun burada çok net konuşuyor.", "pill": "Kanun burada çok *net* konuşuyor.", "sfx": ["ding"] },
+        { "say": "Yasal mazeret izni reddedilemez.", "pill": "Yasal mazeret izni *reddedilemez*.", "sfx": ["stamp"] }
+      ]
+    },
+    {
+      "id": "s03_celiski",
+      "art": "S03Celiski",
+      "kicker": "YAYGIN YANILGI",
+      "headline": ["Ders boş geçer", "bahanesi *geçersiz*"],
+      "footer": "MEB İZİN YÖNERGESİ · HAKKANİYET",
+      "dark": false,
+      "beats": [
+        { "say": "Çoğu öğretmen dersim var diye susar.", "pill": "Çoğu öğretmen “dersim var” diye *susar*.", "sfx": ["pop"] },
+        { "say": "Müdürün sözünü kesin emir sanır.", "pill": "Müdürün sözünü *kesin emir* sanır.", "sfx": ["tick"] },
+        { "say": "Oysa bu yetki müdürde değil.", "pill": "Oysa bu yetki müdürde *değil*.", "sfx": ["thud"] }
+      ]
+    },
+    {
+      "id": "s04_kanun",
+      "art": "S04Kanun",
+      "kicker": "657 SAYILI DMK · MADDE 104",
+      "headline": ["Kanun *verilir* der,", "takdir *bırakmaz*"],
+      "footer": "657 DMK m.104 · KANUNİ ZORUNLULUK",
+      "dark": false,
+      "beats": [
+        { "say": "Altı yüz elli yedi sayılı kanun madde yüz dört açık.", "pill": "*657 DMK* madde 104 açık.", "sfx": ["flip"] },
+        { "say": "Kanun verilebilir değil, verilir der.", "pill": "Kanun “verilebilir” değil, *“verilir”* der.", "sfx": ["ding"] },
+        { "say": "Bu, amirin keyfine bırakılmayan bağlı yetkidir.", "pill": "Amirin keyfine bırakılmayan *bağlı yetkidir*.", "sfx": ["lock"] }
+      ]
+    },
+    {
+      "id": "s05_haklar",
+      "art": "S05Haklar",
+      "kicker": "657 DMK m.104/B",
+      "headline": ["Hangi izinler", "*kesin* haktır?"],
+      "footer": "657 DMK m.104/B · EVLİLİK · DOĞUM · ÖLÜM",
+      "dark": false,
+      "beats": [
+        { "say": "Kendinin veya çocuğunun evliliğinde yedi gün.", "pill": "Evlilikte kesin *7 gün*.", "sfx": ["pop"] },
+        { "say": "Eşinin doğumunda babaya on gün.", "pill": "Eşinin doğumunda babaya *10 gün*.", "sfx": ["pop"] },
+        { "say": "Yakınlarının vefatında yine yedi gün.", "pill": "Yakınlarının vefatında yine *7 gün*.", "sfx": ["pop"] }
+      ]
+    },
+    {
+      "id": "s06_ayrim",
+      "art": "S06Ayrim",
+      "kicker": "BAĞLI YETKİ ≠ TAKDİR YETKİSİ",
+      "headline": ["Müdür onay mercii", "*değildir*"],
+      "footer": "657 DMK m.104/B & 104/C AYRIMI",
+      "dark": false,
+      "beats": [
+        { "say": "Yüz dört B izinlerinde müdürün takdir yetkisi sıfırdır.", "pill": "104/B’de müdürün takdir yetkisi *sıfırdır*.", "sfx": ["lock"] },
+        { "say": "Genel on günlük mazeret izninde ise;", "pill": "Genel *10 günlük* mazeret izninde ise;", "sfx": ["flip"] },
+        { "say": "Yetki okul müdüründe değil, kaymakam ve validedir.", "pill": "Yetki müdürde değil, *kaymakam ve validedir*.", "sfx": ["stamp"] }
+      ]
+    },
+    {
+      "id": "s07_sumen_alti",
+      "art": "S07SumenAlti",
+      "kicker": "USULSÜZ ENGELLEME",
+      "headline": ["Dilekçeyi *sümen altı*", "edemez!"],
+      "footer": "3071 DİLEKÇE KANUNU · 657 DMK",
+      "dark": true,
+      "beats": [
+        { "say": "Okul müdürü dilekçeni geri çeviremez.", "pill": "Okul müdürü dilekçeni *geri çeviremez*.", "sfx": ["siren"] },
+        { "say": "Çekmecede bekletip sümen altı edemez.", "pill": "Çekmecede bekletip *sümen altı* edemez.", "sfx": ["thud"] },
+        { "say": "Evrakı kayıt altına almak zorundadır.", "pill": "Evrakı *kayıt altına* almak zorundadır.", "sfx": ["stamp"] }
+      ]
+    },
+    {
+      "id": "s08_usul",
+      "art": "S08Usul",
+      "kicker": "DOĞRU USUL",
+      "headline": ["Yazılı dilekçe", "ve *evrak kaydı*"],
+      "footer": "DYS EVRAK KAYIT · SİLSİLE YOLU",
+      "dark": false,
+      "beats": [
+        { "say": "Sözlü reddi asla kabul etme.", "pill": "Sözlü reddi *asla* kabul etme.", "sfx": ["pop"] },
+        { "say": "Dilekçeni yazılı ver, kayıt numarası al.", "pill": "Dilekçeni yazılı ver, *kayıt numarası* al.", "sfx": ["stamp"] },
+        { "say": "Silsile yoluyla ilçe milli eğitime ilettir.", "pill": "Silsile yoluyla *ilçe MEM’e* ilettir.", "sfx": ["ding"] }
+      ]
+    },
+    {
+      "id": "s09_idare",
+      "art": "S09Idare",
+      "kicker": "GÖREV DAĞILIMI",
+      "headline": ["Boş dersi çözmek", "*idarenin* işi"],
+      "footer": "MEB KURUM YÖNETMELİKLERİ",
+      "dark": false,
+      "beats": [
+        { "say": "Yerine kim girecek senin sorunun değil.", "pill": "“Yerine kim girecek?” senin *sorunun değil*.", "sfx": ["pop"] },
+        { "say": "Ders tedbirini almak idarenin görevidir.", "pill": "Ders tedbirini almak *idarenin görevidir*.", "sfx": ["flip"] },
+        { "say": "Yasal hakkın bu gerekçeyle engellenemez.", "pill": "Yasal hakkın bu gerekçeyle *engellenemez*.", "sfx": ["lock"] }
+      ]
+    },
+    {
+      "id": "s11_bilanco",
+      "art": "S11Bilanco",
+      "kicker": "MEVZUAT ÖZETİ",
+      "headline": ["Ders programı var,", "ret yetkisi *yok*"],
+      "footer": "657 DMK m.104 · ÖĞRETMEN HAKKI",
+      "dark": false,
+      "beats": [
+        { "say": "Kısacası kanuni mazeret iznin güvencede.", "pill": "Kanuni mazeret iznin *güvencede*.", "sfx": ["ding"] },
+        { "say": "Müdürün keyfi ret yetkisi yok.", "pill": "Müdürün keyfi ret yetkisi *yok*.", "sfx": ["thud"] },
+        { "say": "Hakkını yazılı başvuruyla koru.", "pill": "Hakkını *yazılı başvuruyla* koru.", "sfx": ["lock"] }
+      ]
+    },
+    {
+      "id": "s12_kapanis",
+      "art": "S12Kapanis",
+      "kicker": "ÖĞRETMENLER NE DİYOR?",
+      "headline": ["Senin başına", "*geldi* mi?"],
+      "footer": "GENEL BİLGİLENDİRME · CANLANDIRMADIR",
+      "dark": false,
+      "beats": [
+        { "say": "Yerine kimse yok diye iznin engellendi mi?", "pill": "“Yerine kimse yok” diye iznin *engellendi* mi?", "sfx": ["pop"] },
+        { "say": "Deneyimini yorumlarda paylaş.", "pill": "Deneyimini *yorumlarda* paylaş.", "sfx": ["pop"] },
+        { "say": "Öğretmen hakları için GYSKAMU'yu takip et.", "pill": "Öğretmen hakları için *GYSKAMU*’yu takip et.", "sfx": ["ding"] }
+      ]
+    }
+  ]
+}

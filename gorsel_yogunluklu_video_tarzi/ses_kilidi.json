@@ -1,0 +1,16 @@
+{
+  "_aciklama": "Görsel yoğunluklu tüm videolar BU sesle seslendirilir. Değiştirmek için bu dosyayı bilinçli olarak düzenle; araç sessizce başka sese geçmez.",
+  "provider": "gemini",
+  "model": "gemini-2.5-flash-preview-tts",
+  "voice": "Charon",
+  "tempo": 1.1,
+  "style_prompt": "Hızlı, net, merak uyandıran bir hukuk anlatıcısı gibi söyle: ",
+  "yedek_ses_sadece_izinle": {
+    "provider": "say",
+    "voice": "Yelda",
+    "rate": 185
+  },
+  "mod": "tek_istek",
+  "_mod_aciklama": "tek_istek: tüm senaryo TEK istekle, tek parça üretilir (ses/ton kendiliğinden tutarlı) ve sessizliklerden ifadelere bölünür. beat: ifade başına ayrı istek (yalnız hata ayıklama; kısa ifadelerde boş yanıt ve dakikada 10 istek sınırı sorunu çıkarır).",
+  "style_prompt_tek_istek": "Aşağıdaki metni genç, karizmatik, tok, merak uyandıran ve akıcı bir Türkçe belgesel/Reels anlatıcısı tonuyla oku. Her satır arasında çok kısa ve doğal bir es ver; aynı satır içinde duraksama yapma:"
+}

@@ -1,0 +1,24 @@
+{
+  "last_no": 1,
+  "episodes": [
+    {
+      "no": 1,
+      "id": "gy_001",
+      "title": "Müdür Yerine Derse Girecek Kimse Yok Diyerek Mazeret İznini Reddedebilir mi?",
+      "laws": [
+        "657 sayılı DMK m. 104/B (Evlilik 7 Gün, Doğum/Babalık 10 Gün, Ölüm 7 Gün — Bağlı Yetki)",
+        "657 sayılı DMK m. 104/C (10 Günlük Genel Mazeret İzni — Mülki Amir Onayı)",
+        "Kamu Personeli Genel Tebliği (Seri No: 6)",
+        "3071 sayılı Dilekçe Hakkının Kullanılmasına Dair Kanun"
+      ],
+      "duration_sec": 69.54,
+      "scenes": 11,
+      "beats": 33,
+      "voice": "gemini:gemini-2.5-flash-preview-tts:Charon",
+      "voice_locked": true,
+      "video_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_001_mazeret_izni/gy_001_mazeret_izni.mp4",
+      "caption_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_001_mazeret_izni/caption.txt",
+      "created_at": "2026-11-23"
+    }
+  ]
+}
