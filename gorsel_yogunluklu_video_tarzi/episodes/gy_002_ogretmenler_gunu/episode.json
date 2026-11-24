@@ -1,0 +1,124 @@
+{
+  "id": "gy_002",
+  "title": "24 Kasım Öğretmenler Günü Özel — Bütün Mesleklerin Anası: Öğretmenlik",
+  "handle": "@gyskamu",
+  "scenes": [
+    {
+      "id": "s01_kanca",
+      "art": "S01Kanca",
+      "kicker": "24 KASIM · ÖĞRETMENLER GÜNÜ",
+      "headline": ["Bütün meslekleri", "bir *öğretmen* yetiştirir"],
+      "footer": "BÜTÜN MESLEKLERİN ANASI · ÖĞRETMENLİK",
+      "dark": false,
+      "beats": [
+        { "say": "Dünyadaki bütün meslekleri tek bir kişi yetiştirir: Bir öğretmen.", "pill": "Bütün meslekleri tek kişi yetiştirir: *Bir öğretmen*.", "sfx": ["ding"] },
+        { "say": "Cerrahın eline neşteri ilk o verir.", "pill": "Cerrahın eline neşteri *ilk o* verir.", "sfx": ["pop"] },
+        { "say": "Hakimin önüne adaleti ilk o koyar.", "pill": "Hâkimin önüne adaleti *ilk o* koyar.", "sfx": ["pop"] }
+      ]
+    },
+    {
+      "id": "s02_imza",
+      "art": "S02Imza",
+      "kicker": "GÖRÜNMEZ İMZA",
+      "headline": ["Her başarının", "arkasında *o* var"],
+      "footer": "HER ESERDE BİR ÖĞRETMENİN EMEĞİ",
+      "dark": false,
+      "beats": [
+        { "say": "Mühendisin kurduğu köprüde onun izi vardır.", "pill": "Mühendisin köprüsünde *onun izi* vardır.", "sfx": ["whoosh"] },
+        { "say": "Alkışlanan her büyük başarının arkasında onun emeği.", "pill": "Her büyük başarının arkasında *onun emeği*.", "sfx": ["pop"] },
+        { "say": "Adı kürsüde okunmasa da imzası hep oradadır.", "pill": "Adı okunmasa da *imzası* hep oradadır.", "sfx": ["stamp"] }
+      ]
+    },
+    {
+      "id": "s03_kadimlik",
+      "art": "S03Kadimlik",
+      "kicker": "5 BİN YILLIK MİRAS",
+      "headline": ["İmparatorluklar yıkıldı,", "öğretmen *kaldı*"],
+      "footer": "KİL TABLETTEN BUGÜNE KADİM MESLEK",
+      "dark": false,
+      "beats": [
+        { "say": "Tarihte koca imparatorluklar yıkıldı.", "pill": "Tarihte koca *imparatorluklar* yıkıldı.", "sfx": ["flip"] },
+        { "say": "Yüzlerce meslek zamanla yok olup gitti.", "pill": "Yüzlerce meslek *yok olup* gitti.", "sfx": ["tick"] },
+        { "say": "Ama kil tabletten bugüne öğretmenlik hiç eksilmedi.", "pill": "Kil tabletten bugüne *öğretmenlik* hiç eksilmedi.", "sfx": ["ding"] }
+      ]
+    },
+    {
+      "id": "s04_basogretmen",
+      "art": "S04Basogretmen",
+      "kicker": "24 KASIM 1928 · MİLLET MEKTEPLERİ",
+      "headline": ["Başöğretmen", "*tahtanın* başında"],
+      "footer": "24 KASIM 1928 · MİLLET MEKTEPLERİ TALİMATNAMESİ",
+      "dark": true,
+      "beats": [
+        { "say": "İşte bu yüzden bir ülkeyi kuran komutan bile;", "pill": "Bir ülkeyi kuran *komutan* bile;", "sfx": ["whoosh"] },
+        { "say": "Yirmi dört Kasım bin dokuz yüz yirmi sekizde kara tahtanın başına geçti.", "pill": "*24 Kasım 1928*’de kara tahtaya geçti.", "sfx": ["thud"] },
+        { "say": "Başöğretmen ünvanını en büyük onur saydı.", "pill": "*Başöğretmen* ünvanını en büyük onur saydı.", "sfx": ["ding"] }
+      ]
+    },
+    {
+      "id": "s05_kader",
+      "art": "S05Kader",
+      "kicker": "BİR ÇOCUĞUN DÜNYASI",
+      "headline": ["Sadece ders", "*anlatmaz*"],
+      "footer": "TEK BİR CÜMLE · DEĞİŞEN BİR HAYAT",
+      "dark": false,
+      "beats": [
+        { "say": "Çünkü bir öğretmen sadece müfredat anlatmaz.", "pill": "Bir öğretmen sadece *müfredat* anlatmaz.", "sfx": ["pop"] },
+        { "say": "Bazen sınıfta tek bir cümle kurar: Sana inanıyorum.", "pill": "Tek bir cümle kurar: *“Sana inanıyorum.”*", "sfx": ["ding"] },
+        { "say": "Ve o an bir çocuğun bütün kaderini değiştirir.", "pill": "Bir çocuğun bütün *kaderini* değiştirir.", "sfx": ["pop"] }
+      ]
+    },
+    {
+      "id": "s06_kutsal",
+      "art": "S06Kutsal",
+      "kicker": "İNSAN İNŞA ETMEK",
+      "headline": ["Taşa değil,", "*insana* şekil verir"],
+      "footer": "DÜNYANIN EN KUTSAL SORUMLULUĞU",
+      "dark": false,
+      "beats": [
+        { "say": "Herkes taşa, kağıda, demire şekil verir.", "pill": "Herkes taşa, kâğıda *şekil* verir.", "sfx": ["flip"] },
+        { "say": "Öğretmen ise doğrudan insana şekil verir.", "pill": "Öğretmen ise doğrudan *insana* şekil verir.", "sfx": ["thud"] },
+        { "say": "Bu yüzden dünyanın en kutsal mesleğidir.", "pill": "Dünyanın en *kutsal* mesleğidir.", "sfx": ["lock"] }
+      ]
+    },
+    {
+      "id": "s07_isik",
+      "art": "S07Isik",
+      "kicker": "BİR ÖMÜRLÜK İZ",
+      "headline": ["Bugün olduğun", "*kişisin*"],
+      "footer": "KARANLIKTA YOL AYDINLATAN SES",
+      "dark": false,
+      "beats": [
+        { "say": "Bugün olduğun kişiysen;", "pill": "Bugün olduğun *kişiysen*;", "sfx": ["pop"] },
+        { "say": "Bir zamanlar yolunu aydınlatan o ses sayesindedir.", "pill": "Yolunu aydınlatan *o ses* sayesindedir.", "sfx": ["ding"] },
+        { "say": "Öğretmenlik bir iş değil, bir ömürlük izdir.", "pill": "Bir iş değil, *bir ömürlük izdir*.", "sfx": ["pop"] }
+      ]
+    },
+    {
+      "id": "s08_kutlama",
+      "art": "S08Kutlama",
+      "kicker": "24 KASIM ÖĞRETMENLER GÜNÜ",
+      "headline": ["İyi ki", "*varsınız*"],
+      "footer": "SONSUZ SAYGI VE MİNNETLE",
+      "dark": false,
+      "beats": [
+        { "say": "Başta Başöğretmen Mustafa Kemal Atatürk olmak üzere;", "pill": "Başta *Başöğretmen Atatürk* olmak üzere;", "sfx": ["ding"] },
+        { "say": "Geleceği inşa eden tüm öğretmenlerimizin;", "pill": "Geleceği inşa eden *tüm öğretmenlerimizin*;", "sfx": ["pop"] },
+        { "say": "Yirmi dört Kasım Öğretmenler Günü kutlu olsun.", "pill": "*24 Kasım Öğretmenler Günü* kutlu olsun.", "sfx": ["stamp"] }
+      ]
+    },
+    {
+      "id": "s09_paylasim",
+      "art": "S09Paylasim",
+      "kicker": "VEFA ZAMANI",
+      "headline": ["Hemen o", "*öğretmenine* gönder"],
+      "footer": "24 KASIM ÖZEL · @gyskamu",
+      "dark": false,
+      "beats": [
+        { "say": "Bu videoyu hayatını değiştiren o öğretmenine gönder.", "pill": "Hayatını değiştiren *o öğretmenine* gönder.", "sfx": ["whoosh"] },
+        { "say": "Hala unutmadığını bilsin.", "pill": "Hâlâ *unutmadığını* bilsin.", "sfx": ["pop"] },
+        { "say": "Tüm öğretmenlerimize sonsuz saygı ve minnetle.", "pill": "Sonsuz *saygı* ve *minnetle*.", "sfx": ["ding"] }
+      ]
+    }
+  ]
+}

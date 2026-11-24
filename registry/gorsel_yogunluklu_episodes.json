@@ -1,5 +1,5 @@
 {
-  "last_no": 1,
+  "last_no": 2,
   "episodes": [
     {
       "no": 1,
@@ -19,6 +19,23 @@
       "video_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_001_mazeret_izni/gy_001_mazeret_izni.mp4",
       "caption_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_001_mazeret_izni/caption.txt",
       "created_at": "2026-11-23"
+    },
+    {
+      "no": 2,
+      "id": "gy_002",
+      "title": "24 Kasım Öğretmenler Günü Özel — Bütün Mesleklerin Anası: Öğretmenlik",
+      "laws": [
+        "24 Kasım 1928 Millet Mektepleri Talimatnamesi (Başöğretmenlik Ünvanı)",
+        "1981 Yılı 24 Kasım Öğretmenler Günü İlanı"
+      ],
+      "duration_sec": 74.21,
+      "scenes": 9,
+      "beats": 27,
+      "voice": "gemini:gemini-2.5-flash-preview-tts:Charon",
+      "voice_locked": true,
+      "video_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_002_ogretmenler_gunu/gy_002_ogretmenler_gunu.mp4",
+      "caption_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_002_ogretmenler_gunu/caption.txt",
+      "created_at": "2026-11-24"
     }
   ]
 }

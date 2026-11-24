@@ -1,0 +1,236 @@
+{
+ "fps": 30,
+ "total": 74.21,
+ "audio": "gv/gy_002/master.mp3",
+ "voice": {
+  "id": "gemini:gemini-2.5-flash-preview-tts:Charon",
+  "locked": true
+ },
+ "scenes": [
+  {
+   "id": "s01_kanca",
+   "start": 0.0,
+   "end": 9.05,
+   "beats": [
+    {
+     "start": 0.0,
+     "voiceStart": 0.55,
+     "voiceEnd": 4.48,
+     "end": 4.53
+    },
+    {
+     "start": 4.53,
+     "voiceStart": 4.58,
+     "voiceEnd": 6.69,
+     "end": 6.74
+    },
+    {
+     "start": 6.74,
+     "voiceStart": 6.79,
+     "voiceEnd": 9.01,
+     "end": 9.05
+    }
+   ]
+  },
+  {
+   "id": "s02_imza",
+   "start": 9.05,
+   "end": 17.52,
+   "beats": [
+    {
+     "start": 9.05,
+     "voiceStart": 9.33,
+     "voiceEnd": 11.58,
+     "end": 11.63
+    },
+    {
+     "start": 11.63,
+     "voiceStart": 11.68,
+     "voiceEnd": 14.49,
+     "end": 14.54
+    },
+    {
+     "start": 14.54,
+     "voiceStart": 14.59,
+     "voiceEnd": 17.48,
+     "end": 17.52
+    }
+   ]
+  },
+  {
+   "id": "s03_kadimlik",
+   "start": 17.52,
+   "end": 25.23,
+   "beats": [
+    {
+     "start": 17.52,
+     "voiceStart": 17.8,
+     "voiceEnd": 19.79,
+     "end": 19.84
+    },
+    {
+     "start": 19.84,
+     "voiceStart": 19.89,
+     "voiceEnd": 21.92,
+     "end": 21.97
+    },
+    {
+     "start": 21.97,
+     "voiceStart": 22.02,
+     "voiceEnd": 25.19,
+     "end": 25.23
+    }
+   ]
+  },
+  {
+   "id": "s04_basogretmen",
+   "start": 25.23,
+   "end": 34.32,
+   "beats": [
+    {
+     "start": 25.23,
+     "voiceStart": 25.51,
+     "voiceEnd": 28.24,
+     "end": 28.29
+    },
+    {
+     "start": 28.29,
+     "voiceStart": 28.34,
+     "voiceEnd": 31.77,
+     "end": 31.82
+    },
+    {
+     "start": 31.82,
+     "voiceStart": 31.87,
+     "voiceEnd": 34.28,
+     "end": 34.32
+    }
+   ]
+  },
+  {
+   "id": "s05_kader",
+   "start": 34.32,
+   "end": 43.16,
+   "beats": [
+    {
+     "start": 34.32,
+     "voiceStart": 34.6,
+     "voiceEnd": 37.09,
+     "end": 37.14
+    },
+    {
+     "start": 37.14,
+     "voiceStart": 37.19,
+     "voiceEnd": 40.36,
+     "end": 40.41
+    },
+    {
+     "start": 40.41,
+     "voiceStart": 40.46,
+     "voiceEnd": 43.12,
+     "end": 43.16
+    }
+   ]
+  },
+  {
+   "id": "s06_kutsal",
+   "start": 43.16,
+   "end": 50.89,
+   "beats": [
+    {
+     "start": 43.16,
+     "voiceStart": 43.44,
+     "voiceEnd": 45.86,
+     "end": 45.91
+    },
+    {
+     "start": 45.91,
+     "voiceStart": 45.96,
+     "voiceEnd": 48.57,
+     "end": 48.62
+    },
+    {
+     "start": 48.62,
+     "voiceStart": 48.67,
+     "voiceEnd": 50.85,
+     "end": 50.89
+    }
+   ]
+  },
+  {
+   "id": "s07_isik",
+   "start": 50.89,
+   "end": 58.45,
+   "beats": [
+    {
+     "start": 50.89,
+     "voiceStart": 51.17,
+     "voiceEnd": 52.47,
+     "end": 52.52
+    },
+    {
+     "start": 52.52,
+     "voiceStart": 52.57,
+     "voiceEnd": 55.21,
+     "end": 55.26
+    },
+    {
+     "start": 55.26,
+     "voiceStart": 55.31,
+     "voiceEnd": 58.41,
+     "end": 58.45
+    }
+   ]
+  },
+  {
+   "id": "s08_kutlama",
+   "start": 58.45,
+   "end": 66.11,
+   "beats": [
+    {
+     "start": 58.45,
+     "voiceStart": 58.73,
+     "voiceEnd": 61.37,
+     "end": 61.42
+    },
+    {
+     "start": 61.42,
+     "voiceStart": 61.47,
+     "voiceEnd": 63.72,
+     "end": 63.77
+    },
+    {
+     "start": 63.77,
+     "voiceStart": 63.82,
+     "voiceEnd": 66.07,
+     "end": 66.11
+    }
+   ]
+  },
+  {
+   "id": "s09_paylasim",
+   "start": 66.11,
+   "end": 74.21,
+   "beats": [
+    {
+     "start": 66.11,
+     "voiceStart": 66.39,
+     "voiceEnd": 69.02,
+     "end": 69.07
+    },
+    {
+     "start": 69.07,
+     "voiceStart": 69.12,
+     "voiceEnd": 70.48,
+     "end": 70.53
+    },
+    {
+     "start": 70.53,
+     "voiceStart": 70.58,
+     "voiceEnd": 73.21,
+     "end": 74.21
+    }
+   ]
+  }
+ ]
+}
