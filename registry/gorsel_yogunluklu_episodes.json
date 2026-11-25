@@ -1,5 +1,5 @@
 {
-  "last_no": 2,
+  "last_no": 3,
   "episodes": [
     {
       "no": 1,
@@ -36,6 +36,24 @@
       "video_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_002_ogretmenler_gunu/gy_002_ogretmenler_gunu.mp4",
       "caption_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_002_ogretmenler_gunu/caption.txt",
       "created_at": "2026-11-24"
+    },
+    {
+      "no": 3,
+      "id": "gy_003",
+      "title": "Okul İdaresi Ders Programını Mobbing Aracı Yapabilir mi? (Boş Saatler, Tazminat & Rücu)",
+      "laws": [
+        "657 sayılı DMK m. 10 (Amirlerin Hakkaniyet ve Eşitlik Sorumluluğu)",
+        "T.C. Anayasası m. 129/5 (İdarenin Tazminat Sorumluluğu ve Kusurlu Yöneticiye Rücu)",
+        "Danıştay 2. Dairesi Emsal Kararları (Ders Programı / Boş Saat Mobbingi ve Manevi Tazminat)"
+      ],
+      "duration_sec": 71.60,
+      "scenes": 9,
+      "beats": 27,
+      "voice": "gemini:gemini-2.5-flash-preview-tts:Charon",
+      "voice_locked": true,
+      "video_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_003_ders_programi_mobbing/gy_003_ders_programi_mobbing.mp4",
+      "caption_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_003_ders_programi_mobbing/caption.txt",
+      "created_at": "2026-11-25"
     }
   ]
 }

@@ -1,0 +1,124 @@
+{
+  "id": "gy_003",
+  "title": "Okul İdaresi Ders Programını Mobbing Aracı Yapabilir mi? (Boş Saatler, Tazminat & Rücu)",
+  "handle": "@gyskamu",
+  "scenes": [
+    {
+      "id": "s01_kanca",
+      "art": "S01Kanca",
+      "kicker": "OKULDA MOBBİNG · DERS PROGRAMI",
+      "headline": ["Ders programın", "*ceza* aracı mı?"],
+      "footer": "HAFTALIK DERS PROGRAMI · BOŞ SAATLER",
+      "dark": false,
+      "beats": [
+        { "say": "Pazartesi ilk saat dersin var, sonra üç saat boş.", "pill": "İlk saat dersin var, sonra *3 saat boş*.", "sfx": ["pop"] },
+        { "say": "Öğleden sonra son saat yine tek bir ders.", "pill": "Son saat yine *tek bir ders*.", "sfx": ["tick"] },
+        { "say": "Bütün haftan kasıtlı boşluklarla parçalanmış.", "pill": "Bütün haftan kasıtlı boşluklarla *parçalanmış*.", "sfx": ["thud"] }
+      ]
+    },
+    {
+      "id": "s02_yanilgi",
+      "art": "S02Yanilgi",
+      "kicker": "YAYGIN YANILGI",
+      "headline": ["Müdürün takdir yetkisi", "*sınırsız* değil"],
+      "footer": "MEB YÖNETMELİKLERİ · TAKDİR SINIRI",
+      "dark": false,
+      "beats": [
+        { "say": "Çoğu öğretmen müdürün takdir yetkisi deyip susar.", "pill": "Çoğu öğretmen “takdir yetkisi” deyip *susar*.", "sfx": ["pop"] },
+        { "say": "Programı değiştiremeyeceğini sanır.", "pill": "Programı *değiştiremeyeceğini* sanır.", "sfx": ["tick"] },
+        { "say": "Oysa idarenin takdir yetkisi sınırsız değildir.", "pill": "İdarenin takdir yetkisi *sınırsız değildir*.", "sfx": ["lock"] }
+      ]
+    },
+    {
+      "id": "s03_kanun",
+      "art": "S03Kanun",
+      "kicker": "657 SAYILI DMK · MADDE 10",
+      "headline": ["Hakkaniyet ve", "*eşitlik* zorunlu"],
+      "footer": "657 DMK m.10 · AMİRLERİN SORUMLULUĞU",
+      "dark": false,
+      "beats": [
+        { "say": "Altı yüz elli yedi sayılı kanun madde on açıkça emreder:", "pill": "*657 DMK* madde 10 açıkça emreder:", "sfx": ["flip"] },
+        { "say": "Amir, memura hakkaniyet ve eşitlik içinde davranır.", "pill": "Amir, *hakkaniyet ve eşitlik* içinde davranır.", "sfx": ["ding"] },
+        { "say": "Ders programı cezalandırma aracı yapılamaz.", "pill": "Ders programı *cezalandırma aracı* yapılamaz.", "sfx": ["stamp"] }
+      ]
+    },
+    {
+      "id": "s04_danistay",
+      "art": "S04Danistay",
+      "kicker": "DANIŞTAY 2. DAİRE · EMSAL KARAR",
+      "headline": ["Kasıtlı boş saatler", "*mobbing* sayılır!"],
+      "footer": "DANIŞTAY EMSAL İÇTİHADI · PENCERE SAATLERİ",
+      "dark": true,
+      "beats": [
+        { "say": "Danıştay kararları bu konuda çok nettir.", "pill": "*Danıştay* kararları bu konuda çok nettir.", "sfx": ["siren"] },
+        { "say": "Dersleri kasıtlı olarak tüm haftaya yayıp;", "pill": "Dersleri kasıtlı tüm *haftaya yayıp*;", "sfx": ["thud"] },
+        { "say": "Öğretmeni verimsiz boş saatlerle okulda tutmak mobbingdir.", "pill": "Boş saatlerle okulda tutmak *mobbingdir*.", "sfx": ["stamp"] }
+      ]
+    },
+    {
+      "id": "s05_tazminat",
+      "art": "S05Tazminat",
+      "kicker": "TAM YARGI DAVASI",
+      "headline": ["Manevi tazminat", "*hakkın* var"],
+      "footer": "İDARE MAHKEMESİ · TAM YARGI DAVASI",
+      "dark": false,
+      "beats": [
+        { "say": "Sistematik program baskısına maruz kalan öğretmen;", "pill": "Sistematik program *baskısına* uğrayan öğretmen;", "sfx": ["pop"] },
+        { "say": "Önce yazılı itirazda bulunabilir.", "pill": "Önce *yazılı itirazda* bulunabilir.", "sfx": ["flip"] },
+        { "say": "Ardından İdare Mahkemesinde manevi tazminat davası açabilir.", "pill": "İdare Mahkemesinde *manevi tazminat* açabilir.", "sfx": ["stamp"] }
+      ]
+    },
+    {
+      "id": "s06_rucu",
+      "art": "S06Rucu",
+      "kicker": "ANAYASA MADDE 129/5 · RÜCU",
+      "headline": ["Tazminat müdürün", "*cebinden* çıkar!"],
+      "footer": "ANAYASA m.129/5 · KUSURLU YÖNETİCİYE RÜCU",
+      "dark": false,
+      "beats": [
+        { "say": "Üstelik işin en çarpıcı kısmı burada:", "pill": "İşin en *çarpıcı* kısmı burada:", "sfx": ["ding"] },
+        { "say": "Anayasa madde yüz yirmi dokuz uyarınca tazminatı idare öder.", "pill": "*Anayasa m. 129*: Tazminatı idare öder.", "sfx": ["cash"] },
+        { "say": "Sonra kusurlu yöneticiye rücu edip cebinden tahsil eder.", "pill": "Sonra kusurlu yöneticiye *rücu edip* tahsil eder.", "sfx": ["stamp"] }
+      ]
+    },
+    {
+      "id": "s07_adimlar",
+      "art": "S07Adimlar",
+      "kicker": "DOĞRU ADIMLAR",
+      "headline": ["İspatla ve", "*yazılı* itiraz et"],
+      "footer": "DYS EVRAK KAYIT · HUKUKİ İSPAT",
+      "dark": false,
+      "beats": [
+        { "say": "Ders programını mutlaka tarihli şekilde sakla.", "pill": "Ders programını *tarihli* şekilde sakla.", "sfx": ["pop"] },
+        { "say": "Değişiklik talebini yazılı dilekçe ile ver.", "pill": "Değişiklik talebini *yazılı dilekçe* ile ver.", "sfx": ["stamp"] },
+        { "say": "Eşitsizliği somut belgelerle kayıt altına al.", "pill": "Eşitsizliği somut belgelerle *kayıt altına* al.", "sfx": ["lock"] }
+      ]
+    },
+    {
+      "id": "s08_bilanco",
+      "art": "S08Bilanco",
+      "kicker": "MEVZUAT BİLANÇOSU",
+      "headline": ["Takdir yetkisi var,", "yıldırma hakkı *yok*"],
+      "footer": "657 DMK m.10 · ANAYASA m.129/5",
+      "dark": false,
+      "beats": [
+        { "say": "Kısacası idarenin program yapma yetkisi var,", "pill": "İdarenin program yapma *yetkisi* var,", "sfx": ["ding"] },
+        { "say": "ama öğretmeni bezdirme hakkı yok.", "pill": "ama öğretmeni *bezdirme hakkı* yok.", "sfx": ["thud"] },
+        { "say": "Keyfi uygulamanın bedeli rücuyla ödenir.", "pill": "Keyfi uygulamanın bedeli *rücuyla* ödenir.", "sfx": ["lock"] }
+      ]
+    },
+    {
+      "id": "s09_kapanis",
+      "art": "S09Kapanis",
+      "kicker": "ÖĞRETMENLER NE DİYOR?",
+      "headline": ["Senin programında", "*adaletsizlik* oldu mu?"],
+      "footer": "GENEL BİLGİLENDİRME · CANLANDIRMADIR",
+      "dark": false,
+      "beats": [
+        { "say": "Senin okulunda da ders programında adaletsizlik yapıldı mı?", "pill": "Ders programında *adaletsizlik* yapıldı mı?", "sfx": ["pop"] },
+        { "say": "Deneyimini yorumlarda paylaş.", "pill": "Deneyimini *yorumlarda* paylaş.", "sfx": ["pop"] },
+        { "say": "Öğretmen hakları için GYSKAMU'yu takip et.", "pill": "Öğretmen hakları için *GYSKAMU*’yu takip et.", "sfx": ["ding"] }
+      ]
+    }
+  ]
+}

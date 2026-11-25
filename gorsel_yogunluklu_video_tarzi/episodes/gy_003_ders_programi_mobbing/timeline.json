@@ -1,0 +1,236 @@
+{
+ "fps": 30,
+ "total": 71.6,
+ "audio": "gv/gy_003/master.mp3",
+ "voice": {
+  "id": "gemini:gemini-2.5-flash-preview-tts:Charon",
+  "locked": true
+ },
+ "scenes": [
+  {
+   "id": "s01_kanca",
+   "start": 0.0,
+   "end": 8.25,
+   "beats": [
+    {
+     "start": 0.0,
+     "voiceStart": 0.55,
+     "voiceEnd": 3.6,
+     "end": 3.65
+    },
+    {
+     "start": 3.65,
+     "voiceStart": 3.7,
+     "voiceEnd": 5.78,
+     "end": 5.83
+    },
+    {
+     "start": 5.83,
+     "voiceStart": 5.88,
+     "voiceEnd": 8.21,
+     "end": 8.25
+    }
+   ]
+  },
+  {
+   "id": "s02_yanilgi",
+   "start": 8.25,
+   "end": 15.33,
+   "beats": [
+    {
+     "start": 8.25,
+     "voiceStart": 8.53,
+     "voiceEnd": 10.96,
+     "end": 11.01
+    },
+    {
+     "start": 11.01,
+     "voiceStart": 11.06,
+     "voiceEnd": 12.65,
+     "end": 12.7
+    },
+    {
+     "start": 12.7,
+     "voiceStart": 12.75,
+     "voiceEnd": 15.29,
+     "end": 15.33
+    }
+   ]
+  },
+  {
+   "id": "s03_kanun",
+   "start": 15.33,
+   "end": 24.15,
+   "beats": [
+    {
+     "start": 15.33,
+     "voiceStart": 15.61,
+     "voiceEnd": 18.86,
+     "end": 18.91
+    },
+    {
+     "start": 18.91,
+     "voiceStart": 18.96,
+     "voiceEnd": 21.78,
+     "end": 21.83
+    },
+    {
+     "start": 21.83,
+     "voiceStart": 21.88,
+     "voiceEnd": 24.11,
+     "end": 24.15
+    }
+   ]
+  },
+  {
+   "id": "s04_danistay",
+   "start": 24.15,
+   "end": 31.69,
+   "beats": [
+    {
+     "start": 24.15,
+     "voiceStart": 24.43,
+     "voiceEnd": 26.38,
+     "end": 26.43
+    },
+    {
+     "start": 26.43,
+     "voiceStart": 26.48,
+     "voiceEnd": 28.48,
+     "end": 28.53
+    },
+    {
+     "start": 28.53,
+     "voiceStart": 28.58,
+     "voiceEnd": 31.65,
+     "end": 31.69
+    }
+   ]
+  },
+  {
+   "id": "s05_tazminat",
+   "start": 31.69,
+   "end": 39.82,
+   "beats": [
+    {
+     "start": 31.69,
+     "voiceStart": 31.97,
+     "voiceEnd": 34.48,
+     "end": 34.53
+    },
+    {
+     "start": 34.53,
+     "voiceStart": 34.58,
+     "voiceEnd": 36.23,
+     "end": 36.28
+    },
+    {
+     "start": 36.28,
+     "voiceStart": 36.33,
+     "voiceEnd": 39.78,
+     "end": 39.82
+    }
+   ]
+  },
+  {
+   "id": "s06_rucu",
+   "start": 39.82,
+   "end": 49.07,
+   "beats": [
+    {
+     "start": 39.82,
+     "voiceStart": 40.1,
+     "voiceEnd": 42.1,
+     "end": 42.15
+    },
+    {
+     "start": 42.15,
+     "voiceStart": 42.2,
+     "voiceEnd": 45.84,
+     "end": 45.89
+    },
+    {
+     "start": 45.89,
+     "voiceStart": 45.94,
+     "voiceEnd": 49.03,
+     "end": 49.07
+    }
+   ]
+  },
+  {
+   "id": "s07_adimlar",
+   "start": 49.07,
+   "end": 56.28,
+   "beats": [
+    {
+     "start": 49.07,
+     "voiceStart": 49.35,
+     "voiceEnd": 51.75,
+     "end": 51.8
+    },
+    {
+     "start": 51.8,
+     "voiceStart": 51.85,
+     "voiceEnd": 53.85,
+     "end": 53.9
+    },
+    {
+     "start": 53.9,
+     "voiceStart": 53.95,
+     "voiceEnd": 56.24,
+     "end": 56.28
+    }
+   ]
+  },
+  {
+   "id": "s08_bilanco",
+   "start": 56.28,
+   "end": 63.46,
+   "beats": [
+    {
+     "start": 56.28,
+     "voiceStart": 56.56,
+     "voiceEnd": 59.11,
+     "end": 59.16
+    },
+    {
+     "start": 59.16,
+     "voiceStart": 59.21,
+     "voiceEnd": 60.98,
+     "end": 61.03
+    },
+    {
+     "start": 61.03,
+     "voiceStart": 61.08,
+     "voiceEnd": 63.42,
+     "end": 63.46
+    }
+   ]
+  },
+  {
+   "id": "s09_kapanis",
+   "start": 63.46,
+   "end": 71.6,
+   "beats": [
+    {
+     "start": 63.46,
+     "voiceStart": 63.74,
+     "voiceEnd": 66.52,
+     "end": 66.57
+    },
+    {
+     "start": 66.57,
+     "voiceStart": 66.62,
+     "voiceEnd": 68.07,
+     "end": 68.12
+    },
+    {
+     "start": 68.12,
+     "voiceStart": 68.17,
+     "voiceEnd": 70.6,
+     "end": 71.6
+    }
+   ]
+  }
+ ]
+}
