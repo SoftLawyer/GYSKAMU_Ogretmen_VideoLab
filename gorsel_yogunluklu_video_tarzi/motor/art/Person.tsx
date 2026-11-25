@@ -98,11 +98,11 @@ export type PersonProps = HeadProps & {
   walk?: number;
 };
 
-const Arm: React.FC<{ x: number; a: number; b: number; color: string; skin: string; held?: React.ReactNode }> = ({ x, a, b, color, skin, held }) => (
-  <g transform={`translate(${x},-236) rotate(${-a})`}>
+const Arm: React.FC<{ x: number; a: number; b: number; side?: 1 | -1; color: string; skin: string; held?: React.ReactNode }> = ({ x, a, b, side = 1, color, skin, held }) => (
+  <g transform={`translate(${x},-236) rotate(${-a * side})`}>
     <line x1={0} y1={0} x2={0} y2={58} stroke={INK} strokeWidth={37} strokeLinecap="round" />
     <line x1={0} y1={0} x2={0} y2={58} stroke={color} strokeWidth={27} strokeLinecap="round" />
-    <g transform={`translate(0,58) rotate(${-b})`}>
+    <g transform={`translate(0,58) rotate(${-b * side})`}>
       <line x1={0} y1={0} x2={0} y2={54} stroke={INK} strokeWidth={37} strokeLinecap="round" />
       <line x1={0} y1={0} x2={0} y2={54} stroke={color} strokeWidth={27} strokeLinecap="round" />
       <circle cx={0} cy={62} r={17} fill={skin} stroke={INK} strokeWidth={4.5} />
@@ -114,7 +114,7 @@ const Arm: React.FC<{ x: number; a: number; b: number; color: string; skin: stri
 export const Person: React.FC<PersonProps> = (p) => {
   const f = useCurrentFrame();
   const { x, y, s = 1, face = 1, top = C.teal, pants = "#3C4A5E", shoes = "#2B1B12", style = "hoodie",
-    armF = [8, 8], armB = [8, 8], heldF, heldB, bob = 3, rotate = 0, opacity = 1, lean = 0, walk = 0, ...head } = p;
+    armF = [14, 10], armB = [14, 10], heldF, heldB, bob = 3, rotate = 0, opacity = 1, lean = 0, walk = 0, ...head } = p;
   const skin = head.skin ?? C.skin;
   const by = Math.sin(f / 9) * bob;
   const blink = f % 96 > 92;
@@ -123,8 +123,6 @@ export const Person: React.FC<PersonProps> = (p) => {
     <g transform={`translate(${x},${y}) rotate(${rotate}) scale(${s * face},${s})`} opacity={opacity}>
       <ellipse cx={0} cy={4} rx={86} ry={13} fill="rgba(43,27,18,.14)" />
       <g transform={`translate(0,${by * 0.4})`}>
-        {/* arka kol */}
-        <Arm x={-50} a={armB[0]} b={armB[1]} color={top} skin={skin} held={heldB} />
         {/* bacaklar */}
         <g stroke={INK} strokeWidth={5} strokeLinejoin="round">
           <rect x={-36 + w} y={-136} width={32} height={118} rx={14} fill={pants} />
@@ -133,6 +131,8 @@ export const Person: React.FC<PersonProps> = (p) => {
           <path d={`M${-4 - w} -10 q0 -14 18 -14 q22 0 28 14 q0 12 -10 12 h-26 q-10 0 -10 -12 Z`} fill={shoes} />
         </g>
         <g transform={`translate(${lean},${by}) `}>
+          {/* arka / sol kol (dışa doğru açılır, gövde arkasında kaybolmaz) */}
+          <Arm x={-56} a={armB[0]} b={armB[1]} side={-1} color={top} skin={skin} held={heldB} />
           {/* gövde */}
           {style === "hoodie" ? <path d="M-66 -236 q66 -38 132 0 l-8 16 q-58 -24 -116 0 Z" fill={C.ink} opacity={0.0} /> : null}
           <rect x={-60} y={-262} width={120} height={140} rx={42} fill={top} stroke={INK} strokeWidth={5} />
@@ -150,8 +150,8 @@ export const Person: React.FC<PersonProps> = (p) => {
               <path d="M-26 -262 L0 -232 L26 -262" fill={C.cream} stroke={INK} strokeWidth={4} strokeLinejoin="round" />
             </g>
           ) : null}
-          {/* ön kol */}
-          <Arm x={50} a={armF[0]} b={armF[1]} color={top} skin={skin} held={heldF} />
+          {/* ön / sağ kol */}
+          <Arm x={56} a={armF[0]} b={armF[1]} side={1} color={top} skin={skin} held={heldF} />
           <g transform="translate(0,-318)">
             <Head {...head} skin={skin} blink={blink} />
           </g>
