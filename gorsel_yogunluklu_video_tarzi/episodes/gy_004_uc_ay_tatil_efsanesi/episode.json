@@ -1,0 +1,124 @@
+{
+  "id": "gy_004",
+  "title": "Öğretmenler Yarım Gün Çalışıp 3 Ay Tatil mi Yapıyor? Gerçek Hesap",
+  "handle": "@gyskamu",
+  "scenes": [
+    {
+      "id": "s01_kanca",
+      "art": "S01Kanca",
+      "kicker": "BÜYÜK EFSANE · GERÇEK HESAP",
+      "headline": ["Öğretmenler 3 ay", "*yatıyor* mu?"],
+      "footer": "YILIN EN BÜYÜK TARTIŞMASI · KANUNİ GERÇEK",
+      "dark": false,
+      "beats": [
+        { "say": "Öğretmenler üç ay yatıyor diyenler, durun!", "pill": "“Öğretmenler *3 ay yatıyor!*” diyenler, durun!", "sfx": ["stamp", ["riser", 0.12]] },
+        { "say": "Yılın en büyük efsanesini", "pill": "Yılın en büyük *efsanesini*", "sfx": ["pop"] },
+        { "say": "kanunla çürütüyoruz!", "pill": "*kanunla* çürütüyoruz!", "sfx": ["thud"] }
+      ]
+    },
+    {
+      "id": "s02_iki_ay",
+      "art": "S02IkiAy",
+      "kicker": "1739 SAYILI KANUN · MADDE 50/A",
+      "headline": ["Yaz tatili 3 ay", "*değil, 2 aydır!*"],
+      "footer": "HAZİRAN SONU & EYLÜL BAŞI SEMİNER",
+      "dark": false,
+      "beats": [
+        { "say": "İlk yalan burada patlıyor!", "pill": "İlk yalan *burada* patlıyor!", "sfx": ["slash"] },
+        { "say": "Haziran sonu, Eylül başı seminerle geçer.", "pill": "Haziran sonu, Eylül başı *seminerle* geçer.", "sfx": ["stamp"] },
+        { "say": "Yaz izni kanunen iki aydır!", "pill": "Yaz izni kanunen *2 aydır!*", "sfx": ["ding"] }
+      ]
+    },
+    {
+      "id": "s03_sifir_izin",
+      "art": "S03SifirIzin",
+      "kicker": "657 SAYILI DMK · MADDE 103",
+      "headline": ["Yıl içinde tek gün", "*yıllık izin yok!*"],
+      "footer": "657 DMK m.103 · YILLIK İZİN YASAĞI",
+      "dark": false,
+      "beats": [
+        { "say": "Asıl şok şimdi geliyor!", "pill": "Asıl *şok* şimdi geliyor!", "sfx": ["riser"] },
+        { "say": "Altı yüz elli yedi çok net:", "pill": "*657 sayılı Kanun* çok net:", "sfx": ["flip"] },
+        { "say": "Yıl içinde yıllık izin sıfır gün!", "pill": "Yıl içinde yıllık izin: *0 gün!*", "sfx": ["thud", ["lock", 0.14]] }
+      ]
+    },
+    {
+      "id": "s04_yarim_gun",
+      "art": "S04YarimGun",
+      "kicker": "GÖRÜNMEYEN EFOR · SINIF GERÇEĞİ",
+      "headline": ["Zil çalınca mesai", "*bitmiyor!*"],
+      "footer": "6 SAAT AYAKTA · 30 ÖĞRENCİ · NÖBET",
+      "dark": true,
+      "beats": [
+        { "say": "Peki ya yarım gün lafı?", "pill": "Peki ya *“yarım gün”* lafı?", "sfx": ["bell"] },
+        { "say": "Altı saat ayakta, otuz çocuğun", "pill": "*6 saat* ayakta, *30 çocuğun*", "sfx": ["tick", ["tick", 0.24]] },
+        { "say": "hem güvenliği hem geleceği omuzlarında!", "pill": "hem güvenliği hem *geleceği* omuzlarında!", "sfx": ["thud"] }
+      ]
+    },
+    {
+      "id": "s05_evde_mesai",
+      "art": "S05EvdeMesai",
+      "kicker": "AKŞAM 22.00 · EVDE MESAİ",
+      "headline": ["Kırmızı kalem evde", "*hiç susmaz*"],
+      "footer": "YAZILILAR · E-OKUL · VELİ WHATSAPP GRUBU",
+      "dark": false,
+      "beats": [
+        { "say": "Dur, bitmedi! Zil çalınca?", "pill": "Dur, bitmedi! *Zil çalınca?*", "sfx": ["bell"] },
+        { "say": "Evde yazılılar, e-Okul, ders planları...", "pill": "Evde *yazılılar*, e-Okul, ders planları...", "sfx": ["flip"] },
+        { "say": "Gece onda titreyen veli grubu!", "pill": "Gece 22.00’de titreyen *veli grubu!*", "sfx": ["notif", ["notif", 0.26]] }
+      ]
+    },
+    {
+      "id": "s06_bes_kitle",
+      "art": "S06BesKitle",
+      "kicker": "ORTAK GERÇEK · OKUL EKOSİSTEMİ",
+      "headline": ["Bu yük sadece", "*tahtada* değil"],
+      "footer": "ÖĞRENCİ · VELİ · İDARECİ · AİLE",
+      "dark": false,
+      "beats": [
+        { "say": "Üstelik kimsenin görmediği bir şey var...", "pill": "Üstelik kimsenin *görmediği* bir şey var...", "sfx": ["pop"] },
+        { "say": "Bazen psikolog, bazen dert ortağı.", "pill": "Bazen *psikolog*, bazen *dert ortağı*.", "sfx": ["ding"] },
+        { "say": "Çocuğun kaderi o sınıfta değişir.", "pill": "Çocuğun *kaderi* o sınıfta değişir.", "sfx": ["powerup"] }
+      ]
+    },
+    {
+      "id": "s07_pil_dolum",
+      "art": "S07PilDolum",
+      "kicker": "180 İŞ GÜNÜ · PEDAGOJİK GERÇEK",
+      "headline": ["Tatil lüks değil,", "*nefes* molasıdır"],
+      "footer": "MEB TAKVİMİ · 180 İŞ GÜNÜ ESASI",
+      "dark": false,
+      "beats": [
+        { "say": "İşte gerçek bu:", "pill": "İşte *gerçek* bu:", "sfx": ["riser"] },
+        { "say": "Yüz seksen gün tükenen bu enerjide,", "pill": "*180 iş günü* tükenen bu enerjide,", "sfx": ["tick"] },
+        { "say": "iki ay lüks değil, nefes molasıdır!", "pill": "2 ay lüks değil, *nefes molasıdır!*", "sfx": ["powerup"] }
+      ]
+    },
+    {
+      "id": "s08_bilanco",
+      "art": "S08Bilanco",
+      "kicker": "GERÇEK HESAP BİLANÇOSU",
+      "headline": ["Efsane bitti,", "*rakamlar* konuştu"],
+      "footer": "1739 m.50/A · 657 DMK m.103",
+      "dark": false,
+      "beats": [
+        { "say": "Hesap ortada!", "pill": "*Hesap* ortada!", "sfx": ["stamp"] },
+        { "say": "İki ay izin, sıfır yıllık izin...", "pill": "*2 ay* izin, *0 gün* yıllık izin...", "sfx": ["pop", ["pop", 0.22]] },
+        { "say": "Ve evde bitmeyen mesai!", "pill": "Ve evde *bitmeyen* mesai!", "sfx": ["thud"] }
+      ]
+    },
+    {
+      "id": "s09_kapanis",
+      "art": "S09Kapanis",
+      "kicker": "SÖZ SENDE · @gyskamu",
+      "headline": ["Sen hangi taraftasın?", "*Yorumlara* gel!"],
+      "footer": "ÖĞRETMEN · VELİ · ÖĞRENCİ · YAKINI",
+      "dark": false,
+      "beats": [
+        { "say": "Şimdi söz sende!", "pill": "Şimdi *söz sende!*", "sfx": ["ding"] },
+        { "say": "Öğretmen, veli, öğrenci... Yorumlara gel!", "pill": "Öğretmen, veli, öğrenci... *Yorumlara gel!*", "sfx": ["notif"] },
+        { "say": "Yatıyorsunuz diyen arkadaşına gönder, takip et!", "pill": "“Yatıyorsunuz” diyen *arkadaşına gönder*, takip et!", "sfx": ["cash"] }
+      ]
+    }
+  ]
+}

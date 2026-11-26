@@ -1,5 +1,5 @@
 {
-  "last_no": 3,
+  "last_no": 4,
   "episodes": [
     {
       "no": 1,
@@ -54,6 +54,24 @@
       "video_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_003_ders_programi_mobbing/gy_003_ders_programi_mobbing.mp4",
       "caption_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_003_ders_programi_mobbing/caption.txt",
       "created_at": "2026-11-25"
+    },
+    {
+      "no": 4,
+      "id": "gy_004",
+      "title": "Öğretmenler Yarım Gün Çalışıp 3 Ay Tatil mi Yapıyor? Gerçek Hesap",
+      "laws": [
+        "1739 sayılı Millî Eğitim Temel Kanunu m. 50/A (Yaz Tatilinde Aralıksız 2 Ay İzin + Mesleki Çalışma/Seminer)",
+        "657 sayılı DMK m. 103 (Öğretmenlere Yıl İçinde Ayrıca Yıllık İzin Verilmemesi)",
+        "MEB Okul Öncesi ve İlköğretim / Ortaöğretim Kurumları Yönetmelikleri (180 İş Günü & Nöbet)"
+      ],
+      "duration_sec": 52.64,
+      "scenes": 9,
+      "beats": 27,
+      "voice": "gemini:gemini-2.5-flash-preview-tts:Charon",
+      "voice_locked": true,
+      "video_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_004_uc_ay_tatil_efsanesi/gy_004_uc_ay_tatil_efsanesi.mp4",
+      "caption_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_004_uc_ay_tatil_efsanesi/caption.txt",
+      "created_at": "2026-11-26"
     }
   ]
 }

@@ -269,34 +269,61 @@ def sfx_pop(f=520):
 def sfx_tick():
     t = _t(0.04); return np.sin(2 * np.pi * 1800 * t) * np.exp(-t * 120) * 0.10
 def sfx_whoosh():
-    t = _t(0.22); n = np.convolve(np.random.normal(0, 1, len(t)), np.ones(22) / 22, mode="same")
-    return n * np.sin(np.pi * t / 0.22) * 0.20
+    t = _t(0.24); n = np.convolve(np.random.normal(0, 1, len(t)), np.ones(20) / 20, mode="same")
+    sweep = np.sin(2 * np.pi * np.linspace(220, 680, len(t)) * t) * 0.08
+    return (n * 0.24 + sweep) * np.sin(np.pi * t / 0.24)
 def sfx_stamp():
-    t = _t(0.18); return (np.sin(2 * np.pi * 88 * t) * .75 + np.random.normal(0, .25, len(t))) * np.exp(-t * 28) * 0.34
+    t = _t(0.18); return (np.sin(2 * np.pi * 88 * t) * .75 + np.random.normal(0, .25, len(t))) * np.exp(-t * 28) * 0.36
 def sfx_thud():
-    t = _t(0.26); return np.sin(2 * np.pi * np.linspace(120, 38, len(t)) * t) * np.exp(-t * 18) * 0.40
+    t = _t(0.26); return np.sin(2 * np.pi * np.linspace(125, 36, len(t)) * t) * np.exp(-t * 17) * 0.42
 def sfx_slash():
     t = _t(0.20); n = np.convolve(np.random.normal(0, 1, len(t)), np.ones(4) / 4, mode="same")
-    return n * np.exp(-t * 16) * np.linspace(0.4, 1, len(t)) * 0.26
+    return n * np.exp(-t * 16) * np.linspace(0.4, 1, len(t)) * 0.28
 def sfx_cash():
     t = _t(0.5); a = np.sin(2 * np.pi * 1568 * t) * np.exp(-t * 9); t2 = np.clip(t - 0.09, 0, None)
-    b = np.sin(2 * np.pi * 2093 * t) * np.exp(-t2 * 9) * (t >= 0.09); return (a + b) * 0.10
+    b = np.sin(2 * np.pi * 2093 * t) * np.exp(-t2 * 9) * (t >= 0.09); return (a + b) * 0.14
 def sfx_lock():
-    t = _t(0.22); return (np.sin(2 * np.pi * 640 * t) + .6 * np.sin(2 * np.pi * 1210 * t)) * np.exp(-t * 20) * 0.12 + sfx_tick() .repeat(1)[:len(t)] * 0 if False else (np.sin(2 * np.pi * 640 * t) + .6 * np.sin(2 * np.pi * 1210 * t)) * np.exp(-t * 20) * 0.12
+    t = _t(0.22); return (np.sin(2 * np.pi * 640 * t) + .6 * np.sin(2 * np.pi * 1210 * t)) * np.exp(-t * 20) * 0.14
 def sfx_siren():
     t = _t(0.9); f = 700 + 280 * np.sin(2 * np.pi * 2.2 * t); ph = 2 * np.pi * np.cumsum(f) / SR
     return np.sin(ph) * np.minimum(1, t * 12) * np.exp(-np.clip(t - 0.5, 0, None) * 5) * 0.10
 def sfx_ding():
-    t = _t(0.55); return (np.sin(2 * np.pi * 988 * t) + .4 * np.sin(2 * np.pi * 1976 * t)) * np.exp(-t * 7) * 0.11
+    t = _t(0.55); return (np.sin(2 * np.pi * 988 * t) + .4 * np.sin(2 * np.pi * 1976 * t)) * np.exp(-t * 7) * 0.14
 def sfx_cuff():
     t = _t(0.16); return (np.sin(2 * np.pi * 900 * t) + np.random.normal(0, .3, len(t))) * np.exp(-t * 35) * 0.20
 def sfx_snip():
     t = _t(0.12); n = np.random.normal(0, 1, len(t)); return n * np.exp(-t * 40) * np.sin(2 * np.pi * 6 * t).clip(0) * 0.25
 def sfx_flip():
-    t = _t(0.12); return np.sin(2 * np.pi * np.linspace(300, 700, len(t)) * t) * np.exp(-t * 25) * 0.12
+    t = _t(0.12); return np.sin(2 * np.pi * np.linspace(300, 720, len(t)) * t) * np.exp(-t * 25) * 0.15
+def sfx_notif():
+    t = _t(0.26)
+    a = np.sin(2 * np.pi * 1175 * t) * np.exp(-t * 22) * (t < 0.11)
+    t2 = np.clip(t - 0.085, 0, None)
+    b = np.sin(2 * np.pi * 1568 * t2) * np.exp(-t2 * 18) * (t >= 0.085)
+    return (a + b) * 0.18
+def sfx_bell():
+    t = _t(0.45)
+    sig = (np.sin(2 * np.pi * 1318 * t) + 0.55 * np.sin(2 * np.pi * 2637 * t) + 0.25 * np.sin(2 * np.pi * 3951 * t))
+    return sig * np.exp(-t * 8) * 0.13
+def sfx_riser():
+    t = _t(0.32)
+    f = np.linspace(260, 880, len(t))
+    ph = 2 * np.pi * np.cumsum(f) / SR
+    n = np.convolve(np.random.normal(0, 1, len(t)), np.ones(16) / 16, mode="same")
+    env = (t / 0.32) ** 1.4 * np.exp(-np.clip(t - 0.27, 0, None) * 40)
+    return (np.sin(ph) * 0.12 + n * 0.16) * env
+def sfx_powerup():
+    t = _t(0.42)
+    notes = [(0.0, 523.25), (0.08, 659.25), (0.16, 783.99), (0.24, 1046.5)]
+    out = np.zeros_like(t)
+    for st, freq in notes:
+        dt = np.clip(t - st, 0, None)
+        out += np.sin(2 * np.pi * freq * dt) * np.exp(-dt * 12) * (t >= st)
+    return out * 0.11
 
 SFX = dict(pop=sfx_pop, tick=sfx_tick, whoosh=sfx_whoosh, stamp=sfx_stamp, thud=sfx_thud, slash=sfx_slash, cash=sfx_cash,
-           lock=sfx_lock, siren=sfx_siren, ding=sfx_ding, cuff=sfx_cuff, snip=sfx_snip, flip=sfx_flip)
+           lock=sfx_lock, siren=sfx_siren, ding=sfx_ding, cuff=sfx_cuff, snip=sfx_snip, flip=sfx_flip,
+           notif=sfx_notif, bell=sfx_bell, riser=sfx_riser, powerup=sfx_powerup)
 
 
 def main():

@@ -12,5 +12,5 @@
   },
   "mod": "tek_istek",
   "_mod_aciklama": "tek_istek: tüm senaryo TEK istekle, tek parça üretilir (ses/ton kendiliğinden tutarlı) ve sessizliklerden ifadelere bölünür. beat: ifade başına ayrı istek (yalnız hata ayıklama; kısa ifadelerde boş yanıt ve dakikada 10 istek sınırı sorunu çıkarır).",
-  "style_prompt_tek_istek": "Aşağıdaki metni genç, karizmatik, tok, merak uyandıran ve akıcı bir Türkçe belgesel/Reels anlatıcısı tonuyla oku. Her satır arasında çok kısa ve doğal bir es ver; aynı satır içinde duraksama yapma:"
+  "style_prompt_tek_istek": "Aşağıdaki metni genç, karizmatik, tok ve yüksek enerjili bir Türkçe Reels anlatıcısı gibi oku. Kesinlikle tekdüze okuma; ünlem ve kanca cümlelerinde sesini yükseltip heyecan kat, şaşırtıcı veya duygusal anlarda sesini hafifçe alçaltıp vurgula, sürükleyici bir ritim yakala. Her satır arasında çok kısa ve doğal bir es ver; aynı satır içinde duraksama yapma:"
 }
