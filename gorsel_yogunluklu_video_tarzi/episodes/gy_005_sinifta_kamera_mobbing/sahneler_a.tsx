@@ -2,9 +2,9 @@ import React from "react";
 import { C } from "../../motor/tokens";
 import { useBeatPop, useSince, useScene, shake, lerp } from "../../motor/anim";
 import { Person, INK } from "../../motor/art/Person";
-import { Art, Speech, Check, Cross, Sparkle, Anger, Sweat, M, D } from "../../motor/art/kit";
+import { Art, Room, Speech, Check, Cross, Sparkle, Anger, Sweat, M, D } from "../../motor/art/kit";
 
-/** S01 (DARK HOOK): Kırmızı REC ● CCTV Vizörü + Monitörden İzleyen Müdür ("Bütün ders oturmuşsun!") + Şaşkın Öğretmen */
+/** S01: Her Zamanki Aydınlık Stil + Kırmızı REC ● CCTV Vizörü + Müdür & Şaşkın Öğretmen */
 export const S01Kanca: React.FC = () => {
   const { frame } = useScene();
   const p0 = useBeatPop(0);
@@ -15,72 +15,74 @@ export const S01Kanca: React.FC = () => {
   const blinkRec = Math.floor(frame / 10) % 2 === 0;
 
   return (
-    <Art bg={C.espresso2}>
+    <Art>
       <g transform={`translate(${sh.x},${sh.y})`}>
-        {/* CCTV Vizör Köşeleri */}
-        <g stroke={C.coral} strokeWidth={6} fill="none" opacity={0.85}>
-          <path d="M55 110 V55 H110" />
-          <path d="M917 110 V55 H862" />
-          <path d="M55 680 V735 H110" />
-          <path d="M917 680 V735 H862" />
-        </g>
+        <Room wall="#EFE6D6" floor="#D8C6A6" floorY={665} stripes>
+          {/* CCTV Vizör Köşeleri */}
+          <g stroke={C.coral} strokeWidth={6} fill="none" opacity={0.9}>
+            <path d="M55 110 V55 H110" />
+            <path d="M917 110 V55 H862" />
+            <path d="M55 680 V735 H110" />
+            <path d="M917 680 V735 H862" />
+          </g>
 
-        {/* REC ● Canlı Kamera Göstergesi */}
-        <g transform="translate(150,92)">
-          <circle cx={-38} cy={0} r={12} fill={C.coral} opacity={blinkRec ? 1 : 0.2} />
-          <text x={-14} y={9} fontFamily={M} fontWeight={700} fontSize={26} letterSpacing={3} fill={C.coral}>
-            REC · SINIF CAM-04
-          </text>
-        </g>
-
-        {/* Tavanda CCTV Kamerası */}
-        <g transform={`translate(780,105) scale(${p0})`}>
-          <rect x={-52} y={-22} width={88} height={44} rx={10} fill={C.paper} stroke={INK} strokeWidth={5} />
-          <polygon points="-52,-14 -82,-26 -82,26 -52,14" fill={C.espresso} stroke={INK} strokeWidth={4} />
-          <circle cx={-12} cy={0} r={10} fill={C.coral} opacity={blinkRec ? 1 : 0.35} />
-        </g>
-
-        {/* Solda öfkeli müdür */}
-        <Person
-          x={225} y={665} s={0.94 * p0} face={1}
-          top="#2A2420" pants="#14110F" style="cardigan"
-          hairStyle="gray" mustache mood="angry"
-          armF={[lerp(18, 96, p1), 16]}
-          armB={[18, 14]}
-        />
-        {p1 > 0.2 && <Anger x={135} y={325} s={0.9 * p1} />}
-
-        {/* Müdürün konuşma balonu */}
-        {p1 > 0.05 && (
-          <Speech x={465} y={248} w={500} h={132} tailX={-140} s={p1}>
-            <text y={-8} textAnchor="middle" fontFamily={D} fontSize={40} fill={C.coral}>
-              “Bütün ders oturmuşsun!”
-            </text>
-            <text y={34} textAnchor="middle" fontFamily={M} fontWeight={700} fontSize={20} fill={C.muted}>
-              KAMERADAN İZLEDİM!
-            </text>
-          </Speech>
-        )}
-
-        {/* Sağda şaşkın öğretmen */}
-        <Person
-          x={765} y={665} s={0.94 * p0} face={-1}
-          top={C.teal} pants="#1F2937" style="cardigan"
-          hairStyle="short" glasses mood={p1 > 0.2 ? "shock" : "worry"}
-          armF={[lerp(16, 82, p2), 24]}
-          armB={[lerp(16, 55, p2), 18]}
-        />
-        {p1 > 0.2 && <Sweat x={845} y={335} s={0.9 * p1} />}
-
-        {/* Beat 2: AĞIR İHLAL / SUÇ MU?! */}
-        {p2 > 0.05 && (
-          <g transform={`translate(486,495) rotate(-6) scale(${lerp(2.1, 1, p2)})`} opacity={Math.min(1, p2 * 2)}>
-            <rect x={-285} y={-58} width={570} height={116} rx={20} fill={C.coral} stroke={C.goldBright} strokeWidth={7} />
-            <text y={16} textAnchor="middle" fontFamily={M} fontWeight={700} fontSize={42} letterSpacing={3.5} fill={C.cream}>
-              YASAL MI, SUÇ MU?
+          {/* REC ● Canlı Kamera Göstergesi */}
+          <g transform="translate(150,92)">
+            <circle cx={-38} cy={0} r={12} fill={C.coral} opacity={blinkRec ? 1 : 0.25} />
+            <text x={-14} y={9} fontFamily={M} fontWeight={700} fontSize={26} letterSpacing={3} fill={C.coral}>
+              REC · SINIF CAM-04
             </text>
           </g>
-        )}
+
+          {/* Tavanda CCTV Kamerası */}
+          <g transform={`translate(780,105) scale(${p0})`}>
+            <rect x={-52} y={-22} width={88} height={44} rx={10} fill={C.paper} stroke={INK} strokeWidth={5} />
+            <polygon points="-52,-14 -82,-26 -82,26 -52,14" fill={C.espresso} stroke={INK} strokeWidth={4} />
+            <circle cx={-12} cy={0} r={10} fill={C.coral} opacity={blinkRec ? 1 : 0.35} />
+          </g>
+
+          {/* Solda öfkeli müdür */}
+          <Person
+            x={225} y={665} s={0.94 * p0} face={1}
+            top={C.espresso2} pants="#14110F" style="cardigan"
+            hairStyle="gray" mustache mood="angry"
+            armF={[lerp(18, 96, p1), 16]}
+            armB={[18, 14]}
+          />
+          {p1 > 0.2 && <Anger x={135} y={325} s={0.9 * p1} />}
+
+          {/* Müdürün konuşma balonu */}
+          {p1 > 0.05 && (
+            <Speech x={465} y={248} w={500} h={132} tailX={-140} s={p1}>
+              <text y={-8} textAnchor="middle" fontFamily={D} fontSize={40} fill={C.coral}>
+                “Bütün ders oturmuşsun!”
+              </text>
+              <text y={34} textAnchor="middle" fontFamily={M} fontWeight={700} fontSize={20} fill={C.muted}>
+                KAMERADAN İZLEDİM!
+              </text>
+            </Speech>
+          )}
+
+          {/* Sağda şaşkın öğretmen */}
+          <Person
+            x={765} y={665} s={0.94 * p0} face={-1}
+            top={C.teal} pants="#1F2937" style="cardigan"
+            hairStyle="short" glasses mood={p1 > 0.2 ? "shock" : "worry"}
+            armF={[lerp(16, 82, p2), 24]}
+            armB={[lerp(16, 55, p2), 18]}
+          />
+          {p1 > 0.2 && <Sweat x={845} y={335} s={0.9 * p1} />}
+
+          {/* Beat 2: AĞIR İHLAL / SUÇ MU?! */}
+          {p2 > 0.05 && (
+            <g transform={`translate(486,495) rotate(-6) scale(${lerp(2.1, 1, p2)})`} opacity={Math.min(1, p2 * 2)}>
+              <rect x={-285} y={-58} width={570} height={116} rx={20} fill={C.coral} stroke={INK} strokeWidth={7} />
+              <text y={16} textAnchor="middle" fontFamily={M} fontWeight={700} fontSize={42} letterSpacing={3.5} fill={C.cream}>
+                YASAL MI, SUÇ MU?
+              </text>
+            </g>
+          )}
+        </Room>
       </g>
     </Art>
   );

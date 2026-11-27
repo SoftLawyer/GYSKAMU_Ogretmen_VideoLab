@@ -9,7 +9,7 @@
       "kicker": "OKULDA GÖZETLEME · KRİTİK HAK",
       "headline": ["Müdür sınıfı kamerayla", "*izleyebilir* mi?"],
       "footer": "SINIF İÇİ KAMERA · YASAL SINIR",
-      "dark": true,
+      "dark": false,
       "beats": [
         { "say": "Dur! Müdür sınıfı kamerayla izleyip öğretmene:", "pill": "*Dur!* Müdür sınıfı kamerayla izleyip öğretmene:", "sfx": ["stamp", ["riser", 0.10]] },
         { "say": "Bütün ders oturmuşsun, dedi!", "pill": "“Bütün ders *oturmuşsun!*” dedi!", "sfx": ["thud"] },
