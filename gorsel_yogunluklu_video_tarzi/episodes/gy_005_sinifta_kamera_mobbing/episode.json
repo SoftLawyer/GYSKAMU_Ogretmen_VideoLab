@@ -48,7 +48,7 @@
       "kicker": "6698 SAYILI KVKK · ÖLÇÜLÜLÜK",
       "headline": ["“Hep oturdun!” demek", "*açık mobbing!*"],
       "footer": "KVKK İHLALİ · PERFORMANS GÖZETİMİ YASAĞI",
-      "dark": true,
+      "dark": false,
       "beats": [
         { "say": "Ama asıl bomba şimdi geliyor!", "pill": "Ama *asıl bomba* şimdi geliyor!", "sfx": ["riser"] },
         { "say": "Kameradan öğretmenin kaç dakika oturduğunu izlemek,", "pill": "Kameradan *kaç dakika oturduğunu* izlemek,", "sfx": ["tick", ["tick", 0.24]] },
@@ -74,7 +74,7 @@
       "kicker": "5237 SAYILI TCK · MADDE 134",
       "headline": ["Ses kaydı varsa", "*HAPİS SUÇU!*"],
       "footer": "ÖZEL HAYATIN GİZLİLİĞİNİ İHLAL · ADLİ SORUŞTURMA",
-      "dark": true,
+      "dark": false,
       "beats": [
         { "say": "Üstelik bir de ses kaydı varsa...", "pill": "Üstelik bir de *ses kaydı* varsa...", "sfx": ["riser"] },
         { "say": "Bu artık sadece disiplin değil;", "pill": "Bu artık sadece *disiplin* değil;", "sfx": ["flip"] },

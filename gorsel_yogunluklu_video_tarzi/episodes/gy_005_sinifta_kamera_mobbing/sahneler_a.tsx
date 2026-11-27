@@ -184,7 +184,7 @@ export const S03Sinir: React.FC = () => {
   );
 };
 
-/** S04 (DARK): "Kaç Dakika Oturdun?" Takibi = KVKK İhlali & Açık Mobbing */
+/** S04: "Kaç Dakika Oturdun?" Takibi = KVKK İhlali & Açık Mobbing */
 export const S04Mobbing: React.FC = () => {
   const { frame } = useScene();
   const p0 = useBeatPop(0);
@@ -195,9 +195,9 @@ export const S04Mobbing: React.FC = () => {
   const pulse = 0.5 + 0.5 * Math.sin(frame * 0.45);
 
   return (
-    <Art bg={C.espresso2}>
+    <Art bg={C.cream}>
       <g transform={`translate(${sh.x},${sh.y})`}>
-        <circle cx={486} cy={365} r={275} fill={C.coral} opacity={0.10 + pulse * 0.10} />
+        <circle cx={486} cy={365} r={260} fill={C.coral} opacity={0.07 + pulse * 0.06} />
 
         {/* Hedef Vizörü içinde Öğretmen */}
         <Person
@@ -208,7 +208,7 @@ export const S04Mobbing: React.FC = () => {
         />
 
         {/* Kırmızı Gözetleme Hedefi (Crosshair) */}
-        <g transform={`translate(486,360) scale(${p1})`} opacity={0.85}>
+        <g transform={`translate(486,360) scale(${p1})`} opacity={0.9}>
           <circle r={195} fill="none" stroke={C.coral} strokeWidth={6} strokeDasharray="18 14" />
           <line x1={-230} y1={0} x2={-155} y2={0} stroke={C.coral} strokeWidth={6} />
           <line x1={155} y1={0} x2={230} y2={0} stroke={C.coral} strokeWidth={6} />
@@ -218,7 +218,7 @@ export const S04Mobbing: React.FC = () => {
 
         {/* Üstte Saat / Süre Etiketi */}
         <g transform={`translate(486,98) scale(${p1})`}>
-          <rect x={-370} y={-36} width={740} height={72} rx={16} fill={C.espresso} stroke={C.goldBright} strokeWidth={4} />
+          <rect x={-370} y={-36} width={740} height={72} rx={16} fill={C.espresso} stroke={INK} strokeWidth={4} />
           <text y={9} textAnchor="middle" fontFamily={M} fontWeight={700} fontSize={21} letterSpacing={2} fill={C.goldBright}>
             “KAÇ DAKİKA OTURDUN?” PERFORMANS TAKİBİ
           </text>
@@ -237,7 +237,7 @@ export const S04Mobbing: React.FC = () => {
           </g>
         )}
 
-        <text x={486} y={735} textAnchor="middle" fontFamily={M} fontWeight={700} fontSize={23} letterSpacing={2.5} fill={C.cream}>
+        <text x={486} y={735} textAnchor="middle" fontFamily={M} fontWeight={700} fontSize={23} letterSpacing={2.5} fill={C.espresso}>
           KAMERA PERFORMANS & BASKI ARACI YAPILAMAZ
         </text>
       </g>

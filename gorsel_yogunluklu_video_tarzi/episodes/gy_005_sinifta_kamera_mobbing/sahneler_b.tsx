@@ -4,7 +4,7 @@ import { useBeatPop, useSince, useScene, shake, lerp } from "../../motor/anim";
 import { INK } from "../../motor/art/Person";
 import { Art, Check, Gavel, Speech, Sparkle, M, D } from "../../motor/art/kit";
 
-/** S06 (DARK): Ses Kaydı Varsa TCK 134 — Hapis Cezalı Suç! */
+/** S06: Ses Kaydı Varsa TCK 134 — Hapis Cezalı Suç! */
 export const S06Tck134: React.FC = () => {
   const { frame } = useScene();
   const p0 = useBeatPop(0);
@@ -14,17 +14,17 @@ export const S06Tck134: React.FC = () => {
   const sh = shake(s2, 13, 11);
 
   return (
-    <Art bg={C.espresso2}>
+    <Art bg={C.cream}>
       <g transform={`translate(${sh.x},${sh.y})`}>
         {/* Canlı Kırmızı Ses Dalgaları */}
-        <g transform={`translate(486,210) scale(${p0})`}>
+        <g transform={`translate(486,200) scale(${p0})`}>
           {[-240, -192, -144, -96, -48, 0, 48, 96, 144, 192, 240].map((bx, i) => {
-            const h = 34 + Math.abs(Math.sin(frame * 0.35 + i * 0.9)) * 90;
+            const h = 34 + Math.abs(Math.sin(frame * 0.35 + i * 0.9)) * 88;
             return (
               <rect
                 key={bx}
                 x={bx - 12} y={-h / 2} width={24} height={h} rx={12}
-                fill={i % 2 === 0 ? C.coral : C.goldBright}
+                fill={i % 2 === 0 ? C.coral : C.espresso}
               />
             );
           })}
@@ -35,7 +35,7 @@ export const S06Tck134: React.FC = () => {
 
         {/* Mahkeme Tokmağı */}
         {p1 > 0.05 && (
-          <g transform={`translate(486,405) scale(${p1})`}>
+          <g transform={`translate(486,400) scale(${p1})`}>
             <Gavel x={0} y={0} s={0.95} r={lerp(-44, 0, p2)} />
           </g>
         )}
@@ -43,7 +43,7 @@ export const S06Tck134: React.FC = () => {
         {/* Beat 2: TCK MADDE 134 Kartı */}
         {p2 > 0.05 && (
           <g transform={`translate(486,620) scale(${lerp(1.45, 1, p2)})`} opacity={Math.min(1, p2 * 2)}>
-            <rect x={-380} y={-95} width={760} height={190} rx={28} fill={C.coral} stroke={C.goldBright} strokeWidth={7} />
+            <rect x={-380} y={-95} width={760} height={190} rx={28} fill={C.coral} stroke={INK} strokeWidth={7} />
             <text y={-24} textAnchor="middle" fontFamily={M} fontWeight={700} fontSize={25} letterSpacing={4} fill={C.goldBright}>
               5237 SAYILI TCK · MADDE 134
             </text>
