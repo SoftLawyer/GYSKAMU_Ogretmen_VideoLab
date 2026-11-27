@@ -1,0 +1,124 @@
+{
+  "id": "gy_005",
+  "title": "Müdür Sınıfı Kamerayla İzleyip Öğretmene 'Hep Oturdun!' Diyebilir mi? (MEB, KVKK & TCK 134)",
+  "handle": "@gyskamu",
+  "scenes": [
+    {
+      "id": "s01_kanca",
+      "art": "S01Kanca",
+      "kicker": "OKULDA GÖZETLEME · KRİTİK HAK",
+      "headline": ["Müdür sınıfı kamerayla", "*izleyebilir* mi?"],
+      "footer": "SINIF İÇİ KAMERA · YASAL SINIR",
+      "dark": true,
+      "beats": [
+        { "say": "Dur! Müdür sınıfı kamerayla izleyip öğretmene:", "pill": "*Dur!* Müdür sınıfı kamerayla izleyip öğretmene:", "sfx": ["stamp", ["riser", 0.10]] },
+        { "say": "Bütün ders oturmuşsun, dedi!", "pill": "“Bütün ders *oturmuşsun!*” dedi!", "sfx": ["thud"] },
+        { "say": "Peki bunun ağır bir ihlal olduğunu biliyor musun?", "pill": "Bunun *ağır bir ihlal* olduğunu biliyor musun?", "sfx": ["riser", ["ding", 0.25]] }
+      ]
+    },
+    {
+      "id": "s02_yasak",
+      "art": "S02Yasak",
+      "kicker": "MEB MEVZUATI · KESİN KURAL",
+      "headline": ["Normal sınıflarda", "kamera *YASAK!*"],
+      "footer": "MEB YÖNETMELİKLERİ · DERSLİK GİZLİLİĞİ",
+      "dark": false,
+      "beats": [
+        { "say": "İlk gerçek şok edecek:", "pill": "İlk gerçek *şok edecek*:", "sfx": ["riser"] },
+        { "say": "MEB mevzuatına göre normal sınıflara", "pill": "*MEB mevzuatına* göre normal sınıflara", "sfx": ["flip"] },
+        { "say": "kamera konulması kesinlikle yasaktır!", "pill": "kamera konulması *kesinlikle yasaktır!*", "sfx": ["slash", ["stamp", 0.14]] }
+      ]
+    },
+    {
+      "id": "s03_sinir",
+      "art": "S03Sinir",
+      "kicker": "İZİN VERİLEN ALANLAR · TEK İSTİSNA",
+      "headline": ["Kamera sadece", "*nerede* olur?"],
+      "footer": "DANIŞTAY 8. DAİRE · ÖZEL EĞİTİM İSTİSNASI",
+      "dark": false,
+      "beats": [
+        { "say": "Kamera sadece giriş, bahçe ve koridorda olur.", "pill": "Sadece *giriş, bahçe ve koridorda* olur.", "sfx": ["pop"] },
+        { "say": "Tek istisna özel eğitim sınıflarıdır.", "pill": "Tek istisna: *özel eğitim sınıflarıdır*.", "sfx": ["ding"] },
+        { "say": "Normal derslikte kamera takılamaz!", "pill": "Normal derslikte kamera *takılamaz!*", "sfx": ["lock"] }
+      ]
+    },
+    {
+      "id": "s04_mobbing",
+      "art": "S04Mobbing",
+      "kicker": "6698 SAYILI KVKK · ÖLÇÜLÜLÜK",
+      "headline": ["“Hep oturdun!” demek", "*açık mobbing!*"],
+      "footer": "KVKK İHLALİ · PERFORMANS GÖZETİMİ YASAĞI",
+      "dark": true,
+      "beats": [
+        { "say": "Ama asıl bomba şimdi geliyor!", "pill": "Ama *asıl bomba* şimdi geliyor!", "sfx": ["riser"] },
+        { "say": "Kameradan öğretmenin kaç dakika oturduğunu izlemek,", "pill": "Kameradan *kaç dakika oturduğunu* izlemek,", "sfx": ["tick", ["tick", 0.24]] },
+        { "say": "KVKK ihlali ve açık mobbingdir!", "pill": "*KVKK ihlali* ve *açık mobbingdir!*", "sfx": ["thud", ["stamp", 0.14]] }
+      ]
+    },
+    {
+      "id": "s05_riza",
+      "art": "S05Riza",
+      "kicker": "YAYGIN YANILGI · İMZA TUZAĞI",
+      "headline": ["İmza alsalar bile", "*geçersiz!*"],
+      "footer": "KVKK m.4 · AMAÇ SADECE FİZİKİ GÜVENLİK",
+      "dark": false,
+      "beats": [
+        { "say": "Veli ya da öğretmen imza verdi mi diyorlar?", "pill": "“Veli ya da öğretmen *imza verdi*” mi diyorlar?", "sfx": ["pop"] },
+        { "say": "Kanunun yasakladığı yerde rıza geçersizdir!", "pill": "Kanunun yasakladığı yerde *rıza geçersizdir!*", "sfx": ["slash"] },
+        { "say": "Kamera sadece fiziki güvenlik içindir.", "pill": "Kamera sadece *fiziki güvenlik* içindir.", "sfx": ["lock"] }
+      ]
+    },
+    {
+      "id": "s06_tck134",
+      "art": "S06Tck134",
+      "kicker": "5237 SAYILI TCK · MADDE 134",
+      "headline": ["Ses kaydı varsa", "*HAPİS SUÇU!*"],
+      "footer": "ÖZEL HAYATIN GİZLİLİĞİNİ İHLAL · ADLİ SORUŞTURMA",
+      "dark": true,
+      "beats": [
+        { "say": "Üstelik bir de ses kaydı varsa...", "pill": "Üstelik bir de *ses kaydı* varsa...", "sfx": ["riser"] },
+        { "say": "Bu artık sadece disiplin değil;", "pill": "Bu artık sadece *disiplin* değil;", "sfx": ["flip"] },
+        { "say": "TCK yüz otuz dörtten hapis cezalı suçtur!", "pill": "*TCK m. 134*’ten hapis cezalı suçtur!", "sfx": ["thud", ["stamp", 0.16]] }
+      ]
+    },
+    {
+      "id": "s07_adimlar",
+      "art": "S07Adimlar",
+      "kicker": "NE YAPMALISIN? · 3 NET ADIM",
+      "headline": ["Başına gelirse", "*3 adımda* durdur"],
+      "footer": "YAZILI DİLEKÇE · MEM · KVKK · SAVCILIK",
+      "dark": false,
+      "beats": [
+        { "say": "Peki başına gelirse ne yapacaksın?", "pill": "Başına gelirse *ne yapacaksın?*", "sfx": ["bell"] },
+        { "say": "Önce yazılı dilekçeyle yasal dayanak iste.", "pill": "1) *Yazılı dilekçeyle* yasal dayanak iste.", "sfx": ["pop"] },
+        { "say": "Sonra MEM, KVKK ve savcılığa başvur!", "pill": "2) *MEM, KVKK ve savcılığa* başvur!", "sfx": ["powerup"] }
+      ]
+    },
+    {
+      "id": "s08_bilanco",
+      "art": "S08Bilanco",
+      "kicker": "HUKUKİ SINIR BİLANÇOSU",
+      "headline": ["Sınır çok net,", "*haklarını* bil!"],
+      "footer": "MEB · 6698 KVKK · TCK m.134",
+      "dark": false,
+      "beats": [
+        { "say": "Özetle, sınır çok net:", "pill": "Özetle, *sınır* çok net:", "sfx": ["stamp"] },
+        { "say": "Sınıfta kamera yasak, gözetleme mobbing,", "pill": "Sınıfta kamera *yasak*, gözetleme *mobbing*,", "sfx": ["pop", ["pop", 0.22]] },
+        { "say": "ses kaydıysa doğrudan suçtur!", "pill": "ses kaydıysa doğrudan *suçtur!*", "sfx": ["thud"] }
+      ]
+    },
+    {
+      "id": "s09_kapanis",
+      "art": "S09Kapanis",
+      "kicker": "AÇIKLAMAYI MUTLAKA OKU · @gyskamu",
+      "headline": ["Senin okulunda", "*kamera* var mı?"],
+      "footer": "KRİTİK KANUN MADDELERİ AÇIKLAMADA 👇",
+      "dark": false,
+      "beats": [
+        { "say": "Senin okulunda sınıflarda kamera var mı? Yorumlara yaz!", "pill": "Senin okulunda *kamera* var mı? Yorumlara yaz!", "sfx": ["notif"] },
+        { "say": "Bilmen gereken kritik detayları açıklamaya bıraktım, mutlaka oku!", "pill": "Bilmen gereken *kritik detaylar açıklamada*, mutlaka oku!", "sfx": ["ding"] },
+        { "say": "Öğretmen arkadaşına gönder, bizi takip et!", "pill": "Öğretmen arkadaşına *gönder*, takip et!", "sfx": ["cash"] }
+      ]
+    }
+  ]
+}

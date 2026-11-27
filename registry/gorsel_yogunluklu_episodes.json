@@ -1,5 +1,5 @@
 {
-  "last_no": 4,
+  "last_no": 5,
   "episodes": [
     {
       "no": 1,
@@ -72,6 +72,25 @@
       "video_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_004_uc_ay_tatil_efsanesi/gy_004_uc_ay_tatil_efsanesi.mp4",
       "caption_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_004_uc_ay_tatil_efsanesi/caption.txt",
       "created_at": "2026-11-26"
+    },
+    {
+      "no": 5,
+      "id": "gy_005",
+      "title": "Müdür Sınıfı Kamerayla İzleyip Öğretmene 'Hep Oturdun!' Diyebilir mi? (MEB, KVKK & TCK 134)",
+      "laws": [
+        "MEB Özel Öğretim Kurumları Yönetmeliği m. 11/4 & MEB Güvenlik Düzenlemeleri (Dersliklerde Kamera Yasağı)",
+        "Danıştay 8. Dairesi Kararı (Özel Eğitim Sınıfları İstisnası)",
+        "6698 sayılı KVKK m. 4 (Amaçla Bağlılık, Ölçülülük & Fiziki Güvenlik Sınırı)",
+        "5237 sayılı TCK m. 134 (Özel Hayatın Gizliliğini İhlal — Ses Kaydı & Gözetleme)"
+      ],
+      "duration_sec": 56.27,
+      "scenes": 9,
+      "beats": 27,
+      "voice": "gemini:gemini-2.5-flash-preview-tts:Charon",
+      "voice_locked": true,
+      "video_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_005_sinifta_kamera_mobbing/gy_005_sinifta_kamera_mobbing.mp4",
+      "caption_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_005_sinifta_kamera_mobbing/caption.txt",
+      "created_at": "2026-11-27"
     }
   ]
 }
