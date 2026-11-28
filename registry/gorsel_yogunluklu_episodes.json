@@ -1,5 +1,5 @@
 {
-  "last_no": 5,
+  "last_no": 6,
   "episodes": [
     {
       "no": 1,
@@ -91,6 +91,23 @@
       "video_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_005_sinifta_kamera_mobbing/gy_005_sinifta_kamera_mobbing.mp4",
       "caption_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_005_sinifta_kamera_mobbing/caption.txt",
       "created_at": "2026-11-27"
+    },
+    {
+      "no": 6,
+      "id": "gy_006",
+      "title": "Aynı Sınıfta, Aynı Dersi Veren İki Öğretmen — Ama Maaş Farkı! (7528 ÖMK & Emeklilik)",
+      "laws": [
+        "7528 sayılı Öğretmenlik Mesleği Kanunu m. 20 & Geçici m. 3 (10/20 Yıl, Kademe İlerlemesinin Durdurulması Cezası Almamak, Millî Eğitim Akademisi Eğitimi)",
+        "657 sayılı DMK m. 152 (Uzman Öğretmen +%60, Başöğretmen +%120 Eğitim-Öğretim Tazminatı, +1 Derece)"
+      ],
+      "duration_sec": 63.88,
+      "scenes": 9,
+      "beats": 27,
+      "voice": "gemini:gemini-2.5-flash-preview-tts:Charon",
+      "voice_locked": true,
+      "video_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_006_kariyer_basamaklari_maas_farki/gy_006_kariyer_basamaklari_maas_farki.mp4",
+      "caption_path": "gorsel_yogunluklu_video_tarzi/episodes/gy_006_kariyer_basamaklari_maas_farki/caption.txt",
+      "created_at": "2026-11-28"
     }
   ]
 }

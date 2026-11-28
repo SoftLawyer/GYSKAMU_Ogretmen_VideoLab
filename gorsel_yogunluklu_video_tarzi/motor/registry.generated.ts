@@ -16,10 +16,14 @@ import { art as art3 } from "../episodes/gy_004_uc_ay_tatil_efsanesi/art";
 import ep4 from "../episodes/gy_005_sinifta_kamera_mobbing/episode.json";
 import tl4 from "../episodes/gy_005_sinifta_kamera_mobbing/timeline.json";
 import { art as art4 } from "../episodes/gy_005_sinifta_kamera_mobbing/art";
+import ep5 from "../episodes/gy_006_kariyer_basamaklari_maas_farki/episode.json";
+import tl5 from "../episodes/gy_006_kariyer_basamaklari_maas_farki/timeline.json";
+import { art as art5 } from "../episodes/gy_006_kariyer_basamaklari_maas_farki/art";
 export const EPISODES: { id: string; ep: Episode; tl: Timeline; art: Record<string, React.FC> }[] = [
   { id: "gy-001", ep: ep0 as Episode, tl: tl0 as unknown as Timeline, art: art0 as Record<string, React.FC> },
   { id: "gy-002", ep: ep1 as Episode, tl: tl1 as unknown as Timeline, art: art1 as Record<string, React.FC> },
   { id: "gy-003", ep: ep2 as Episode, tl: tl2 as unknown as Timeline, art: art2 as Record<string, React.FC> },
   { id: "gy-004", ep: ep3 as Episode, tl: tl3 as unknown as Timeline, art: art3 as Record<string, React.FC> },
   { id: "gy-005", ep: ep4 as Episode, tl: tl4 as unknown as Timeline, art: art4 as Record<string, React.FC> },
+  { id: "gy-006", ep: ep5 as Episode, tl: tl5 as unknown as Timeline, art: art5 as Record<string, React.FC> },
 ];

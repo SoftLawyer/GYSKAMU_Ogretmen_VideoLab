@@ -1,0 +1,124 @@
+{
+  "id": "gy_006",
+  "title": "Aynı Sınıfta, Aynı Dersi Veren İki Öğretmen — Ama Maaş Farkı! (7528 ÖMK & Emeklilik)",
+  "handle": "@gyskamu",
+  "scenes": [
+    {
+      "id": "s01_kanca",
+      "art": "S01Kanca",
+      "kicker": "7528 SAYILI ÖMK · KARİYER BASAMAKLARI",
+      "headline": ["Aynı ders,", "*farklı* maaş!"],
+      "footer": "AYNI OKUL · AYNI SINIF · MAAŞ FARKI",
+      "dark": false,
+      "beats": [
+        { "say": "Dur! Yan yana iki sınıf düşün...", "pill": "*Dur!* Yan yana iki sınıf düşün...", "sfx": ["stamp", ["riser", 0.10]] },
+        { "say": "Aynı okul, aynı ders, aynı otuz öğrenci.", "pill": "Aynı okul, aynı ders, aynı *30 öğrenci*.", "sfx": ["pop"] },
+        { "say": "Peki iki öğretmen arasında neden maaş farkı var?", "pill": "Peki iki öğretmen arasında *neden maaş farkı* var?", "sfx": ["thud"] }
+      ]
+    },
+    {
+      "id": "s02_sartlar",
+      "art": "S02Sartlar",
+      "kicker": "7528 SAYILI ÖMK · MADDE 20",
+      "headline": ["Uzman & Başöğretmen", "*şartları* neler?"],
+      "footer": "10 / 20 YIL · CEZA ALMAMA · AKADEMİ EĞİTİMİ",
+      "dark": false,
+      "beats": [
+        { "say": "Cevap Öğretmenlik Mesleği Kanunu’nda!", "pill": "Cevap *Öğretmenlik Mesleği Kanunu*’nda!", "sfx": ["flip"] },
+        { "say": "On yıl uzmanlık, yirmi yıl başöğretmenlik için:", "pill": "*10 yıl* uzmanlık, *20 yıl* başöğretmenlik için:", "sfx": ["pop"] },
+        { "say": "Kademe durdurma cezası almamak ve Akademi eğitimini tamamlamak şart!", "pill": "*Kademe cezası almamak* ve *Akademi eğitimi* şart!", "sfx": ["ding", ["lock", 0.14]] }
+      ]
+    },
+    {
+      "id": "s03_tazminat",
+      "art": "S03Tazminat",
+      "kicker": "657 SAYILI DMK · MADDE 152",
+      "headline": ["Maaş farkı", "*ne kadar?*"],
+      "footer": "EĞİTİM-ÖĞRETİM TAZMİNATI · +1 DERECE",
+      "dark": false,
+      "beats": [
+        { "say": "Peki bu maaşa nasıl yansıyor?", "pill": "Peki bu maaşa *nasıl yansıyor?*", "sfx": ["riser"] },
+        { "say": "Uzman öğretmene yüzde altmış,", "pill": "Uzman öğretmene *%60*,", "sfx": ["pop"] },
+        { "say": "başöğretmene yüzde yüz yirmi ilave tazminat ödenir!", "pill": "başöğretmene *%120* ilave tazminat ödenir!", "sfx": ["cash"] }
+      ]
+    },
+    {
+      "id": "s04_cephe1",
+      "art": "S04Cephe1",
+      "kicker": "ÖĞRETMENLER ODASI · 1. GÖRÜŞ",
+      "headline": ["Eşit işe", "*eşit ücret!*"],
+      "footer": "STATÜ AYRIMI & ADALET TARTIŞMASI",
+      "dark": false,
+      "beats": [
+        { "say": "Öğretmenler odası tam burada ikiye bölünüyor!", "pill": "Öğretmenler odası *tam burada* ikiye bölünüyor!", "sfx": ["stamp"] },
+        { "say": "Bir kesim diyor ki: Aynı sınıfta aynı emek...", "pill": "1. Görüş: Aynı sınıfta *aynı emek*...", "sfx": ["pop"] },
+        { "say": "Ünvan ayrımı adalet duygusunu zedeliyor!", "pill": "Ünvan ayrımı *adalet duygusunu* zedeliyor!", "sfx": ["thud"] }
+      ]
+    },
+    {
+      "id": "s05_cephe2",
+      "art": "S05Cephe2",
+      "kicker": "ÖĞRETMENLER ODASI · 2. GÖRÜŞ",
+      "headline": ["Kıdem ödülü", "*şart!*"],
+      "footer": "TECRÜBE & MESLEKİ TEŞVİK GÖRÜŞÜ",
+      "dark": false,
+      "beats": [
+        { "say": "Diğer kesimse tam tersini savunuyor:", "pill": "Diğer kesimse *tam tersini* savunuyor:", "sfx": ["flip"] },
+        { "say": "Yirmi yıllık tecrübe ile yeni başlayan bir olmamalı!", "pill": "*20 yıllık tecrübe* ile yeni başlayan bir olmamalı!", "sfx": ["pop"] },
+        { "say": "Kariyer basamağı mesleki teşviktir!", "pill": "Kariyer basamağı *mesleki teşviktir!*", "sfx": ["ding"] }
+      ]
+    },
+    {
+      "id": "s06_emeklilik_sok",
+      "art": "S06EmeklilikSok",
+      "kicker": "ASIL ŞOK · EMEKLİLİK GERÇEĞİ",
+      "headline": ["Emekli olduğun gün", "*SIFIRLANIYOR!*"],
+      "footer": "EMEKLİ KESENEĞİ KESİLMİYOR · 0 TL YANSIMA",
+      "dark": false,
+      "beats": [
+        { "say": "Ama dur! Asıl şok şimdi geliyor!", "pill": "Ama dur! *Asıl şok* şimdi geliyor!", "sfx": ["riser"] },
+        { "say": "Bu tazminatlardan emekli keseneği kesilmiyor.", "pill": "Bu tazminatlardan *emekli keseneği* kesilmiyor.", "sfx": ["slash"] },
+        { "say": "Yani emekli olduğun gün o fark sıfırlanıyor!", "pill": "Emekli olduğun gün o fark *sıfırlanıyor!*", "sfx": ["thud", ["stamp", 0.14]] }
+      ]
+    },
+    {
+      "id": "s07_ek_ders",
+      "art": "S07EkDers",
+      "kicker": "EMEKLİLİKTE GELİR KAYBI",
+      "headline": ["Ek ders de", "*yansımıyor!*"],
+      "footer": "BAŞÖĞRETMEN TAZMİNATI ✗ · EK DERS ✗",
+      "dark": false,
+      "beats": [
+        { "say": "Üstelik ek ders de emekliliğe yansımıyor.", "pill": "Üstelik *ek ders* de emekliliğe yansımıyor.", "sfx": ["tick"] },
+        { "say": "Başöğretmen emekli olduğunda düz öğretmen gibi hesaplanıyor.", "pill": "Başöğretmen emeklilikte *düz öğretmen* gibi hesaplanıyor.", "sfx": ["pop"] },
+        { "say": "İşte gelir kaybının asıl sebebi bu!", "pill": "İşte *gelir kaybının* asıl sebebi bu!", "sfx": ["stamp"] }
+      ]
+    },
+    {
+      "id": "s08_bilanco",
+      "art": "S08Bilanco",
+      "kicker": "ÖZLÜK HAKKI BİLANÇOSU",
+      "headline": ["Rakamlar", "*ortada!*"],
+      "footer": "7528 ÖMK m.20 · 657 DMK m.152",
+      "dark": false,
+      "beats": [
+        { "say": "Özetle, tablo çok net:", "pill": "Özetle, tablo *çok net*:", "sfx": ["stamp"] },
+        { "say": "Görevde yüzde altmış ve yüz yirmi fark...", "pill": "Görevde *%60* ve *%120* fark...", "sfx": ["pop", ["pop", 0.22]] },
+        { "say": "Emekli olduğun gün sıfır yansıma!", "pill": "Emekli olduğun gün *0 TL* yansıma!", "sfx": ["thud"] }
+      ]
+    },
+    {
+      "id": "s09_kapanis",
+      "art": "S09Kapanis",
+      "kicker": "AÇIKLAMAYI MUTLAKA OKU · @gyskamu",
+      "headline": ["Sen hangi", "*taraftasın?*"],
+      "footer": "TÜM KANUN MADDELERİ AÇIKLAMADA 👇",
+      "dark": false,
+      "beats": [
+        { "say": "Şimdi söz sende! Kıdem ödülü mü, eşit ücret mi?", "pill": "*Kıdem ödülü* mü, *eşit ücret* mi?", "sfx": ["notif"] },
+        { "say": "Bilmen gereken tüm kanun maddeleri açıklamada, mutlaka oku!", "pill": "Tüm kanun maddeleri *açıklamada*, mutlaka oku!", "sfx": ["ding"] },
+        { "say": "Yorumlara bir ya da iki yaz, bizi takip et!", "pill": "Yorumlara *1 ya da 2* yaz, takip et!", "sfx": ["cash"] }
+      ]
+    }
+  ]
+}
