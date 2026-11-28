@@ -159,11 +159,11 @@ export const S09Kapanis: React.FC = () => {
   return (
     <Art bg={C.cream}>
       <Speech x={486} y={185} w={780} h={164} tailX={0} s={p0}>
-        <text y={-12} textAnchor="middle" fontFamily={D} fontSize={40} fill={C.espresso}>
-          1️⃣ Kıdem Ödülü mü · 2️⃣ Eşit Ücret mi?
+        <text y={-12} textAnchor="middle" fontFamily={D} fontSize={42} fill={C.espresso}>
+          Kıdem Ödülü mü · Eşit Ücret mi?
         </text>
-        <text y={40} textAnchor="middle" fontFamily={M} fontWeight={700} fontSize={24} fill={C.coral}>
-          YORUMLARA 1 YA DA 2 YAZ! 👇
+        <text y={40} textAnchor="middle" fontFamily={M} fontWeight={700} fontSize={26} fill={C.coral}>
+          SEN HANGİ TARAFTASIN?
         </text>
       </Speech>
 

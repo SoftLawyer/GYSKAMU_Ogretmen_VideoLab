@@ -1,6 +1,6 @@
 {
  "fps": 30,
- "total": 63.84,
+ "total": 63.87,
  "audio": "gv/gy_006/master.mp3",
  "voice": {
   "id": "gemini:gemini-2.5-flash-preview-tts:Charon",
@@ -10,225 +10,225 @@
   {
    "id": "s01_kanca",
    "start": 0.0,
-   "end": 7.9,
+   "end": 7.29,
    "beats": [
     {
      "start": 0.0,
      "voiceStart": 0.55,
-     "voiceEnd": 2.6,
-     "end": 2.65
+     "voiceEnd": 2.34,
+     "end": 2.39
     },
     {
-     "start": 2.65,
-     "voiceStart": 2.7,
-     "voiceEnd": 5.41,
-     "end": 5.46
+     "start": 2.39,
+     "voiceStart": 2.44,
+     "voiceEnd": 4.83,
+     "end": 4.88
     },
     {
-     "start": 5.46,
-     "voiceStart": 5.51,
-     "voiceEnd": 7.86,
-     "end": 7.9
+     "start": 4.88,
+     "voiceStart": 4.93,
+     "voiceEnd": 7.25,
+     "end": 7.29
     }
    ]
   },
   {
    "id": "s02_sartlar",
-   "start": 7.9,
-   "end": 16.41,
+   "start": 7.29,
+   "end": 15.9,
    "beats": [
     {
-     "start": 7.9,
-     "voiceStart": 8.18,
-     "voiceEnd": 10.09,
-     "end": 10.14
+     "start": 7.29,
+     "voiceStart": 7.57,
+     "voiceEnd": 9.65,
+     "end": 9.7
     },
     {
-     "start": 10.14,
-     "voiceStart": 10.19,
-     "voiceEnd": 12.82,
-     "end": 12.87
+     "start": 9.7,
+     "voiceStart": 9.75,
+     "voiceEnd": 12.28,
+     "end": 12.33
     },
     {
-     "start": 12.87,
-     "voiceStart": 12.92,
-     "voiceEnd": 16.37,
-     "end": 16.41
+     "start": 12.33,
+     "voiceStart": 12.38,
+     "voiceEnd": 15.86,
+     "end": 15.9
     }
    ]
   },
   {
    "id": "s03_tazminat",
-   "start": 16.41,
-   "end": 22.4,
+   "start": 15.9,
+   "end": 22.04,
    "beats": [
     {
-     "start": 16.41,
-     "voiceStart": 16.69,
-     "voiceEnd": 18.08,
-     "end": 18.13
+     "start": 15.9,
+     "voiceStart": 16.18,
+     "voiceEnd": 17.77,
+     "end": 17.82
     },
     {
-     "start": 18.13,
-     "voiceStart": 18.18,
-     "voiceEnd": 19.68,
-     "end": 19.73
+     "start": 17.82,
+     "voiceStart": 17.87,
+     "voiceEnd": 19.3,
+     "end": 19.35
     },
     {
-     "start": 19.73,
-     "voiceStart": 19.78,
-     "voiceEnd": 22.36,
-     "end": 22.4
+     "start": 19.35,
+     "voiceStart": 19.4,
+     "voiceEnd": 22.0,
+     "end": 22.04
     }
    ]
   },
   {
    "id": "s04_cephe1",
-   "start": 22.4,
-   "end": 29.18,
+   "start": 22.04,
+   "end": 28.84,
    "beats": [
     {
-     "start": 22.4,
-     "voiceStart": 22.68,
-     "voiceEnd": 24.69,
-     "end": 24.74
+     "start": 22.04,
+     "voiceStart": 22.32,
+     "voiceEnd": 24.28,
+     "end": 24.33
     },
     {
-     "start": 24.74,
-     "voiceStart": 24.79,
-     "voiceEnd": 27.09,
-     "end": 27.14
+     "start": 24.33,
+     "voiceStart": 24.38,
+     "voiceEnd": 26.69,
+     "end": 26.74
     },
     {
-     "start": 27.14,
-     "voiceStart": 27.19,
-     "voiceEnd": 29.14,
-     "end": 29.18
+     "start": 26.74,
+     "voiceStart": 26.79,
+     "voiceEnd": 28.8,
+     "end": 28.84
     }
    ]
   },
   {
    "id": "s05_cephe2",
-   "start": 29.18,
-   "end": 35.37,
+   "start": 28.84,
+   "end": 35.44,
    "beats": [
     {
-     "start": 29.18,
-     "voiceStart": 29.46,
-     "voiceEnd": 31.14,
-     "end": 31.19
+     "start": 28.84,
+     "voiceStart": 29.12,
+     "voiceEnd": 30.85,
+     "end": 30.9
     },
     {
-     "start": 31.19,
-     "voiceStart": 31.24,
-     "voiceEnd": 33.54,
-     "end": 33.59
+     "start": 30.9,
+     "voiceStart": 30.95,
+     "voiceEnd": 33.48,
+     "end": 33.53
     },
     {
-     "start": 33.59,
-     "voiceStart": 33.64,
-     "voiceEnd": 35.33,
-     "end": 35.37
+     "start": 33.53,
+     "voiceStart": 33.58,
+     "voiceEnd": 35.4,
+     "end": 35.44
     }
    ]
   },
   {
    "id": "s06_emeklilik_sok",
-   "start": 35.37,
-   "end": 42.12,
+   "start": 35.44,
+   "end": 42.28,
    "beats": [
     {
-     "start": 35.37,
-     "voiceStart": 35.65,
-     "voiceEnd": 37.42,
-     "end": 37.47
+     "start": 35.44,
+     "voiceStart": 35.72,
+     "voiceEnd": 37.54,
+     "end": 37.59
     },
     {
-     "start": 37.47,
-     "voiceStart": 37.52,
-     "voiceEnd": 39.7,
-     "end": 39.75
+     "start": 37.59,
+     "voiceStart": 37.64,
+     "voiceEnd": 39.84,
+     "end": 39.89
     },
     {
-     "start": 39.75,
-     "voiceStart": 39.8,
-     "voiceEnd": 42.08,
-     "end": 42.12
+     "start": 39.89,
+     "voiceStart": 39.94,
+     "voiceEnd": 42.24,
+     "end": 42.28
     }
    ]
   },
   {
    "id": "s07_ek_ders",
-   "start": 42.12,
-   "end": 49.24,
+   "start": 42.28,
+   "end": 49.4,
    "beats": [
     {
-     "start": 42.12,
-     "voiceStart": 42.4,
-     "voiceEnd": 44.32,
-     "end": 44.37
+     "start": 42.28,
+     "voiceStart": 42.56,
+     "voiceEnd": 44.59,
+     "end": 44.64
     },
     {
-     "start": 44.37,
-     "voiceStart": 44.42,
-     "voiceEnd": 47.35,
-     "end": 47.4
+     "start": 44.64,
+     "voiceStart": 44.69,
+     "voiceEnd": 47.5,
+     "end": 47.55
     },
     {
-     "start": 47.4,
-     "voiceStart": 47.45,
-     "voiceEnd": 49.2,
-     "end": 49.24
+     "start": 47.55,
+     "voiceStart": 47.6,
+     "voiceEnd": 49.36,
+     "end": 49.4
     }
    ]
   },
   {
    "id": "s08_bilanco",
-   "start": 49.24,
-   "end": 54.59,
+   "start": 49.4,
+   "end": 54.9,
    "beats": [
     {
-     "start": 49.24,
-     "voiceStart": 49.52,
-     "voiceEnd": 50.73,
-     "end": 50.78
+     "start": 49.4,
+     "voiceStart": 49.68,
+     "voiceEnd": 51.04,
+     "end": 51.09
     },
     {
-     "start": 50.78,
-     "voiceStart": 50.83,
-     "voiceEnd": 52.77,
-     "end": 52.82
+     "start": 51.09,
+     "voiceStart": 51.14,
+     "voiceEnd": 53.08,
+     "end": 53.13
     },
     {
-     "start": 52.82,
-     "voiceStart": 52.87,
-     "voiceEnd": 54.55,
-     "end": 54.59
+     "start": 53.13,
+     "voiceStart": 53.18,
+     "voiceEnd": 54.86,
+     "end": 54.9
     }
    ]
   },
   {
    "id": "s09_kapanis",
-   "start": 54.59,
-   "end": 63.84,
+   "start": 54.9,
+   "end": 63.87,
    "beats": [
     {
-     "start": 54.59,
-     "voiceStart": 54.87,
-     "voiceEnd": 57.4,
-     "end": 57.45
+     "start": 54.9,
+     "voiceStart": 55.18,
+     "voiceEnd": 57.64,
+     "end": 57.69
     },
     {
-     "start": 57.45,
-     "voiceStart": 57.5,
-     "voiceEnd": 60.55,
-     "end": 60.6
+     "start": 57.69,
+     "voiceStart": 57.74,
+     "voiceEnd": 60.71,
+     "end": 60.76
     },
     {
-     "start": 60.6,
-     "voiceStart": 60.65,
-     "voiceEnd": 62.84,
-     "end": 63.84
+     "start": 60.76,
+     "voiceStart": 60.81,
+     "voiceEnd": 62.87,
+     "end": 63.87
     }
    ]
   }

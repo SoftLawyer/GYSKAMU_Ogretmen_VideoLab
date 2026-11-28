@@ -117,7 +117,7 @@
       "beats": [
         { "say": "Şimdi söz sende! Kıdem ödülü mü, eşit ücret mi?", "pill": "*Kıdem ödülü* mü, *eşit ücret* mi?", "sfx": ["notif"] },
         { "say": "Bilmen gereken tüm kanun maddeleri açıklamada, mutlaka oku!", "pill": "Tüm kanun maddeleri *açıklamada*, mutlaka oku!", "sfx": ["ding"] },
-        { "say": "Yorumlara bir ya da iki yaz, bizi takip et!", "pill": "Yorumlara *1 ya da 2* yaz, takip et!", "sfx": ["cash"] }
+        { "say": "Öğretmen arkadaşına gönder, bizi takip et!", "pill": "Öğretmen arkadaşına *gönder*, takip et!", "sfx": ["cash"] }
       ]
     }
   ]
