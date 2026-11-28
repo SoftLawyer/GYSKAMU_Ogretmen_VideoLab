@@ -212,8 +212,9 @@ def gemini_full_take(texts, cache_dir):
 
 
 def split_take(x, n_beats, weights):
-    """Tek parça kaydı n_beats ifadeye böler: sessizlik boşluklarını bulur, metin uzunluğu oranlarına en uygun
-    n_beats-1 boşluğu dinamik programlamayla seçer. [(start_sn, end_sn), ...] döner."""
+    """Tek parça kaydı n_beats ifadeye böler: sessizlik boşluklarını bulur, her bir ifadenin beklenen süresini
+    ve satır sonu es uzunluğunu (≥0.24s) birlikte optimize eden 2D dinamik programlama ile en doğru n_beats-1
+    kesimi seçer. [(start_sn, end_sn), ...] döner."""
     win = int(SR * 0.01)
     n = len(x) // win
     e = np.sqrt((x[: n * win].reshape(n, win) ** 2).mean(axis=1))
@@ -231,32 +232,54 @@ def split_take(x, n_beats, weights):
             i += 1
     if len(gaps) < n_beats - 1:
         raise RuntimeError(f"Tek parça kayıtta yeterli sessizlik yok ({len(gaps)} boşluk < {n_beats - 1}). Metni/satırları gözden geçir.")
-    # beklenen kesim konumları: konuşma süresi içinde kümülatif ağırlık oranı
-    cum = np.cumsum(weights)[:-1] / np.sum(weights)
-    # gap'lerdeki toplam sessizlik zamanı da dağılır; ilk yaklaşım: konuşma-zamanı ekseni
-    gap_len = np.array([b - a for a, b in gaps]); gap_mid = np.array([(a + b) / 2 for a, b in gaps])
-    spoken_before = np.array([(m - t0) - gap_len[:k].sum() - 0.5 * gap_len[k] for k, m in enumerate(gap_mid)])
-    speech_total = (t1 - t0) - gap_len.sum()
-    exp = cum * speech_total
     G, K = len(gaps), n_beats - 1
+    w_arr = np.array(weights, dtype=float)
+    est_total = max(1.0, (t1 - t0) - K * 0.35)
+    exp_dur = w_arr / w_arr.sum() * est_total
+
+    def seg_cost(dur, ex):
+        if dur < 0.25:
+            return 100.0
+        r = dur / max(ex, 0.3)
+        return 4.0 * (np.log(r) ** 2) + 0.5 * ((dur - ex) ** 2)
+
+    def gap_bonus(gl):
+        if gl >= 0.30:
+            return -3.5
+        if gl >= 0.24:
+            return -1.8
+        return 2.5
+
     INF = 1e18
-    cost = np.full((K, G), INF); prev = np.zeros((K, G), dtype=int)
-    sig = max(1.2, 0.04 * speech_total)
-    def c(k, g): return ((spoken_before[g] - exp[k]) / sig) ** 2 - 3.0 * min(gap_len[g], 0.7)
-    for g in range(G): cost[0, g] = c(0, g)
+    dp = np.full((K, G), INF)
+    prev = np.full((K, G), -1, dtype=int)
+    for g in range(G):
+        dp[0, g] = seg_cost(gaps[g][0] - t0, exp_dur[0]) + gap_bonus(gaps[g][1] - gaps[g][0])
     for k in range(1, K):
-        best, bi = INF, -1
         for g in range(k, G):
-            if cost[k - 1, g - 1] < best: best, bi = cost[k - 1, g - 1], g - 1
-            cost[k, g] = best + c(k, g); prev[k, g] = bi
-    g = int(np.argmin(cost[K - 1])); sel = [g]
+            gb = gap_bonus(gaps[g][1] - gaps[g][0])
+            best, bi = INF, -1
+            for pg in range(k - 1, g):
+                c = dp[k - 1, pg] + seg_cost(gaps[g][0] - gaps[pg][1], exp_dur[k]) + gb
+                if c < best:
+                    best, bi = c, pg
+            dp[k, g] = best
+            prev[k, g] = bi
+    best_last, g = INF, -1
+    for cand in range(K - 1, G):
+        c = dp[K - 1, cand] + seg_cost(t1 - gaps[cand][1], exp_dur[K])
+        if c < best_last:
+            best_last, g = c, cand
+    sel = [g]
     for k in range(K - 1, 0, -1):
-        g = int(prev[k, g]); sel.append(g)
+        g = int(prev[k, g])
+        sel.append(g)
     sel = sel[::-1]
-    cuts = [gaps[g] for g in sel]
+    cuts = [gaps[idx] for idx in sel]
     segs, start = [], t0
     for (a, b) in cuts:
-        segs.append((start, a)); start = b
+        segs.append((start, a))
+        start = b
     segs.append((start, t1))
     return segs
 
